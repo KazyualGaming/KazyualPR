@@ -1803,3 +1803,9 @@ Entries:
       message: Other stuff I forget about, it's 4 AM, sue me.
   id: 196
   time: '2026-03-17T07:58:00.0000000+00:00'
+- author: Notarin
+  changes:
+    - type: Add
+      message: Added Andromeda Engineering & Development company.
+  id: 197
+  time: '2026-03-17T07:19:20.0000000+00:00'
