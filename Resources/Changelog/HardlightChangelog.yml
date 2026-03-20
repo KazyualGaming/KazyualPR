@@ -1854,3 +1854,13 @@ Entries:
         produce per fruit when using advanced scanning mode
   id: 202
   time: '2026-03-20T22:38:01.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Add
+      message: >-
+        A handful of new markings are now available for Synths—made by
+        GravastarDragon!
+    - type: Tweak
+      message: Synth eye placement has been slightly adjusted.
+  id: 203
+  time: '2026-03-20T22:42:35.0000000+00:00'
