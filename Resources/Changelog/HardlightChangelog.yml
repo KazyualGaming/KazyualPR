@@ -1878,3 +1878,9 @@ Entries:
       message: Pulled Changes and fixes from Sandwich
   id: 205
   time: '2026-03-20T23:11:06.0000000+00:00'
+- author: LoboFrontale
+  changes:
+    - type: Fix
+      message: Mantis now spawns with the proper loadout!
+  id: 206
+  time: '2026-03-20T23:26:07.0000000+00:00'
