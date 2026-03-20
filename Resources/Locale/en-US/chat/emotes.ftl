@@ -32,7 +32,6 @@ chat-emote-name-monkeyscreeches = Monkey Screeches
 chat-emote-name-robotbeep = Robot
 chat-emote-name-yawn = Yawn
 chat-emote-name-flap = Flap Wings
-
 # Message
 chat-emote-msg-scream = screams!
 chat-emote-msg-laugh = laughs.
