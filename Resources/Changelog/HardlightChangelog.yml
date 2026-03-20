@@ -1832,3 +1832,11 @@ Entries:
       message: Forktail to finally be admeme again. Rejoice admins.
   id: 199
   time: '2026-03-20T22:29:09.0000000+00:00'
+- author: Nikode16
+  changes:
+    - type: Fix
+      message: >-
+        Fixes the MagiVend so it never spawns on Expeds anymore. As the man
+        above intended.
+  id: 200
+  time: '2026-03-20T22:30:05.0000000+00:00'
