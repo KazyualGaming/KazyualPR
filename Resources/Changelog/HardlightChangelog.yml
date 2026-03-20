@@ -1815,3 +1815,20 @@ Entries:
       message: Added Edison equipment to Eaglerock
   id: 198
   time: '2026-03-20T22:28:21.0000000+00:00'
+- author: Nikode16
+  changes:
+    - type: Add
+      message: >-
+        Part 1 of the Mega-Update to the MercVend. Giving it a large majority of
+        new utility, armors, weapons, etc. To its catalog for reasonable-ish
+        prices.
+    - type: Add
+      message: >-
+        Magazines that were otherwise nearly unobtainable or rare as hell to the
+        list of printable mags at their respective lathes.
+    - type: Fix
+      message: PMC C-20r to make a return as a C2 King of end-game SMGs.
+    - type: Fix
+      message: Forktail to finally be admeme again. Rejoice admins.
+  id: 199
+  time: '2026-03-20T22:29:09.0000000+00:00'
