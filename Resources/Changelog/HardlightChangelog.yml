@@ -1840,3 +1840,9 @@ Entries:
         above intended.
   id: 200
   time: '2026-03-20T22:30:05.0000000+00:00'
+- author: leonon42
+  changes:
+    - type: Add
+      message: The plant analyzer UI window can now scroll up and down
+  id: 201
+  time: '2026-03-20T22:31:35.0000000+00:00'
