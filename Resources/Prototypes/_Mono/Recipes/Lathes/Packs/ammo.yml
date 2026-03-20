@@ -115,6 +115,8 @@
   - Magazine556x45mmPractice
   - Magazine556x45mmEmpty
   - Magazine556x45mmUranium
+  - MagazineNovaliteC1
+  - MagazineNovaliteC1Empty
   - SpeedLoader556x45mmFMJ
   - SpeedLoader556x45mmIncendiary
   - SpeedLoader556x45mmPractice
@@ -228,7 +230,7 @@
   - Magazine8x65mmEmpty
   - Magazine762x54mmREmpty
   - Magazine762x51mmEmpty
-  - Magazine12_gaugeEmpty
+  - Magazine12_gaugeEmpty 
   - Magazine45_ACPSubMachineGunTopMountedEmpty
   - Magazine9x19mmSubMachineGunTopMountedEmpty
   - Magazine57x28mmSubMachineGunTopMountedEmpty
@@ -382,6 +384,10 @@
   - AmmoBox762x51mmRubberBig
   - AmmoBox762x39mmRubberBig
   - AmmoBox762x54mmRRubberBig
+  - MagazineNovaliteC1
+  - MagazineNovaliteC1Empty
+  - Magazine635x40mmCaseless
+  - Magazine635x40mmCaselessPistol
 
 #civilian = FMJ + practice + empty + rubber
 
@@ -515,16 +521,21 @@
   - BulletCasing9x19mm
   - BulletFlechette
 # big boxes
-  # - AmmoBox46x30mmBig                    # WTF, aren't big boxes supposed to be only in the Ammo techfab???
-  # - AmmoBox556x45mmBigFMJ
-  # - AmmoBox635x40mmCaselessBig
-  # - AmmoBox762x39mmBigFMJ
-  # - AmmoBox762x51mmBigFMJ
-  # - AmmoBox762x54mmRBigFMJ
-  # - AmmoBox9x19mmBigFMJ
-  # - AmmoBox762x51mmRubberBig       
-  # - AmmoBox762x39mmRubberBig
-  # - AmmoBox762x54mmRRubberBig
+  - AmmoBox46x30mmBig
+  - AmmoBox556x45mmBigFMJ
+  - AmmoBox635x40mmCaselessBig
+  - AmmoBox762x39mmBigFMJ
+  - AmmoBox762x51mmBigFMJ
+  - AmmoBox762x54mmRBigFMJ
+  - AmmoBox9x19mmBigFMJ
+  - AmmoBox762x51mmRubberBig
+  - AmmoBox762x39mmRubberBig
+  - AmmoBox762x54mmRRubberBig
+  # HL
+  - MagazineNovaliteC1
+  - MagazineNovaliteC1Empty
+  - Magazine635x40mmCaseless
+  - Magazine635x40mmCaselessPistol
 
 #advanced = Uranium + Incendiary
 
@@ -592,3 +603,7 @@
   - AmmoBox23x75mmUranium
 # HL
   - MagRailgun
+  - MagazineNovaliteC1
+  - MagazineNovaliteC1Empty
+  - Magazine635x40mmCaseless
+  - Magazine635x40mmCaselessPistol
