@@ -33,7 +33,7 @@
     - Rodentia # DeltaV
     - Feroxi # Flooftier
     - Resomi
-    - Protogen # Monolith
+    - Protogen # FarHorizons
     - Shadekin
     - Avali
     - Kitsune # DeltaV
@@ -128,11 +128,6 @@
   id: Avali
   name: species-name-avali
   text: "/ServerInfo/Guidebook/Mobs/Avali.xml"
-
-- type: guideEntry
-  id: Protogen
-  name: species-name-protogen
-  text: "/ServerInfo/Guidebook/Mobs/Protogen.xml"
 
 - type: guideEntry
   id: Shadekin

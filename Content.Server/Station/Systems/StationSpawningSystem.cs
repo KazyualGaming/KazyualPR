@@ -279,6 +279,11 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             /// End Frontier: overwriting EquipRoleLoadout
         }
 
+        // Far Horizons Start - Subspecies
+        if (species.Loadout != null && _prototypeManager.TryIndex(species.Loadout.Value, out var speciesLoadoutProto) && profile != null && profile.SpeciesLoadout != null)
+            EquipRoleLoadout(entity.Value, profile.SpeciesLoadout, speciesLoadoutProto);
+        // Far Horizons End
+        
         // Frontier: always equip job startingGear, even if no loadout prototype exists.
         // This must be outside the loadout block so players always get base job equipment (uniform, PDA, ID card, etc.).
         if (prototype?.StartingGear is not null)

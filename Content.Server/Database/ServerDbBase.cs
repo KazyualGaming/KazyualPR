@@ -246,6 +246,14 @@ namespace Content.Server.Database
                 loadouts[role.RoleName] = loadout;
             }
 
+            // Far Horizons Start - Subspecies
+            RoleLoadout? speciesLoadout = null;
+            if (loadouts.Remove(HumanoidCharacterProfile.SpeciesLoadoutDatabaseKey, out var speciesLoadoutValue))
+            {
+                speciesLoadout = speciesLoadoutValue;
+            }
+            // Far Horizons End
+
             // Get the company with fallback to default "None"
             var company = profile.Company ?? "None";
 
@@ -286,7 +294,8 @@ namespace Content.Server.Database
                 antags.ToHashSet(),
                 traits.ToHashSet(),
                 loadouts,
-                company);
+                company,
+                speciesLoadout); // Far Horizons
         }
 
         private static Profile ConvertProfiles(HumanoidCharacterProfile humanoid, int slot, Profile? profile = null)
@@ -346,7 +355,13 @@ namespace Content.Server.Database
 
             profile.Loadouts.Clear();
 
-            foreach (var (role, loadouts) in humanoid.Loadouts)
+            // Far Horizons-Start - Include species loadout in serialized loadouts
+            Dictionary<string, RoleLoadout> allLoadouts = new(humanoid.Loadouts);
+            if (humanoid.SpeciesLoadout != null)
+                allLoadouts[HumanoidCharacterProfile.SpeciesLoadoutDatabaseKey] = humanoid.SpeciesLoadout;
+            // Far Horizons-End
+
+            foreach (var (role, loadouts) in allLoadouts) // Far Horizons
             {
                 var dz = new ProfileRoleLoadout()
                 {
@@ -962,7 +977,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({playerDbId}, {id}) ON 
                 try
                 {
                     await using var db = await GetDb();
-                    
+
                     // Get all unique player IDs referenced in these logs
                     var playerIds = logs
                         .SelectMany(log => log.Players)
