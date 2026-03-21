@@ -1884,3 +1884,19 @@ Entries:
       message: Mantis now spawns with the proper loadout!
   id: 206
   time: '2026-03-20T23:26:07.0000000+00:00'
+- author: Killer Tamashi
+  changes:
+    - type: Add
+      message: >-
+        Added FarHorizon's Protogens & Protogen Subspecies! (Check PR for
+        details)
+    - type: Add
+      message: Added Subspecies Selection System
+    - type: Add
+      message: Added Species Loadout System
+    - type: Add
+      message: Added Automatic Roundstart Implant Injection
+    - type: Remove
+      message: Removed Monolith's Protogens
+  id: 207
+  time: '2026-03-21T22:34:56.0000000+00:00'
