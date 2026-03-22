@@ -41,3 +41,4 @@ We are actively checking PR's to rectify any missing credits and ensure all orig
 | `Space Station 14` | Vanilla/WizDen | https://github.com/space-wizards/space-station-14 | MIT |
 | `_Emberfall` | Emberfall | https://github.com/emberfall-14/emberfall | MPL 2.0 |
 | `_FarHorizons` | Far-Horizons | https://github.com/Far-Horizons-SS14/Far-Horizons-SS14.git | MIT |
+| `_Crescent` | Hullrot | https://github.com/Sector-Crescent/Hullrot.git | AGPL 3.0|
