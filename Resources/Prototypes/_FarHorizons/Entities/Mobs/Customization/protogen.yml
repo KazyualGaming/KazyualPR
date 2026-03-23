@@ -109,7 +109,7 @@
 
 - type: marking
   id: ProtogenMediumArmor
-  bodyPart: RFoot
+  bodyPart: Chest
   markingCategory: Special
   speciesRestriction: [Protogen, ProtoReptile, ProtoHumie, ProtoDawi, ProtoArachnid]
   sprites:
@@ -165,7 +165,7 @@
 
 - type: marking
   id: ProtoVulpVisorSideWings
-  bodyPart: RFoot
+  bodyPart: Chest
   markingCategory: Head
   speciesRestriction: [ProtoVulp]
   sprites:
@@ -174,7 +174,7 @@
 
 - type: marking
   id: ProtoVulpMediumArmor
-  bodyPart: RFoot
+  bodyPart: Chest
   markingCategory: Special
   speciesRestriction: [ProtoVulp]
   sprites:
@@ -183,7 +183,7 @@
 
 - type: marking
   id: ProtoVulpMediumArmorAngled
-  bodyPart: RFoot
+  bodyPart: Chest
   markingCategory: Special
   speciesRestriction: [ProtoVulp]
   sprites:
@@ -268,7 +268,7 @@
 
 - type: marking
   id: ProtoVoxMediumArmor
-  bodyPart: RFoot
+  bodyPart: Chest
   markingCategory: Special
   speciesRestriction: [ProtoVox]
   sprites:
@@ -315,7 +315,7 @@
 
 - type: marking
   id: ProtoThavenMediumArmor
-  bodyPart: RFoot
+  bodyPart: Chest
   markingCategory: Special
   speciesRestriction: [ProtoThaven]
   sprites:
@@ -344,7 +344,7 @@
 
 - type: marking
   id: ProtoSlimePersonMediumArmor
-  bodyPart: RFoot
+  bodyPart: Chest
   markingCategory: Special
   speciesRestriction: [ProtoSlimePerson]
   sprites:
@@ -359,7 +359,7 @@
   sprites:
     - sprite: _FarHorizons/Mobs/Customization/proto-slime/visor_shapes.rsi
       state: visor
-  
+
 - type: marking
   id: ProtoSlimePersonLEDFace
   bodyPart: RHand
@@ -382,7 +382,7 @@
 
 - type: marking
   id: ProtoKinMediumArmor
-  bodyPart: RFoot
+  bodyPart: Chest
   markingCategory: Special
   speciesRestriction: [ProtoKin]
   sprites:
@@ -397,7 +397,7 @@
   sprites:
     - sprite: _FarHorizons/Mobs/Customization/proto-kin/visor_shapes.rsi
       state: visor
-  
+
 - type: marking
   id: ProtoKinLEDFace
   bodyPart: RHand
@@ -420,7 +420,7 @@
 
 - type: marking
   id: ProtoResomiMediumArmor
-  bodyPart: RFoot
+  bodyPart: Chest
   markingCategory: Special
   speciesRestriction: [ProtoResomi]
   sprites:
@@ -435,7 +435,7 @@
   sprites:
     - sprite: _FarHorizons/Mobs/Customization/proto-resomi/visor_shapes.rsi
       state: visor
-  
+
 - type: marking
   id: ProtoResomiLEDFace
   bodyPart: RHand
@@ -478,7 +478,7 @@
 
 - type: marking
   id: ProtoMothMediumArmor
-  bodyPart: RFoot
+  bodyPart: Chest
   markingCategory: Special
   speciesRestriction: [ProtoMoth]
   sprites:
@@ -493,7 +493,7 @@
   sprites:
     - sprite: _FarHorizons/Mobs/Customization/proto-moth/visor_shapes.rsi
       state: visor
-  
+
 - type: marking
   id: ProtoMothLEDFace
   bodyPart: RHand
@@ -527,7 +527,7 @@
 
 - type: marking
   id: ProtoFelineMediumArmor
-  bodyPart: RFoot
+  bodyPart: Chest
   markingCategory: Special
   speciesRestriction: [ProtoFeline]
   sprites:
@@ -542,7 +542,7 @@
   sprites:
     - sprite: _FarHorizons/Mobs/Customization/proto-feline/visor_shapes.rsi
       state: visor
-  
+
 - type: marking
   id: ProtoFelineLEDFace
   bodyPart: RHand
@@ -576,7 +576,7 @@
 
 - type: marking
   id: ProtoDionaeMediumArmor
-  bodyPart: RFoot
+  bodyPart: Chest
   markingCategory: Special
   speciesRestriction: [ProtoDionae]
   sprites:
@@ -591,7 +591,7 @@
   sprites:
     - sprite: _FarHorizons/Mobs/Customization/proto-dionae/visor_shapes.rsi
       state: visor
-  
+
 - type: marking
   id: ProtoDionaeLEDFace
   bodyPart: RHand
@@ -623,7 +623,7 @@
 
 - type: marking
   id: ProtoAvaliMediumArmor
-  bodyPart: RFoot
+  bodyPart: Chest
   markingCategory: Special
   speciesRestriction: [ProtoAvali]
   sprites:
@@ -638,7 +638,7 @@
   sprites:
     - sprite: _FarHorizons/Mobs/Customization/proto-avali/visor_shapes.rsi
       state: visor
-  
+
 - type: marking
   id: ProtoAvaliLEDFace
   bodyPart: RHand
@@ -676,7 +676,7 @@
   sprites:
     - sprite: _FarHorizons/Mobs/Customization/proto-arachnid/visor_shapes.rsi
       state: visor
-  
+
 - type: marking
   id: ProtoArachnidLEDFace
   bodyPart: RHand
