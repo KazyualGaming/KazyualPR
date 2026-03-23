@@ -1900,3 +1900,9 @@ Entries:
       message: Removed Monolith's Protogens
   id: 207
   time: '2026-03-21T22:34:56.0000000+00:00'
+- author: Iisazel
+  changes:
+    - type: Add
+      message: Added more brass ammo calibers
+  id: 208
+  time: '2026-03-23T18:17:11.0000000+00:00'
