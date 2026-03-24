@@ -1920,3 +1920,11 @@ Entries:
       message: Feroxi and Rodentia can be psykers
   id: 210
   time: '2026-03-24T00:44:14.0000000+00:00'
+- author: TrylobyteWasTaken
+  changes:
+    - type: Add
+      message: You can now make Sap from juicing Tower-Cap Logs
+    - type: Add
+      message: Syrup has had its nutritional value restored.
+  id: 211
+  time: '2026-03-24T05:07:07.0000000+00:00'
