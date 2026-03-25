@@ -63,28 +63,30 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         }
         // Starlight end
 
-        // Apply networked height/width to sprite scale on the client.
+        // HardLight start
+        // Apply current humanoid scale. If HumanoidVisuals.Scale exists, it already includes
+        // networked slider values and any server-side trait multipliers.
+        ApplyHumanoidScale(uid, sprite, component.Width, component.Height);
+        // HardLight end
+    }
+
+    // HardLight start: Separate method to apply scale so it can be called from multiple places without worrying about the source of the change.
+    private void ApplyHumanoidScale(EntityUid uid, SpriteComponent sprite, float width, float height)
+    {
         // Clamp to a sane minimum to avoid issues with zero/near-zero scales from legacy data.
-        var width = component.Width <= 0.005f ? 1.0f : component.Width;
-        var height = component.Height <= 0.005f ? 1.0f : component.Height;
-        _sprite.SetScale((uid, sprite), new Vector2(width, height));
+        var clampedWidth = width <= 0.005f ? 1.0f : width;
+        var clampedHeight = height <= 0.005f ? 1.0f : height;
 
-        // Sub-Pixel Gap Fix (Very cheap fix, moves body parts towards torso)
-        // This is not great, hopefully someone smarter with more sanity will fix the render code at some point :P
-        var pushUpOffset = new System.Numerics.Vector2(0f, 0.004f);   // Move slightly up
-        var pushDownOffset = new System.Numerics.Vector2(0f, -0.004f); // Move slightly down
+        if (TryComp<AppearanceComponent>(uid, out var appearance)
+            && _appearance.TryGetData<Vector2>(uid, HumanoidVisuals.Scale, out var scaled, appearance))
+        {
+            _sprite.SetScale((uid, sprite), scaled);
+            return;
+        }
 
-        // 1. Parts that are pushed UP (+Y) (hands, legs, feet + clothing)
-        foreach (var layerEnum in PushUpLayers)
-        {
-            if (_sprite.LayerMapTryGet((uid, sprite), layerEnum, out var layerIndex, false))
-                _sprite.LayerSetOffset((uid, sprite), layerIndex, pushUpOffset);
-        }
-        foreach (var layerString in PushUpLayerNames)
-        {
-            if (_sprite.LayerMapTryGet((uid, sprite), layerString, out var layerIndex, false))
-                _sprite.LayerSetOffset((uid, sprite), layerIndex, pushUpOffset);
-        }
+        _sprite.SetScale((uid, sprite), new Vector2(clampedWidth, clampedHeight));
+    }
+    // HardLight end
 
         // 2. Parts that are pushed DOWN (-Y) (head, snout + headgear)
         foreach (var layerEnum in PushDownLayers)
@@ -231,13 +233,13 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             ? profile.Appearance.SkinColor.WithAlpha(hairAlpha)
             : profile.Appearance.HairColor;
         var hair = new Marking(profile.Appearance.HairStyleId,
-            new[] { hairColor }, profile.Appearance.HairGlowing); //starlight
+            new[] { hairColor }, profile.Appearance.HairGlowing); // Starlight
 
         var facialHairColor = _markingManager.MustMatchSkin(profile.Species, HumanoidVisualLayers.FacialHair, out var facialHairAlpha, _prototypeManager)
             ? profile.Appearance.SkinColor.WithAlpha(facialHairAlpha)
             : profile.Appearance.FacialHairColor;
         var facialHair = new Marking(profile.Appearance.FacialHairStyleId,
-            new[] { facialHairColor }, profile.Appearance.FacialHairGlowing); //starlight
+            new[] { facialHairColor }, profile.Appearance.FacialHairGlowing); // Starlight
 
         if (_markingManager.CanBeApplied(profile.Species, profile.Sex, hair, _prototypeManager))
         {
@@ -257,7 +259,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
                 profile.Appearance.EyeColor,
                 markings
             );
-            markings.AddBack(prototype.MarkingCategory, new Marking(marking.MarkingId, markingColors, marking.IsGlowing)); //starlight, glowing
+            markings.AddBack(prototype.MarkingCategory, new Marking(marking.MarkingId, markingColors, marking.IsGlowing)); // Starlight: Glowing
         }
 
         markings.EnsureSpecies(profile.Species, profile.Appearance.SkinColor, _markingManager, _prototypeManager);
@@ -278,18 +280,15 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         humanoid.Age = profile.Age;
         humanoid.Species = profile.Species;
         humanoid.CustomSpecies = string.IsNullOrEmpty(profile.CustomSpecies) ? null : profile.CustomSpecies;
-        humanoid.SkinColor = profile.Appearance.SkinColor; //starlight
+        humanoid.SkinColor = profile.Appearance.SkinColor; // Starlight
         humanoid.EyeColor = profile.Appearance.EyeColor;
         humanoid.EyeGlowing = profile.Appearance.EyeGlowing;
         humanoid.Height = profile.Appearance.Height;
         humanoid.Width = profile.Appearance.Width;
 
-        // Apply scaling for client-side preview (width, height)
+        // Apply scaling for client-side preview.
         var sprite = Comp<SpriteComponent>(uid);
-        // Check to prevent sprite scale errors for old profiles
-        var width = profile.Appearance.Width <= 0.005f ? 1.0f : profile.Appearance.Width;
-        var height = profile.Appearance.Height <= 0.005f ? 1.0f : profile.Appearance.Height;
-        _sprite.SetScale((uid, sprite), new Vector2(width, height));
+        ApplyHumanoidScale(uid, sprite, profile.Appearance.Width, profile.Appearance.Height); // HardLight
 
         UpdateSprite(uid, humanoid, sprite);
     }
@@ -464,7 +463,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
                 layerDict.Add(layerSlot.ToString(), 0);
             }
 
-            if (!sprite.LayerMapTryGet(layerSlot, out var targetLayer))
+            if (!_sprite.LayerMapTryGet((uid, sprite), layerSlot, out var targetLayer, false)) // HardcLight: Added uid, sprite and false
             {
                 continue;
             }
