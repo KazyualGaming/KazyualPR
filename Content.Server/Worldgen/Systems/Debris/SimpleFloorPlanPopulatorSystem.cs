@@ -1,4 +1,4 @@
-using Content.Server.Worldgen.Components.Debris;
+﻿using Content.Server.Worldgen.Components.Debris;
 using Content.Shared.Maps;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
@@ -28,16 +28,15 @@ public sealed class SimpleFloorPlanPopulatorSystem : BaseWorldSystem
         var grid = Comp<MapGridComponent>(uid);
         var tiles = new List<TileRef>();
         var enumerator = _map.GetAllTilesEnumerator(uid, grid);
-        while (enumerator.MoveNext(out var tileRef))
+        while (enumerator.MoveNext(out var tile))
         {
-            if (tileRef != null)
-                tiles.Add(tileRef.Value);
+            tiles.Add(tile);
         }
 
-        foreach (var tileRef in tiles)
+        foreach (var tile in tiles)
         {
-            var coords = grid.GridTileToLocal(tileRef.GridIndices);
-            var selector = tileRef.Tile.GetContentTileDefinition(_tileDefinition).ID;
+            var coords = grid.GridTileToLocal(tile.GridIndices);
+            var selector = tile.Tile.GetContentTileDefinition(_tileDefinition).ID;
             if (!component.Caches.TryGetValue(selector, out var cache))
                 continue;
 
