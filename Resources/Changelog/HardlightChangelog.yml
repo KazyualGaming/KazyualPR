@@ -1938,3 +1938,9 @@ Entries:
       message: 'Fixes station captain spawn on  '
   id: 212
   time: '2026-03-25T23:18:36.0000000+00:00'
+- author: IrkallaEpsilon
+  changes:
+    - type: Fix
+      message: Tajara can be psychic now.
+  id: 213
+  time: '2026-03-25T23:19:17.0000000+00:00'
