@@ -1976,3 +1976,9 @@ Entries:
       message: Chat text can now be highlighted for ease of readability.
   id: 217
   time: '2026-03-26T21:19:09.0000000+00:00'
+- author: VoidedDevNull
+  changes:
+    - type: Tweak
+      message: IPCs now have binary built in
+  id: 218
+  time: '2026-03-26T21:19:27.0000000+00:00'
