@@ -1988,3 +1988,13 @@ Entries:
       message: .45 Magnum magazines properly reflect their ammo fill
   id: 219
   time: '2026-03-26T21:21:13.0000000+00:00'
+- author: Nikode16
+  changes:
+    - type: Add
+      message: PMC Energy Shotgun to the Merc Vend
+    - type: Tweak
+      message: Energy Shotguns to cost 100 instead of 120 per Disabler Shot
+    - type: Tweak
+      message: Energy Shotguns Disabler Shot to **NOT** slowly kill people now.
+  id: 220
+  time: '2026-03-27T16:45:40.0000000+00:00'
