@@ -2034,3 +2034,33 @@ Entries:
       message: removed contraband level from interdyne uniforms
   id: 224
   time: '2026-03-28T18:36:28.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Tweak
+      message: >-
+        Frontier and upstream cryospaces have been combined to reduce maps
+        generated in normal play.
+    - type: Fix
+      message: Ship shields should now function as expected when toggled.
+    - type: Fix
+      message: Ship shields should no longer save indefinitely and bloat ship files.
+    - type: Fix
+      message: >-
+        Dungeon generation should result in much less lag and stuttering while
+        the atlases are active.
+    - type: Fix
+      message: Ships should no longer create lingering maps when loaded.
+    - type: Fix
+      message: >-
+        Ending an expedition early should no longer have the potential to delete
+        characters and ships.
+    - type: Fix
+      message: >-
+        Ending an expedition early should now correctly sync the FTL audio
+        instead of starting earlier than it should.
+    - type: Fix
+      message: >-
+        Expedition maps should no longer delete on early departure until all
+        ships that were on the map have left it.
+  id: 225
+  time: '2026-03-28T19:03:35.0000000+00:00'
