@@ -2018,3 +2018,9 @@ Entries:
       message: The PTK can now break rocks again.
   id: 222
   time: '2026-03-28T18:27:40.0000000+00:00'
+- author: re-silvered
+  changes:
+    - type: Tweak
+      message: Can now use subtle OOC and subtle while unconscious
+  id: 223
+  time: '2026-03-28T18:28:00.0000000+00:00'
