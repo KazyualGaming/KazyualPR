@@ -2078,3 +2078,17 @@ Entries:
         longer cause said fails.
   id: 226
   time: '2026-03-29T19:41:16.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Tweak
+      message: >-
+        Job payout calculation now persists between rounds, meaning cryocycles
+        should no longer be necessary.
+    - type: Fix
+      message: Dynamic allocation of Freelancer slots should work as intended now.
+    - type: Fix
+      message: >-
+        The crew manifest should correctly update throughout the round as
+        players join and leave.
+  id: 227
+  time: '2026-03-29T19:41:34.0000000+00:00'
