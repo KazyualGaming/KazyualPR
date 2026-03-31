@@ -2152,3 +2152,11 @@ Entries:
       message: Many, MANY fashion items from Coyote Sector.
   id: 232
   time: '2026-03-30T23:25:59.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Fix
+      message: Dungeon map generation should now function as intended.
+    - type: Fix
+      message: Affected substations should no longer start in dysfunctional states.
+  id: 233
+  time: '2026-03-31T19:26:38.0000000+00:00'
