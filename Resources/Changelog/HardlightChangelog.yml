@@ -2166,3 +2166,9 @@ Entries:
       message: Bluespace lockers no longer silently delete materials on deconstruction.
   id: 236
   time: '2026-04-02T03:50:57.0000000+00:00'
+- author: Illumos
+  changes:
+    - type: Tweak
+      message: Synthetic trait is now free
+  id: 237
+  time: '2026-04-02T03:51:27.0000000+00:00'
