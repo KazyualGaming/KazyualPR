@@ -19915,8 +19915,6 @@ entities:
       pos: 15.5,-53.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 50
   - uid: 17163
@@ -102425,8 +102423,6 @@ entities:
       pos: 13.5,-54.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 50
     - type: AtmosPipeColor
@@ -105841,8 +105837,6 @@ entities:
       pos: 15.5,-57.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 50
     - type: AtmosPipeColor
