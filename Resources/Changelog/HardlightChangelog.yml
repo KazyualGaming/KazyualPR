@@ -2190,3 +2190,11 @@ Entries:
       message: Wizards now use their magic to enchant blades! Go rob them!
   id: 240
   time: '2026-04-02T19:19:35.0000000+00:00'
+- author: R3v3l4t1on
+  changes:
+    - type: Fix
+      message: >-
+        Fixed a BUNCH of invalid entity references which should mean the
+        integration tests are actually usable again.
+  id: 241
+  time: '2026-04-02T19:45:53.0000000+00:00'
