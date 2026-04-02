@@ -334,7 +334,7 @@
   id: HLLockerFillHeadOfSecurityNoHardsuit
   table: !type:AllSelector
     children:
-    - id: WeaponEnergyShotgun
+    - id: WeaponCaseLongESAR550
     - id: NFHyperlinkBookSpaceLaw
     - id: BoxEncryptionKeySecurity
     - id: CigarGoldCase
