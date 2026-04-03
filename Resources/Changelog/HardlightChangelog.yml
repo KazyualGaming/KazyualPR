@@ -2232,3 +2232,11 @@ Entries:
       message: New Epsilon alert sound
   id: 245
   time: '2026-04-03T21:12:55.0000000+00:00'
+- author: re-silvered
+  changes:
+    - type: Tweak
+      message: >-
+        Changed some interaction verbs to function/not function depending on if
+        you are restrained or if you're wearing a mask.
+  id: 246
+  time: '2026-04-03T21:15:13.0000000+00:00'
