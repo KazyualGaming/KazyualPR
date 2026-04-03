@@ -2220,3 +2220,9 @@ Entries:
         available to cyborgs on roundstart.
   id: 242
   time: '2026-04-02T20:09:09.0000000+00:00'
+- author: Sully669
+  changes:
+    - type: Fix
+      message: Fixed a bug where succumbing to your fate deleted your character
+  id: 244
+  time: '2026-04-03T21:12:13.0000000+00:00'
