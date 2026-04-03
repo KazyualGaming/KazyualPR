@@ -16,6 +16,10 @@ namespace Content.Client.Shuttles.Save
         [Dependency] private readonly IResourceManager _resourceManager = default!;
         private ISawmill _sawmill = default!;
 
+        private const string RoomGridDirectory = "/Exports/room_grids/";
+        private const string RoomGridPrefix = "/Exports/room_";
+
+        // Static data shared across all instances to handle multiple system instances
         private static readonly Dictionary<string, string> CachedShipData = new();
         private static readonly Dictionary<string, (string shipName, DateTime timestamp)> ShipMetadataCache = new();
         private static readonly List<string> AvailableShips = new();
@@ -275,6 +279,7 @@ namespace Content.Client.Shuttles.Save
                     // Accept any .yml file in Exports (not just ship_index), but exclude backups
                     if (filePath.Contains("Exports")
                         && !filePath.Contains("Exports/backup")
+                        && !IsRoomGridFile(filePath)
                         && filePath.EndsWith(".yml")
                         && !filePath.Contains("ship_index"))
                     {
