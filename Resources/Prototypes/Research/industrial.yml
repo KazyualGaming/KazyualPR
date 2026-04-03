@@ -239,6 +239,8 @@
     - NFBlueprintPowerDrill # Frontier
     - NFBlueprintJawsOfLife # Frontier
     - NFBlueprintWelderExperimental # Frontier
+    - OmniHandLeft # HardLight
+    - OmniHandRight # HardLight
   # Goobstation R&D Console rework start
   position: 2,-5
   technologyPrerequisites:
