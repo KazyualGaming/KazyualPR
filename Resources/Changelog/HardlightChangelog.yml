@@ -2258,3 +2258,9 @@ Entries:
       message: CYNs Outfit to reflect the new changes and also hyper-organizes her bag.
   id: 248
   time: '2026-04-04T01:40:25.0000000+00:00'
+- author: Sully669
+  changes:
+    - type: Fix
+      message: Fixed a bug that failed to populate the character fields in lobby
+  id: 249
+  time: '2026-04-04T01:41:52.0000000+00:00'
