@@ -2264,3 +2264,9 @@ Entries:
       message: Fixed a bug that failed to populate the character fields in lobby
   id: 249
   time: '2026-04-04T01:41:52.0000000+00:00'
+- author: ishkab
+  changes:
+    - type: Add
+      message: Microwaves can now be used as bludgeoning weapons
+  id: 250
+  time: '2026-04-04T19:51:55.0000000+00:00'
