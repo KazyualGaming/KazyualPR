@@ -155,6 +155,7 @@
   - type: ShowHealthBars
     damageContainers:
     - Biological
+    - Synth #HL
   - type: ShowHealthIcons
     damageContainers:
     - Biological
