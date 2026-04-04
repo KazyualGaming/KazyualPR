@@ -2248,3 +2248,13 @@ Entries:
       message: Condiments now restore some small hunger.
   id: 247
   time: '2026-04-04T01:39:48.0000000+00:00'
+- author: Nikode16
+  changes:
+    - type: Add
+      message: >-
+        New Trico Pill and Pill Bottle that's 10, 20u pills and not those icky
+        5, 10u pills.
+    - type: Tweak
+      message: CYNs Outfit to reflect the new changes and also hyper-organizes her bag.
+  id: 248
+  time: '2026-04-04T01:40:25.0000000+00:00'
