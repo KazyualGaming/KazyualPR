@@ -2284,3 +2284,9 @@ Entries:
       message: Removed boring smelly thieving gloves
   id: 253
   time: '2026-04-08T21:36:19.0000000+00:00'
+- author: Generic_Eagle
+  changes:
+    - type: Tweak
+      message: ESAR now fully replaces the WT and Energy shotgun for HoS.
+  id: 254
+  time: '2026-04-08T22:49:24.0000000+00:00'
