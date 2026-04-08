@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -10,7 +10,6 @@ using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Store.Components; // HardLight
 using Content.Server._HL.Shipyard; // HardLight
-using Content.Shared._Common.Consent; // HardLight
 using Content.Shared._HL.Shipyard; // HardLight
 using Content.Shared._NF.CCVar;
 using Content.Shared._NF.Shipyard.Components;
