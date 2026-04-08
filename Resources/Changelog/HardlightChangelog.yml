@@ -2312,3 +2312,9 @@ Entries:
         simulator fantasy.
   id: 257
   time: '2026-04-08T22:56:36.0000000+00:00'
+- author: Iisazel
+  changes:
+    - type: Fix
+      message: Avalis can now use cryopods correctly
+  id: 258
+  time: '2026-04-08T22:59:33.0000000+00:00'
