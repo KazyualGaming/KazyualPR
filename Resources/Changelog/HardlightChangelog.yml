@@ -2326,3 +2326,9 @@ Entries:
       message: Gunnery servers now require increasingly expensive amounts of materials.
   id: 259
   time: '2026-04-08T23:01:16.0000000+00:00'
+- author: VoidedDevNull
+  changes:
+    - type: Tweak
+      message: Newly bought ships do not include a latejoin spot anymore.
+  id: 260
+  time: '2026-04-08T23:11:01.0000000+00:00'
