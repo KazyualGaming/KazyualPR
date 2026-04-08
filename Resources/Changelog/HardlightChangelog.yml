@@ -2318,3 +2318,11 @@ Entries:
       message: Avalis can now use cryopods correctly
   id: 258
   time: '2026-04-08T22:59:33.0000000+00:00'
+- author: Illumos
+  changes:
+    - type: Add
+      message: UHP Gunnery server is now researchable.
+    - type: Tweak
+      message: Gunnery servers now require increasingly expensive amounts of materials.
+  id: 259
+  time: '2026-04-08T23:01:16.0000000+00:00'
