@@ -2296,3 +2296,11 @@ Entries:
       message: Plating and Lattice can now be traversed at normal speed again.
   id: 255
   time: '2026-04-08T22:49:44.0000000+00:00'
+- author: Iisazel
+  changes:
+    - type: Add
+      message: >-
+        Flesh expeditions now have improved loot! Time to break some
+        assimilation sacks!
+  id: 256
+  time: '2026-04-08T22:50:36.0000000+00:00'
