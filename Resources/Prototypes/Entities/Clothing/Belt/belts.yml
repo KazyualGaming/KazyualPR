@@ -429,6 +429,7 @@
   #       - Seed
   #       - Smokable
   #       - HandLabeler
+  #       - BotanySwab
   - type: ItemMapper
     mapLayers:
       hatchet:
