@@ -2276,3 +2276,11 @@ Entries:
       message: Shadekin now have correct amount of starting genes
   id: 251
   time: '2026-04-04T19:52:28.0000000+00:00'
+- author: Magniras
+  changes:
+    - type: Add
+      message: Restored cool sexy thieving gloves
+    - type: Remove
+      message: Removed boring smelly thieving gloves
+  id: 253
+  time: '2026-04-08T21:36:19.0000000+00:00'
