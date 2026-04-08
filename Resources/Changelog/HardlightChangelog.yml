@@ -2290,3 +2290,9 @@ Entries:
       message: ESAR now fully replaces the WT and Energy shotgun for HoS.
   id: 254
   time: '2026-04-08T22:49:24.0000000+00:00'
+- author: TrylobyteWasTaken
+  changes:
+    - type: Fix
+      message: Plating and Lattice can now be traversed at normal speed again.
+  id: 255
+  time: '2026-04-08T22:49:44.0000000+00:00'
