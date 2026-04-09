@@ -2384,3 +2384,11 @@ Entries:
       message: Wagging has been improved!
   id: 267
   time: '2026-04-09T21:19:47.0000000+00:00'
+- author: rtasva
+  changes:
+    - type: Add
+      message: '"Teach a Lesson" traitor objective!'
+    - type: Tweak
+      message: Reduced frequency of RR kill objective
+  id: 268
+  time: '2026-04-09T21:20:03.0000000+00:00'
