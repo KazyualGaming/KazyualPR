@@ -2392,3 +2392,11 @@ Entries:
       message: Reduced frequency of RR kill objective
   id: 268
   time: '2026-04-09T21:20:03.0000000+00:00'
+- author: re-silvered
+  changes:
+    - type: Tweak
+      message: Aphro fadeout message works again, and with a little bit more flare
+    - type: Fix
+      message: Peregrine mags being general use batteries
+  id: 269
+  time: '2026-04-09T21:27:02.0000000+00:00'
