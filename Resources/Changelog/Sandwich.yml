@@ -1,5 +1,5 @@
-Order: -1 # Sandwich: us first since its our codebase
 Name: SandwichChangelog
+Order: -2
 Entries:
 - author: SandwichStation
   changes:
@@ -7,3 +7,195 @@ Entries:
       type: Add
   id: 1
   time: '2026-04-08T18:00:00.000000'
+- author: B3CKDOOR
+  changes:
+    - type: Add
+      message: SandwichStation changelog added.
+  id: 2
+  time: '2026-03-03T10:36:42.0000000+00:00'
+- author: QEU-B-458
+  changes:
+    - type: Add
+      message: >-
+        Station AI can now remotely control borgs with a B.O.R.I.S. module
+        installed.
+    - type: Fix
+      message: Cryogenic sleep units no longer crash on map load when rotated.
+    - type: Fix
+      message: Borg chassis no longer show surgery UI when interacted with.
+    - type: Fix
+      message: Fixed missing pirate logo texture.
+  id: 3
+  time: '2026-03-16T11:23:10.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Add
+      message: Security system against cheating shuttle players!
+    - type: Tweak
+      message: >-
+        Bluespace Stashes are now more restrictive (no longer nukedisks for the
+        next shift in your ship)
+    - type: Fix
+      message: Fixed bluespace WALL locker bug
+  id: 4
+  time: '2026-03-17T18:04:48.0000000+00:00'
+- author: BodenPflanze
+  changes:
+    - type: Add
+      message: Lizard legs are back!
+    - type: Tweak
+      message: The item size of collars has been reduced.
+    - type: Remove
+      message: Security no longer works for BluCorp.
+    - type: Remove
+      message: Security thongs.
+    - type: Fix
+      message: >-
+        Hotfix for most sprite gaps between limbs, there might still be some
+        issues for other species.
+  id: 5
+  time: '2026-03-19T20:34:29.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Tweak
+      message: >-
+        Shipyards no longer charge more then 50.000 bucks for loading a stored
+        ship
+  id: 6
+  time: '2026-03-19T18:39:42.0000000+00:00'
+- author: BodenPflanze
+  changes:
+    - type: Add
+      message: Added old Sandwich Station Tiles
+    - type: Remove
+      message: Removed HL Tiles
+  id: 7
+  time: '2026-03-17T18:10:32.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Fix
+      message: Fixed power on roundstart!
+  id: 8
+  time: '2026-03-22T11:28:16.0000000+00:00'
+- author: lever1209
+  changes:
+    - type: Fix
+      message: Fixed instruments allowing them to be used outside of hand slots.
+  id: 9
+  time: '2026-03-22T16:59:25.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Add
+      message: Added ship rulebook
+  id: 10
+  time: '2026-03-22T21:55:39.0000000+00:00'
+- author: QEU-B-458
+  changes:
+    - type: Add
+      message: >-
+        New utility dock airlock (AirlockShuttleUtility) that bridges HV power,
+        atmos piping, and disposal tubes between docked grids.
+  id: 11
+  time: '2026-03-24T13:25:25.0000000+00:00'
+- author: BodenPflanze
+  changes:
+    - type: Add
+      message: Added CE Handheld Power Console!
+    - type: Remove
+      message: Removed thongs and Libidozenithizine.
+    - type: Fix
+      message: Amber Map security decal color and LV wirering beneath bridge.
+  id: 12
+  time: '2026-03-24T13:13:39.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Add
+      message: Added volume slider to "Options Menu" and Jukebox for jukebox music
+  id: 13
+  time: '2026-03-27T16:59:51.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Tweak
+      message: Jukebox songs are now sorted again (and better)!
+    - type: Fix
+      message: Fixed Jukebox songs!
+  id: 14
+  time: '2026-03-25T15:20:31.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Tweak
+      message: Moved CCVar's
+    - type: Tweak
+      message: Made asteroids limit no longer hardcoded
+  id: 15
+  time: '2026-03-23T11:51:12.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Add
+      message: New station, Taco
+  id: 16
+  time: '2026-03-27T20:33:48.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Fix
+      message: Shuttles no longer get deleted on timer-run-out expeditions
+    - type: Add
+      message: Re-add of songs by Kazyu
+    - type: Add
+      message: Character randomizer now has a confirmation window
+    - type: Add
+      message: >-
+        New feature to disable auto rotation (server side, client will come
+        later)
+    - type: Tweak
+      message: Resized the "Portable Charger" (admin fix)
+    - type: Tweak
+      message: Captains+ can now reboot server without Yuuchan's intervention
+  id: 17
+  time: '2026-04-07T15:42:42.0000000+00:00'
+- author: BodenPflanze
+  changes:
+    - type: Add
+      message: Omega Station
+    - type: Remove
+      message: bondage gear
+    - type: Remove
+      message: leashes
+    - type: Remove
+      message: Overproportional genitals
+    - type: Tweak
+      message: various aghost improvements
+    - type: Tweak
+      message: Comms Console now uses Command access
+    - type: Tweak
+      message: Alert levels are now for the Station, not the entire Sector
+    - type: Tweak
+      message: Colonial Command is now Central Command
+    - type: Fix
+      message: rusted wall textures
+    - type: Fix
+      message: Neuralyzer
+  id: 18
+  time: '2026-04-02T14:39:46.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Fix
+      message: Fixed round endings (sometimes got stuck)
+    - type: Fix
+      message: Fixed ATAG's getting deleted
+    - type: Fix
+      message: Fixed spawning without gear or with wrong gear
+  id: 19
+  time: '2026-04-07T18:17:29.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Fix
+      message: Fixed water walking rubberbanding
+    - type: Fix
+      message: Fixed Station jobs not applying
+    - type: Fix
+      message: Vinyl and Advertisement crates now contain 5 records (as advertised)
+    - type: Fix
+      message: 'All maps (that we use) now start with freelancer slots   '
+  id: 20
+  time: '2026-04-07T21:17:36.0000000+00:00'
