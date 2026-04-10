@@ -31,7 +31,7 @@ public sealed class MutationFirebreathSystem : EntitySystem
 
     private void OnInit(EntityUid uid, MutationFirebreathComponent comp, ComponentInit args)
     {
-        _actions.AddAction(uid, ref comp.GrantedAction, "ActionGeneticFireball");
+        // _actions.AddAction(uid, ref comp.GrantedAction, "ActionGeneticFireball"); Sandwich: Commented out in genetic_mutations.yml, so here too!
     }
 
     private void OnShutdown(EntityUid uid, MutationFirebreathComponent comp, ComponentShutdown args)

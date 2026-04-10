@@ -51,12 +51,10 @@
   reactants:
     Ephedrine:
       amount: 2
-    Benzene:
-      amount: 1
-    Hydroxide:
-      amount: 1
+    Phenol:
+      amount: 2
   products:
-    Exile: 3
+    Exile: 4
 
 - type: reaction
   id: Mechanites

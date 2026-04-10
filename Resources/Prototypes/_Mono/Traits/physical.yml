@@ -7,7 +7,6 @@
   components:
     - type: Prying
       speedModifier: 0.2
-      pryPowered: true
 
 - type: trait
   id: Vigor
@@ -312,8 +311,7 @@
   description: trait-dermal-armor-desc
   category: Physical
   cost: 6
-  mutuallyExclusiveTraits:
-  - PoolToy
+  mutuallyExclusiveTraits: []
   components:
   - type: DamageProtectionBuff
     modifiers:
@@ -325,16 +323,6 @@
           Blunt: 1.5
           Slash: 1.5
           Piercing: 1.5
-
-#- type: trait
-#  id: Ironman
-#  name: trait-ironman-name
-#  description: trait-ironman-desc
-#  category: Physical
-#  cost: -5 # This shit was FREE for factions practically
-#  components:
-#  - type: Ironman
-#  traitGear: SpaceCash10000
 
 - type: trait
   id: TemperatureTolerance
@@ -387,3 +375,4 @@
     intervalSeconds: 1
     healPerSecond: .3
     critMultiplier: .25
+

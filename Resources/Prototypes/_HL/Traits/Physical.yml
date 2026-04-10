@@ -11,8 +11,8 @@
 
 - type: trait
   id: Inoculated
-  name: inoculated-name
-  description: inoculated-text
+  name: chosen-one-name
+  description: chosen-one-text
   category: Physical
   cost: 5
   speciesBlacklist:
@@ -37,7 +37,6 @@
   - Radproof
   - SnakeEater
   - Cryoresistant
-  - PoolToy
   components:
   - type: Insulated
 
@@ -54,7 +53,6 @@
   - Radproof
   - SnakeEater
   - Cryoresistant
-  - PoolToy
   components:
   - type: FireproofBodyParts
   - type: DamageProtectionBuff
@@ -62,7 +60,7 @@
       dermal:
         id: heatresistantTrait
         coefficients:
-          Heat: 0.01
+          Heat: 0.50
   - type: FireProtection
     reduction: 0
 
@@ -79,14 +77,13 @@
   - Heatresistant
   - SnakeEater
   - Cryoresistant
-  - PoolToy
   components:
   - type: DamageProtectionBuff
     modifiers:
       dermal:
         id: RadproofTrait
         coefficients:
-          Radiation: 0.01
+          Radiation: 0.50
 
 - type: trait
   id: SnakeEater
@@ -101,14 +98,13 @@
   - Heatresistant
   - Radproof
   - Cryoresistant
-  - PoolToy
   components:
   - type: DamageProtectionBuff
     modifiers:
       dermal:
         id: SnakeeaterTrait
         coefficients:
-          Poison: 0.01
+          Poison: 0.50
 
 - type: trait
   id: Cryoresistant
@@ -123,7 +119,6 @@
   - Insulated
   - SnakeEater
   - Radproof
-  - PoolToy
   components:
   - type: DamageProtectionBuff
     modifiers:
@@ -187,30 +182,3 @@
         Burn: -0.4
         Airloss: -1
 
-- type: trait
-  id: PoolToy
-  name: pooltoy-name
-  description: pooltoy-text
-  category: Physical
-  cost: 8
-  mutuallyExclusiveTraits:
-  - Heatresistant
-  - Insulated
-  - SnakeEater
-  - Radproof
-  - DermalArmor
-  components:
-  - type: Insulated
-  - type: DamageProtectionBuff
-    modifiers:
-      dermal:
-        id: PoolToyTrait
-        coefficients:
-          Blunt: 0.10
-          Slash: 2
-          Piercing: 3
-  - type: EmitSoundOnCritDeath
-    critSound:
-      path: /Audio/Items/smoke_grenade_smoke.ogg
-    deathSound:
-      path: /Audio/Effects/balloon-pop.ogg

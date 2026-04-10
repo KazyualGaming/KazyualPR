@@ -10,5 +10,6 @@
 #  source: "Artist name, youtube channel, name etc."
 
 - files: ["language.png"]
-  license: "CC-BY-SA 3.0"
+  license: "CC-BY-SA-3.0"
   copyright: "Topicranger"
+  source: "NA"

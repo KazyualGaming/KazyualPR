@@ -207,6 +207,8 @@
     - map: ["enum.PowerChargerVisualLayers.Light"]
       state: "light-off"
       shader: "unshaded"
+  - type: Fixtures
+    fixtures: {}
   - type: WallMount
   - type: Charger
     chargeRate: 25

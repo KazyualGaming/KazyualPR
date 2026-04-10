@@ -86,7 +86,6 @@
   id: JobServiceWorker
   groups:
 # HL start - Add departmental NF-style loadouts
-  - ServiceJumpsuit
   - CommonBackpack
   - ContractorOuterClothing
   - ContractorForcedOuterClothing
@@ -809,7 +808,6 @@
   groups:
 # HL start - Add departmental NF-style loadouts
   - ServiceForcedOuterClothing
-  - ServiceJumpsuit
   - CommonBackpack
   - ContractorOuterClothing
   - ContractorForcedOuterClothing

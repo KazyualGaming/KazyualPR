@@ -1791,8 +1791,6 @@
       prob: 0.002
     - id: ReagentSlimeBuzzachloricbees
       prob: 0.002
-    - id: ReagentSlimeCum
-      prob: 0.005
     - id: ReagentSlimePomelustine
       prob: 0.005
     - id: ReagentSlimePhilterex

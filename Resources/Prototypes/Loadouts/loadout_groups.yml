@@ -274,7 +274,6 @@
   - BartenderJumpskirt
   - BartenderJumpsuitPurple
   subgroups:
-  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -311,7 +310,6 @@
   - ChefJumpsuit
   - ChefJumpskirt
   subgroups:
-  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -334,7 +332,6 @@
   - CuratorJumpsuit
   - CuratorJumpskirt
   subgroups:
-  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -351,8 +348,6 @@
   - LawyerJumpskirtRed
   - LawyerJumpsuitGood
   - LawyerJumpskirtGood
-  subgroups:
-  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
   id: LawyerNeck
@@ -431,7 +426,6 @@
   - JanitorJumpsuit
   - JanitorJumpskirt
   subgroups:
-  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -481,7 +475,6 @@
   - BotanistJumpskirt
   - BotanistOveralls
   subgroups:
-  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -521,7 +514,6 @@
   - JesterSuit
   - JesterAltSuit
   subgroups:
-  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -591,7 +583,6 @@
   - MimeJumpsuit
   - MimeJumpskirt
   subgroups:
-  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -635,7 +626,6 @@
   - MusicianJumpsuit
   - MusicianJumpskirt
   subgroups:
-  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -703,7 +693,6 @@
   - QuartermasterTurtleneckSkirt
   - QuartermasterFormalSuit
   subgroups:
-  - CargoJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -752,7 +741,6 @@
   - CargoTechnicianJumpsuit
   - CargoTechnicianJumpskirt
   subgroups:
-  - CargoJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -837,7 +825,6 @@
   - ChiefEngineerTurtleneck
   - ChiefEngineerTurtleneckSkirt
   subgroups:
-  - EngineeringJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -877,7 +864,6 @@
   - YellowJumpsuit
   - YellowJumpskirt
   subgroups:
-  - EngineeringJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -902,7 +888,6 @@
   - SeniorEngineerJumpsuit
   - SeniorEngineerJumpskirt
   subgroups:
-  - EngineeringJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -948,7 +933,6 @@
   - AtmosphericTechnicianJumpskirt
   - AtmosphericTechnicianJumpsuitCasual
   subgroups:
-  - EngineeringJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1013,7 +997,6 @@
   - ResearchDirectorJumpsuit
   - ResearchDirectorJumpskirt
   subgroups:
-  - ScienceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1067,7 +1050,6 @@
   - SeniorResearcherJumpsuit
   - SeniorResearcherJumpskirt
   subgroups:
-  - ScienceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1130,7 +1112,6 @@
   - WhiteJumpsuit
   - WhiteJumpskirt
   subgroups:
-  - ScienceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 # Security
@@ -1588,7 +1569,6 @@
   - ReporterJumpsuit
   - JournalistJumpsuit
   subgroups:
-  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1608,7 +1588,6 @@
   - BoxerShorts
   - BoxerShortsWithTop
   subgroups:
-  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup

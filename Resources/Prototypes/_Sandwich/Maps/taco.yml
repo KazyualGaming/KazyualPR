@@ -15,8 +15,8 @@
         #  prefixCreator: '14-SWCH'
       - type: ExtraStationInformation
         iconPath: /Textures/Logo/icon/icon-256x256.png
-        stationSubtext: 'Start from nothing...'
-        stationDescription: 'Its gonna be tough, but fun!'
+        stationSubtext: 'sandwich-lobby-taco-subtext'
+        stationDescription: 'sandwich-lobby-taco-description'
         lobbySortOrder: 1
       - type: StationJobs
         availableJobs:

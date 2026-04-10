@@ -9,12 +9,12 @@
   source: "https://www.youtube.com/watch?v=-xRx0xeQpGE"
 
 - files: ["Classical/symphony-9.ogg"]
-  license: "CC0"
+  license: "CC0-1.0"
   copyright: "Dvorak"
   source: "https://www.youtube.com/watch?v=89jOPAGJq-M"
 
 - files: ["Classical/waltz-2.ogg"]
-  license: "CC0"
+  license: "CC0-1.0"
   copyright: "Dmitri Shostakovich"
   source: "https://youtu.be/mmCnQDUSO4I?si=k6Lbk5N0puf-wyov"
 

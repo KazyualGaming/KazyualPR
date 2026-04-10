@@ -11,5 +11,3 @@
       layers:
         - state: boxwide
         - state: shellslug
-    - type: GuideHelp
-      guides: [ Mindbreaking ]

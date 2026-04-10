@@ -5,7 +5,6 @@ _SandwichStation_ originally was a fork of _ShibaStation_<sup>†</sup> since th
 This codebase is based on _HardLight_ <br>
 However, this fork is mainly customized to our own standards and balances.
 
-
 ## Licenses
 
 [You can find more information about the multiple licenses here](https://github.com/SandwichStation/SandwichStation-HL?tab=License-1-ov-file)

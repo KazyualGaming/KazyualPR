@@ -1,14 +1,5 @@
 # HEAD
 - type: marking
-  id: LizardHeadGuilmon
-  bodyPart: Eyes
-  markingCategory: Head
-  speciesRestriction: [Reptilian]
-  sprites:
-  - sprite: _White/Mobs/Customization/snouts.rsi
-    state: guilmon
-
-- type: marking
   id: LizardHeadCobraHood
   bodyPart: HeadSide
   markingCategory: HeadSide

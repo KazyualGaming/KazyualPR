@@ -17,7 +17,6 @@
   category: Medium
   group: Shipyard
   shuttlePath: /Maps/_HL/Shuttles/verdure.yml
-  guidebookPage: ShipyardVerdure
   class:
   - Botany
   engine:

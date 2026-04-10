@@ -194,7 +194,7 @@ public sealed class RadiationCollectorSystem : EntitySystem
 
     private void UpdateMachineAppearance(EntityUid uid, RadiationCollectorComponent component, AppearanceComponent? appearance = null)
     {
-        if (!Resolve(uid, ref appearance))
+        if (!Resolve(uid, ref appearance, false))
             return;
 
         var state = component.Enabled ? RadiationCollectorVisualState.Active : RadiationCollectorVisualState.Deactive;

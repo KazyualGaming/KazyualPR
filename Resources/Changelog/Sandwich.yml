@@ -199,3 +199,55 @@ Entries:
       message: 'All maps (that we use) now start with freelancer slots   '
   id: 20
   time: '2026-04-07T21:17:36.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Fix
+      message: Fixed various broken prototypes, guidebook pages, and loadout entries
+    - type: Fix
+      message: >-
+        Fixed several missing content references across admin/event content,
+        shipyard entries, books, and markings
+    - type: Fix
+      message: >-
+        Fixed missing and incorrect text/localization in several traits,
+        recipes, and station descriptions
+    - type: Fix
+      message: >-
+        Fixed broken poster construction and removed invalid improvised magazine
+        recipes
+    - type: Fix
+      message: Fixed rain lizards causing spawn-related errors (and half-lizzos)
+    - type: Fix
+      message: Fixed the Exile chemistry recipe
+    - type: Fix
+      message: Fixed the default "Empty" map
+    - type: Fix
+      message: Restored normal headset behavior (passengers have common again)
+    - type: Fix
+      message: >-
+        Fixed round restart cleanup issues (ships got deleted 30 seconds after
+        round end...?!)
+    - type: Fix
+      message: Fixed several malformed YAML entries that were breaking tests
+    - type: Remove
+      message: Removed the Ironman trait
+    - type: Remove
+      message: Firebreath and Icebreath mutagens (broken)
+    - type: Tweak
+      message: Prybar Prosthetics no longer works on powered doors
+    - type: Tweak
+      message: Rebalanced several defensive traits to be less overpowered
+    - type: Tweak
+      message: Renamed Inoculated to The Chosen One
+  id: 21
+  time: '2026-04-10T17:05:25.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Fix
+      message: Fixed a memory issue with the automated tests
+    - type: Tweak
+      message: >-
+        Recalling shuttle now restricted on updates (I dont have all day to wait
+        for an update...)
+  id: 22
+  time: '2026-04-10T21:51:16.0000000+00:00'
