@@ -2379,13 +2379,6 @@ entities:
     - type: Transform
       pos: 1.5,-0.5
       parent: 2
-- proto: SpawnPointEngineeringQuadborg
-  entities:
-  - uid: 352
-    components:
-    - type: Transform
-      pos: 1.5,-0.5
-      parent: 2
 - proto: SpawnPointERTChaplain
   entities:
   - uid: 342
@@ -2517,13 +2510,6 @@ entities:
     components:
     - type: Transform
       pos: -3.5,0.5
-      parent: 2
-- proto: SpawnPointMedicalQuadborg
-  entities:
-  - uid: 451
-    components:
-    - type: Transform
-      pos: 1.5,0.5
       parent: 2
 - proto: SpawnPointMercenary
   entities:
@@ -2661,13 +2647,6 @@ entities:
     - type: Transform
       pos: 1.5,-0.5
       parent: 2
-- proto: SpawnPointSalvageQuadborg
-  entities:
-  - uid: 349
-    components:
-    - type: Transform
-      pos: 1.5,0.5
-      parent: 2
 - proto: SpawnPointSalvageSpecialist
   entities:
   - uid: 469
@@ -2702,20 +2681,6 @@ entities:
     components:
     - type: Transform
       pos: 1.5,-0.5
-      parent: 2
-- proto: SpawnPointSecurityQuadborg
-  entities:
-  - uid: 350
-    components:
-    - type: Transform
-      pos: 1.5,0.5
-      parent: 2
-- proto: SpawnPointServiceQuadborg
-  entities:
-  - uid: 475
-    components:
-    - type: Transform
-      pos: 1.5,0.5
       parent: 2
 - proto: SpawnPointServiceWorker
   entities:

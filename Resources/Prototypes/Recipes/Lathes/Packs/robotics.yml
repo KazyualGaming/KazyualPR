@@ -10,40 +10,25 @@
   - Quadborgendoskeleton
 
 - type: latheRecipePack
-  id: BorgModulesStatic #
+  id: BorgModulesStatic
   recipes:
+  - BorgModuleTool
   - BorgModuleCable
   - BorgModuleFireExtinguisher
   - BorgModuleRadiationDetection
-  - BorgModuleTool
-  - BorgModuleStun
-  - BorgModuleKill
-  - BorgModuleInvestigation
-  - BorgModuleSurgery # Shitmed Change
-  # Hardlight change start
-  - BorgModuleCleaning
-  - BorgModuleTreatment
-  - BorgModuleBureaucracy
-  - BorgModuleJetpack
-  - BorgModuleConstruction
-  - BorgModuleDefibrillator
-  - BorgModuleDiagnosis
-  - BorgModuleNFService
-  - BorgModuleRCDShipyard
-  - BorgModuleMining
 
 - type: latheRecipePack
   id: BorgModulesDynamic
   recipes:
   - BorgModuleAdvancedSurgery
   # Hardlight change start
-  - BorgModuleClowning
-  - BorgModuleMusique
+  #- BorgModuleClowning            #Doesnt exist, someone figure out why
+  #- BorgModuleMusique             #Doesnt exist, someone figure out why
   - BorgModuleTreatment
-  - BorgModuleadvancedmeasures
-  - BorgModuleAdvancedTreatment
-  - BorgModuleGrapplingGun
-  - BorgModuleLightReplacer
+  #- BorgModuleadvancedmeasures    #Doesnt exist, someone figure out why
+  - BorgModuleAdvancedTreatment 
+  #- BorgModuleGrapplingGun        #Doesnt exist, someone figure out why
+  #- BorgModuleLightReplacer       #Doesnt exist, someone figure out why
   - BorgModuleAdvancedParamedic
 
 - type: latheRecipePack
@@ -85,43 +70,6 @@
   - RightLegBorg
   - LightHeadBorg
   - TorsoBorg
-  - LeftArmBorgEngineer
-  - RightArmBorgEngineer
-  - LeftLegBorgEngineer
-  - RightLegBorgEngineer
-  - HeadBorgEngineer
-  - TorsoBorgEngineer
-  - LeftLegBorgJanitor
-  - RightLegBorgJanitor
-  - HeadBorgJanitor
-  - TorsoBorgJanitor
-  - LeftArmBorgMedical
-  - RightArmBorgMedical
-  - LeftLegBorgMedical
-  - RightLegBorgMedical
-  - HeadBorgMedical
-  - TorsoBorgMedical
-  - LeftArmBorgMining
-  - RightArmBorgMining
-  - LeftLegBorgMining
-  - RightLegBorgMining
-  - HeadBorgMining
-  - TorsoBorgMining
-  - LeftArmBorgService
-  - RightArmBorgService
-  - LeftLegBorgService
-  - RightLegBorgService
-  - HeadBorgService
-  - TorsoBorgService
-
-- type: latheRecipePack # HardLight: Added a recipe pack for security quadborg limbs
-  id: SecBorgLimbsStatic
-  recipes:
-  - LeftLegBorgSecurity
-  - RightLegBorgSecurity
-  - HeadBorgSecurity
-  - TorsoBorgSecurity
-  - Quadborgendoskeleton
 
 ## Dynamic
 
@@ -145,8 +93,6 @@
   - BorgModuleAdvancedParamedic # Frontier
   - BorgModuleAdvancedMining # Frontier
   - BorgModuleChef # Frontier
-  - BorgModuleRCD # Frontier
-  - BorgModuleStorage # HardLight
 
 - type: latheRecipePack
   id: MechParts

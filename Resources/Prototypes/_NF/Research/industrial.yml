@@ -12,6 +12,11 @@
   recipeUnlocks:
   - ConstructionBagOfHolding
   - NFBlueprintConstructionBagOfHolding
+  # Goobstation R&D Console rework start
+  position: -1,-2
+  technologyPrerequisites:
+  - PowerGeneration
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: HardsuitsBasic
@@ -24,6 +29,11 @@
   cost: 5000
   recipeUnlocks:
   - ClothingOuterHardsuitBasic
+  # Goobstation R&D Console rework start
+  position: -1,-3
+  technologyPrerequisites:
+  - ConstructionBags
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: HardsuitsSpecialized
@@ -39,11 +49,12 @@
   - ClothingOuterHardsuitEngineering
   - ClothingOuterHardsuitSpatio
   - ClothingOuterHardsuitSalvage
-  - ClothingOuterHardsuitClown
-  - ClothingOuterHardsuitMime
   - ClothingOuterHardsuitPilot
+  # Goobstation R&D Console rework start
+  position: -2,-3
   technologyPrerequisites:
   - HardsuitsBasic
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: AtmosphericDrilling
@@ -57,25 +68,13 @@
   recipeUnlocks:
   - GasMiningDrillMachineCircuitboard
   - GaslockFrameMachineCircuitboard
+  # Goobstation R&D Console rework start
+  position: -2,-4
+  technologyPrerequisites:
+  - AtmosphericTech
+  # Goobstation R&D Console rework end
 
 # Tier 2
-
-- type: technology
-  id: HardsuitsAdvanced
-  name: research-technology-hardsuits-advanced
-  icon:
-    sprite: Clothing/OuterClothing/Hardsuits/engineering-white.rsi
-    state: icon
-  discipline: Industrial
-  tier: 2
-  cost: 10000
-  recipeUnlocks:
-  - ClothingOuterHardsuitCap
-  - ClothingOuterHardsuitEngineeringWhite
-  - ClothingOuterHardsuitMedical
-  - ClothingOuterHardsuitLuxury
-  technologyPrerequisites:
-  - HardsuitsSpecialized
 
 # Tier 3
 
@@ -87,11 +86,14 @@
     state: icon
   discipline: Industrial
   tier: 3
-  cost: 15000
+  cost: 45000  # R&D change increase 15000>45000
   recipeUnlocks:
     - ClothingOuterHardsuitMaximPrototype
 #    - ClothingHeadHelmetAncient
 #    - ClothingOuterHardsuitAncientEVA
     - NFBlueprintClothingOuterHardsuitMaximPrototype
+  # Goobstation R&D Console rework start
+  position: -3,-3
   technologyPrerequisites:
-  - HardsuitsAdvanced
+  - HardsuitsSpecialized
+  # Goobstation R&D Console rework end

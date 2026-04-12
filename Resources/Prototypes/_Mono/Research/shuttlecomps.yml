@@ -1,3 +1,26 @@
+# tier 1
+
+# tier2
+
+- type: technology
+  id: ShuttleCtla25DriveResearch
+  name: research-technology-bluespace-drive-ctla25
+  icon:
+    sprite: _Mono/Structures/ShuttleComponents/drive.rsi
+    state: control
+  discipline: Experimental
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - MachineDriveCTLA25Circuitboard
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - RapidPartExchange
+  position: -5, 4
+  # Goobstation R&D Console rework end
+
+# tier 3
+
 - type: technology
   id: ShuttleArmamentComponentsResearch
   name: research-technology-shuttle-armaments-components
@@ -14,6 +37,11 @@
   - MachineGCSLowCircuitboard
   - MachineGCSMediumCircuitboard
   - MachineGCSHighCircuitboard
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - LightShuttleWeapons
+  position: 6,-3 
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: ShuttleRadarResearch
@@ -27,18 +55,11 @@
   recipeUnlocks:
   - AdvancedRadarConsoleCircuitboard
   #- ComputerIFFCircuitboard
-
-- type: technology
-  id: ShuttleCtla25DriveResearch
-  name: research-technology-bluespace-drive-ctla25
-  icon:
-    sprite: _Mono/Structures/ShuttleComponents/drive.rsi
-    state: control
-  discipline: Experimental
-  tier: 2
-  cost: 5000
-  recipeUnlocks:
-  - MachineDriveCTLA25Circuitboard
+  # Goobstation R&D Console rework start
+  position: 2,4
+  technologyPrerequisites:
+  - AudioVisualCommunication
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: ShuttleCtlaAdvancedDriveResearch
@@ -52,3 +73,9 @@
   recipeUnlocks:
   - MachineDriveCTLA25sCircuitboard
   - MachineDriveCTLA50Circuitboard
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - ShuttleCtla25DriveResearch
+  - QuantumLeaping
+  position: -6, 4
+  # Goobstation R&D Console rework end

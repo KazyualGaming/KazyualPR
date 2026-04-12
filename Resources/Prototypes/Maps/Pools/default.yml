@@ -8,11 +8,14 @@
   # - Cluster # Cluster is missing in HL
   # - Convex  # Disabled due to lowpop on Sandwich
   # - Core
+  - Eaglerock
   - Elkridge
   # - Fland   # Disabled due to lowpop on Sandwich
   # - Gate
+  - HardCore
+  - HardlightSilica
   # - Loop    # Disabled due to Error occuring when creating
-  - Marathon
+  # - Marathon # No HL version
   # - Meta    # Disabled due to Error occuring when creating
   # - Oasis   # Disabled due to lowpop on Sandwich
   - Omega   
@@ -21,4 +24,4 @@
   - Reach
   #- Train
 
-# Appearently this file is not getting used, pool is in Ressources/Prototypes/_NF/Maps/Pools/frontier.yml
+# Gonna crash out, this is the pool we are using smh

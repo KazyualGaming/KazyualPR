@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 03/20/2026 19:00:54
-  entityCount: 23865
+  time: 04/09/2026 10:14:36
+  entityCount: 23862
 maps:
 - 1
 grids:
@@ -138686,13 +138686,6 @@ entities:
     - type: Transform
       pos: 36.5,3.5
       parent: 2
-- proto: SpawnPointEngineeringQuadborg
-  entities:
-  - uid: 19584
-    components:
-    - type: Transform
-      pos: 33.5,-24.5
-      parent: 2
 - proto: SpawnPointForensicMantis
   entities:
   - uid: 23816
@@ -138832,13 +138825,6 @@ entities:
     components:
     - type: Transform
       pos: -35.5,-23.5
-      parent: 2
-- proto: SpawnPointMedicalQuadborg
-  entities:
-  - uid: 19609
-    components:
-    - type: Transform
-      pos: 34.5,-25.5
       parent: 2
 - proto: SpawnPointMercenary
   entities:
@@ -139073,6 +139059,18 @@ entities:
     - type: Transform
       pos: -37.5,-52.5
       parent: 2
+- proto: SpawnPointQuadborg
+  entities:
+  - uid: 3353
+    components:
+    - type: Transform
+      pos: 34.5,-26.5
+      parent: 2
+  - uid: 19584
+    components:
+    - type: Transform
+      pos: 34.5,-25.5
+      parent: 2
 - proto: SpawnPointQuartermaster
   entities:
   - uid: 19653
@@ -139127,13 +139125,6 @@ entities:
     components:
     - type: Transform
       pos: 28.5,-34.5
-      parent: 2
-- proto: SpawnPointSalvageQuadborg
-  entities:
-  - uid: 19661
-    components:
-    - type: Transform
-      pos: 35.5,-24.5
       parent: 2
 - proto: SpawnPointSalvageSpecialist
   entities:
@@ -139227,20 +139218,6 @@ entities:
     components:
     - type: Transform
       pos: -25.5,16.5
-      parent: 2
-- proto: SpawnPointSecurityQuadborg
-  entities:
-  - uid: 19679
-    components:
-    - type: Transform
-      pos: 34.5,-24.5
-      parent: 2
-- proto: SpawnPointServiceQuadborg
-  entities:
-  - uid: 19680
-    components:
-    - type: Transform
-      pos: 34.5,-26.5
       parent: 2
 - proto: SpawnPointServiceWorker
   entities:

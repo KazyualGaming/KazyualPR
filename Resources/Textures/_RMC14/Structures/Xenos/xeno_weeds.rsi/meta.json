@@ -284,6 +284,22 @@
       "directions": 4
     },
     {
+      "name": "human_4",
+      "directions": 4
+    },
+    {
+      "name": "human_4_f",
+      "directions": 4
+    },
+    {
+      "name": "human_5",
+      "directions": 4
+    },
+    {
+      "name": "human_5_f",
+      "directions": 4
+    },
+    {
       "name": "nest_overlay",
       "directions": 4
     }

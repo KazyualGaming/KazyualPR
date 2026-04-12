@@ -16,6 +16,11 @@
   - BoozeDispenserMachineCircuitboard
   - SodaDispenserMachineCircuitboard
   - ImpCoffeeMachineCircuitboard #imp
+  # Goobstation R&D Console rework start
+  position: -3,5
+  technologyPrerequisites:
+  - Hydroponics
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: MiscellaneousItemsOrganization
@@ -45,6 +50,11 @@
   - NFPouchMime
   - NFPouchCaptain
   - NFPouchCargo
+  # Goobstation R&D Console rework start
+  position: 1,6
+  technologyPrerequisites:
+  - FauxAstroTiles
+  # Goobstation R&D Console rework end
 
 # Tier 2
 
@@ -60,6 +70,11 @@
   recipeUnlocks:
   - ChemMasterMachineCircuitboard
   - ChemDispenserMachineCircuitboard
+  # Goobstation R&D Console rework start
+  position: 3,4
+  technologyPrerequisites:
+  - AudioVisualCommunication
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: IndustrialMedicine
@@ -73,20 +88,13 @@
   recipeUnlocks:
   - MedicalAssemblerMachineCircuitboard
   - HotplateMachineCircuitboard
+  # Goobstation R&D Console rework start
+  position: 2,5
+  technologyPrerequisites:
+  - ChemicalDispensary
+  # Goobstation R&D Console rework
 
-# Tier 3
-
-- type: technology
-  id: AdvancedPersonalPropulsion
-  name: research-technology-advanced-personal-propulsion
-  icon:
-    sprite: Objects/Tanks/Jetpacks/void.rsi
-    state: icon
-  discipline: CivilianServices
-  tier: 3
-  cost: 15000
-  recipeUnlocks:
-  - JetpackVoid
+# # Tier 3
 
 - type: technology
   id: AdvancedFoodService
@@ -103,6 +111,11 @@
   - KitchenAssemblerMachineCircuitboard
   - ElectricRangeMachineCircuitboard
   - BorgModuleChef
+  # Goobstation R&D Console rework start
+  position: -3,8
+  technologyPrerequisites:
+  - MeatManipulation
+  # Goobstation R&D Console rework
 
 - type: technology
   id: MobileSanitation
@@ -115,3 +128,8 @@
   cost: 5000
   recipeUnlocks:
     - JanicartFlatpack
+  # Goobstation R&D Console rework start
+  position: -1,7
+  technologyPrerequisites:
+  - AdvancedCleaning
+  # Goobstation R&D Console rework

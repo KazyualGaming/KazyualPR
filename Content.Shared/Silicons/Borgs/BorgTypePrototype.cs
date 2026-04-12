@@ -30,6 +30,14 @@ public sealed partial class BorgTypePrototype : IPrototype
     [DataField]
     public required EntProtoId DummyPrototype;
 
+    // Floof Quad Changes start
+    /// <summary>
+    /// Defines the chassis family this borg type belongs to (e.g. "bipedal", "quad").
+    /// </summary>
+    [DataField("chassisFamily")]
+    public string ChassisFamily { get; set; } = "bipedal";
+    // Floof Quad Changes end
+    
     //
     // Functional information
     //

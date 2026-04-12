@@ -37,3 +37,23 @@
         # startingItem: PowerCellMedium
   # - type: RandomMetadata
     # nameSegments: [names_borg]
+
+# Borgs
+- type: entity
+  id: PlayerQuadBorgBattery
+  parent: BorgChassisQuadSelectable
+  name: Unselected Quadborg
+  suffix: Battery
+  components:
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - PositronicBrain
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+  - type: StartingMindRole
+    mindRole: "MindRoleSiliconBrain"
+    silent: true

@@ -2,7 +2,51 @@
 
 # Tier 2
 
+- type: technology
+  id: AdvancedTreatment
+  name: research-technology-advanced-treatment
+  icon:
+    sprite: _Shitmed/Objects/Specific/Medical/Surgery/e-scalpel.rsi
+    state: e-scalpel-on
+  discipline: CivilianServices
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  # - BorgModuleAdvancedTreatment # Frontier
+  # - BorgModuleDefibrillator # Frontier
+  - BorgModuleAdvancedParamedic # Frontier
+  - MedicalTechFabCircuitboard
+  - EnergyScalpel
+  - EnergyCautery
+  - AdvancedRetractor
+  - BorgModuleAdvancedSurgery
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - AdvancedEntertainment
+  position: -2,4
+  # Goobstation R&D Console rework end
+
 # Tier 3
+
+- type: technology
+  id: CyberneticEnhancements
+  name: research-technology-cybernetic-enhancements
+  icon:
+    sprite: _Shitmed/Mobs/Species/IPC/organs.rsi
+    state: eyes
+  discipline: CivilianServices
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - JawsOfLifeLeftArm
+  - JawsOfLifeRightArm
+  - SpeedLeftLeg
+  - SpeedRightLeg
+  - BasicCyberneticEyes
+  position: -2,5
+  technologyPrerequisites:          # MISSING WOMP WOMP
+  - AdvancedTreatment
+  #- Autodoc
 
 - type: technology
   id: HighEndSurgery
@@ -15,3 +59,6 @@
   cost: 10000
   recipeUnlocks:
   - ShitmedOmnimedTool
+  technologyPrerequisites:
+  - SLCyberneticEnhancements
+  position: -2,7

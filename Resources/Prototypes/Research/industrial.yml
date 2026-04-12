@@ -13,12 +13,15 @@
   - MiningDrill
   - WeaponGrapplingGun # Frontier
   - MineralScannerEmpty
-  #- BorgModuleMining # HL
-  - BorgModuleGrapplingGun
   - OreProcessorIndustrialMachineCircuitboard
   - ClothingMaskWeldingGas
   - ClothingShoesBootsJump
   - MechEquipmentDrill # Goobstation
+  # Goobstation R&D Console rework start
+  position: 0,-4
+  technologyPrerequisites:
+  - SpaceScanning
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: SpaceScanning
@@ -33,6 +36,11 @@
   - RadarConsoleCircuitboard
   - HandHeldMassScanner
   # - BorgModuleGPS # Frontier: useless
+  # Goobstation R&D Console rework start
+  position: 0,-3
+  technologyPrerequisites:
+  - PowerGeneration
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: AdvancedPowercells
@@ -47,6 +55,11 @@
   - PowerCellHigh
   - TurboItemRechargerCircuitboard
   - SMESAdvancedMachineCircuitboard
+  # Goobstation R&D Console rework start
+  position: 1,-6
+  technologyPrerequisites:
+  - IndustrialEngineering
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: MechanicalCompression
@@ -59,6 +72,11 @@
   cost: 10000
   recipeUnlocks:
   - FlatpackerMachineCircuitboard
+  # Goobstation R&D Console rework start
+  position: 1,-4
+  technologyPrerequisites:
+  - SpaceScanning
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: IndustrialEngineering
@@ -89,6 +107,11 @@
   - SheetifierMachineCircuitboard
   - EngineeringTechFabCircuitboard
   - MaterialSiloMachineCircuitboard # Frontier
+  # Goobstation R&D Console rework start
+  position: 1,-5
+  technologyPrerequisites:
+  - MechanicalCompression
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: PowerGeneration
@@ -106,6 +129,8 @@
   - SolarControlComputerCircuitboard
   - SolarTrackerElectronics
   - EmitterCircuitboard
+  position: 0,-2
+
 
 - type: technology
   id: AtmosphericTech
@@ -119,6 +144,11 @@
   recipeUnlocks:
   - ThermomachineFreezerMachineCircuitBoard
   - GasRecyclerMachineCircuitboard
+  # Goobstation R&D Console rework start
+  position: -1,-4
+  technologyPrerequisites:
+  - SpaceScanning
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: RipleyAPLU
@@ -139,6 +169,11 @@
   - RipleyPeripheralsElectronics
   - MechEquipmentGrabber
   - MechEquipmentFork # Frontier
+  # Goobstation R&D Console rework start
+  position: 0,-6
+  technologyPrerequisites:
+  - SalvageEquipment
+  # Goobstation R&D Console rework end
 
 # Tier 2
 
@@ -159,6 +194,11 @@
   - MiniStationAnchorCircuitboard # Frontier
   - SmallThrusterMachineCircuitboard # Frontier
   - SmallGyroscopeMachineCircuitboard # Frontier
+  # Goobstation R&D Console rework start
+  position: 2,-4
+  technologyPrerequisites:
+  - MechanicalCompression
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: AdvancedAtmospherics
@@ -176,6 +216,9 @@
   #  - FireExtinguisherBluespace # DeltaV
   technologyPrerequisites:
   - AtmosphericTech
+  # Goobstation R&D Console rework start
+  position: -2,-5
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: AdvancedToolsTechnology
@@ -190,14 +233,17 @@
     - WelderExperimental
     - PowerDrill
     - JawsOfLife
-    - UtilityBeltChiefEngineer
     - BorgModuleAdvancedTool
-    - BorgModuleRCD
     - Fulton # Frontier
     - FultonBeacon # Frontier
     - NFBlueprintPowerDrill # Frontier
     - NFBlueprintJawsOfLife # Frontier
     - NFBlueprintWelderExperimental # Frontier
+  # Goobstation R&D Console rework start
+  position: 2,-5
+  technologyPrerequisites:
+  - Shuttlecraft
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: MassExcavation
@@ -217,6 +263,11 @@
   - NFBlueprintAdvancedMineralScannerEmpty # Frontier
   - BorgModuleAdvancedMining # Frontier
   - MechEquipmentDrillDiamond
+  # Goobstation R&D Console rework start
+  position: 0,-7
+  technologyPrerequisites:
+  - RipleyAPLU
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: Ripley2
@@ -230,8 +281,11 @@
   recipeUnlocks:
   - RipleyMKIIHarness
   - RipleyUpgradeKit
+  # Goobstation R&D Console rework start
+  position: -1,-6
   technologyPrerequisites:
   - RipleyAPLU
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: Clarke
@@ -250,8 +304,11 @@
   - ClarkeTreads
   - ClarkeCentralElectronics
   - ClarkePeripheralsElectronics
+  # Goobstation R&D Console rework start
+  position: -1,-7
   technologyPrerequisites:
   - Ripley2
+  # Goobstation R&D Console rework end
 
 # Tier 3
 
@@ -263,7 +320,7 @@
     state: holding
   discipline: Industrial
   tier: 3
-  cost: 15000
+  cost: 20000 # Goobstation 15000 -> 20000
   recipeUnlocks:
   - SmallBluespaceAirTank #Frpntier
   - BluespaceAirTank #Frontier
@@ -275,7 +332,11 @@
   - NFBlueprintClothingBackpackSatchelHolding # Frontier
   - NFBlueprintClothingBackpackDuffelHolding # Frontier
   - NFBlueprintClothingBackpackMessengerHolding # Frontier
-  - BorgModuleStorage # HardLight
+  # Goobstation R&D Console rework start
+  position: 2,-7
+  technologyPrerequisites:
+   - PortableFission
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: PortableFission
@@ -291,8 +352,12 @@
   - NFBlueprintPowerCellMicroreactor # Frontier
   - PortableGeneratorDKJrMachineCircuitboard # Frontier
   - NFBlueprintPortableGeneratorDKJr # Frontier
+  # Goobstation R&D Console rework start
   technologyPrerequisites:
-  - AdvancedPowercells
+  - AdvancedToolsTechnology
+  - AdvancedPowercells    
+  position: 2,-6             
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: RapidConstruction
@@ -307,3 +372,8 @@
   - ShipyardRCD # Frontier
   - ShipyardRCDAmmo # Frontier
   - NFBlueprintShipyardRCDAmmo # Frontier
+  # Goobstation R&D Console rework start
+  position: 3,-6
+  technologyPrerequisites:
+  - PortableFission
+  # Goobstation R&D Console rework end

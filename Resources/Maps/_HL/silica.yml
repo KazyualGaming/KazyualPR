@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 02/22/2026 13:54:06
-  entityCount: 25744
+  time: 04/09/2026 10:18:29
+  entityCount: 25740
 maps:
 - 1
 grids:
@@ -12284,7 +12284,7 @@ entities:
       pos: -29.5,-12.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -150789.95
+      secondsUntilStateChange: -150832.5
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -12296,7 +12296,7 @@ entities:
       pos: 30.5,-28.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -150796.45
+      secondsUntilStateChange: -150839
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -12308,7 +12308,7 @@ entities:
       pos: 30.5,-24.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -150797.14
+      secondsUntilStateChange: -150839.69
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -13501,7 +13501,7 @@ entities:
       pos: 36.5,0.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -242493.25
+      secondsUntilStateChange: -242535.8
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -128492,16 +128492,49 @@ entities:
     - type: Transform
       pos: -13.5,1.5
       parent: 2
+    - type: DeviceLinkSink
+      ports:
+      - Start
+      - AutoStart
+    - type: DeviceLinkSource
+      linkedPorts: {}
+      lastSignals: {}
+      ports:
+      - Started
+      - Completed
+      - Failed
   - uid: 18574
     components:
     - type: Transform
       pos: -23.5,10.5
       parent: 2
+    - type: DeviceLinkSink
+      ports:
+      - Start
+      - AutoStart
+    - type: DeviceLinkSource
+      linkedPorts: {}
+      lastSignals: {}
+      ports:
+      - Started
+      - Completed
+      - Failed
   - uid: 18575
     components:
     - type: Transform
       pos: -22.5,-14.5
       parent: 2
+    - type: DeviceLinkSink
+      ports:
+      - Start
+      - AutoStart
+    - type: DeviceLinkSource
+      linkedPorts: {}
+      lastSignals: {}
+      ports:
+      - Started
+      - Completed
+      - Failed
 - proto: MachineElectrolysisUnit
   entities:
   - uid: 18576
@@ -128509,6 +128542,17 @@ entities:
     - type: Transform
       pos: -24.5,9.5
       parent: 2
+    - type: DeviceLinkSink
+      ports:
+      - Start
+      - AutoStart
+    - type: DeviceLinkSource
+      linkedPorts: {}
+      lastSignals: {}
+      ports:
+      - Started
+      - Completed
+      - Failed
 - proto: MachineFrame
   entities:
   - uid: 18577
@@ -150515,13 +150559,6 @@ entities:
     - type: Transform
       pos: 41.5,-1.5
       parent: 2
-- proto: SpawnPointEngineeringQuadborg
-  entities:
-  - uid: 21770
-    components:
-    - type: Transform
-      pos: 13.5,28.5
-      parent: 2
 - proto: SpawnPointForensicMantis
   entities:
   - uid: 21771
@@ -150616,13 +150653,6 @@ entities:
     components:
     - type: Transform
       pos: -20.5,-0.5
-      parent: 2
-- proto: SpawnPointMedicalQuadborg
-  entities:
-  - uid: 21786
-    components:
-    - type: Transform
-      pos: 12.5,27.5
       parent: 2
 - proto: SpawnPointMercenary
   entities:
@@ -150751,6 +150781,18 @@ entities:
     - type: Transform
       pos: -25.5,16.5
       parent: 2
+- proto: SpawnPointQuadborg
+  entities:
+  - uid: 11006
+    components:
+    - type: Transform
+      pos: 11.5,27.5
+      parent: 2
+  - uid: 21770
+    components:
+    - type: Transform
+      pos: 12.5,27.5
+      parent: 2
 - proto: SpawnPointQuartermaster
   entities:
   - uid: 21808
@@ -150788,13 +150830,6 @@ entities:
     components:
     - type: Transform
       pos: -2.5,40.5
-      parent: 2
-- proto: SpawnPointSalvageQuadborg
-  entities:
-  - uid: 21814
-    components:
-    - type: Transform
-      pos: 14.5,27.5
       parent: 2
 - proto: SpawnPointSalvageSpecialist
   entities:
@@ -150868,20 +150903,6 @@ entities:
     components:
     - type: Transform
       pos: 30.5,4.5
-      parent: 2
-- proto: SpawnPointSecurityQuadborg
-  entities:
-  - uid: 21828
-    components:
-    - type: Transform
-      pos: 11.5,27.5
-      parent: 2
-- proto: SpawnPointServiceQuadborg
-  entities:
-  - uid: 21829
-    components:
-    - type: Transform
-      pos: 13.5,27.5
       parent: 2
 - proto: SpawnPointServiceWorker
   entities:

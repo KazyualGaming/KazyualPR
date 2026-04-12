@@ -14,7 +14,6 @@
 
   defaultModules:
   - BorgModuleTool
-  - BorgModuleJetpack # Frontier
 
   radioChannels:
   - Science
@@ -48,9 +47,8 @@
   defaultModules:
   - BorgModuleTool
   - BorgModuleConstruction
-  - BorgModuleRCDShipyard # Frontier: RCD<RCDShipyard
+  - BorgModuleRCD
   - BorgModuleCable
-  - BorgModuleJetpack # Frontier
 
   radioChannels:
   - Engineering
@@ -87,7 +85,6 @@
   - BorgModuleGrapplingGun
   - BorgModuleAppraisal
   - BorgModuleTool
-  - BorgModuleJetpack # Frontier
 
   radioChannels:
   - Supply
@@ -123,7 +120,6 @@
   defaultModules:
   - BorgModuleLightReplacer
   - BorgModuleCleaning
-  - BorgModuleJetpack # Frontier
 
   radioChannels:
   - Science
@@ -158,9 +154,6 @@
 
   defaultModules:
   - BorgModuleTreatment
-  # - BorgModuleAdvancedTreatment # Frontier
-  # - BorgModuleDefibrillator # Frontier
-  - BorgModuleJetpack # Frontier
 
   radioChannels:
   - Science
@@ -212,7 +205,6 @@
   - BorgModuleClowning
   - BorgModuleBureaucracy # Frontier
   - BorgModuleNFService # Frontier
-  - BorgModuleJetpack # Frontier
 
   radioChannels:
   - Science

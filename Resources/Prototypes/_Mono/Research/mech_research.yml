@@ -1,3 +1,7 @@
+# Tier 1
+
+# Tier 2
+
 - type: technology
   id: Broadsword
   name: research-technology-broadsword
@@ -21,8 +25,11 @@
   - LightMechaSMG
   - LightMechaShotgun
   - PowerCageMech
+  # Goobstation R&D Console rework start
   technologyPrerequisites:
   - Gygax
+  position: 5,-1
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: Halberd
@@ -38,8 +45,11 @@
   - MediumMechDMR
   - MediumMechCoilgun
   - MediumMechTOW
+  # Goobstation R&D Console rework start
   technologyPrerequisites:
   - Broadsword
+  position: 6,-2
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: Sabre
@@ -52,8 +62,14 @@
   cost: 5000
   recipeUnlocks:
   - SabreHarness
+  # Goobstation R&D Console rework start
   technologyPrerequisites:
   - Broadsword
+  - Halberd
+  position: 6,-1
+  # Goobstation R&D Console rework end
+
+# Tier 3
 
 - type: technology
   id: Flail
@@ -77,8 +93,11 @@
   - HeavyMechRPG
   - HeavyMechCannon
   - HeavyMechProjector
+  # Goobstation R&D Console rework start
   technologyPrerequisites:
-  - Broadsword
+  - Sabre
+  position: 7,-1
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: Spyglass
@@ -93,8 +112,11 @@
   - SpyglassHarness
   - EWACMechaFlares
   - EWACMechaJammer
+  # Goobstation R&D Console rework start
   technologyPrerequisites:
   - Flail
+  position: 8,-1
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: Mace
@@ -107,5 +129,8 @@
   cost: 9000
   recipeUnlocks:
   - MaceHarness
+  # Goobstation R&D Console rework start
   technologyPrerequisites:
   - Flail
+  position: 8,-2
+  # Goobstation R&D Console rework end

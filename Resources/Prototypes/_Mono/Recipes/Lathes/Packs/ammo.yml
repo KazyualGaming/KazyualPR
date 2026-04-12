@@ -4,98 +4,97 @@
   id: AllTheAmmo
   recipes:
   - Magazine45_ACPPistolFMJ
-  - Magazine45_ACPPistolRubber
   - Magazine45_ACPPistolIncendiary
   - Magazine45_ACPPistolPractice
   - Magazine45_ACPPistolEmpty
   - Magazine45_ACPPistolUranium
   - Magazine45_ACPSubMachineGunFMJ
-  - Magazine45_ACPSubMachineGunRubber
   - Magazine45_ACPSubMachineGunIncendiary
   - Magazine45_ACPSubMachineGunPractice
   - Magazine45_ACPSubMachineGunEmpty
   - Magazine45_ACPSubMachineGunUranium
   - AmmoBox45_ACPFMJ
-  - AmmoBox45_ACPRubber
+  # - Magazine45_ACPPistolRubber
+  # - Magazine45_ACPSubMachineGunRubber
+  # - AmmoBox45_ACPRubber
   - AmmoBox45_ACPIncendiary
   - AmmoBox45_ACPPractice
   - AmmoBox45_ACPUranium
   - Magazine9x19mmPistolFMJ
-  - Magazine9x19mmPistolRubber
+  # - Magazine9x19mmPistolRubber
+  # - Magazine9x19mmSubMachineGunRubber
+  # - SpeedLoader9x19mmRubber
+  # - AmmoBox9x19mmRubber
   - Magazine9x19mmPistolIncendiary
   - Magazine9x19mmPistolPractice
   - Magazine9x19mmPistolEmpty
   - Magazine9x19mmPistolUranium
   - Magazine9x19mmSubMachineGunFMJ
-  - Magazine9x19mmSubMachineGunRubber
   - Magazine9x19mmSubMachineGunIncendiary
   - Magazine9x19mmSubMachineGunPractice
   - Magazine9x19mmSubMachineGunEmpty
   - Magazine9x19mmSubMachineGunUranium
   - SpeedLoader9x19mmFMJ
-  - SpeedLoader9x19mmRubber
   - SpeedLoader9x19mmIncendiary
   - SpeedLoader9x19mmPractice
   - SpeedLoader9x19mmEmpty
   - SpeedLoader9x19mmUranium
   - AmmoBox9x19mmFMJ
-  - AmmoBox9x19mmRubber
   - AmmoBox9x19mmIncendiary
   - AmmoBox9x19mmPractice
   - AmmoBox9x19mmUranium
   - Magazine57x28mmPistolFMJ
-  - Magazine57x28mmPistolRubber
   - Magazine57x28mmPistolIncendiary
   - Magazine57x28mmPistolPractice
   - Magazine57x28mmPistolEmpty
   - Magazine57x28mmPistolUranium
   - Magazine57x28mmSubMachineGunFMJ
-  - Magazine57x28mmSubMachineGunRubber
   - Magazine57x28mmSubMachineGunIncendiary
   - Magazine57x28mmSubMachineGunPractice
   - Magazine57x28mmSubMachineGunEmpty
   - Magazine57x28mmSubMachineGunUranium
   - AmmoBox57x28mmFMJ
-  - AmmoBox57x28mmRubber
+  # - Magazine57x28mmPistolRubber
+  # - Magazine57x28mmSubMachineGunRubber
+  # - AmmoBox57x28mmRubber
   - AmmoBox57x28mmIncendiary
   - AmmoBox57x28mmPractice
   - AmmoBox57x28mmUranium
   - Magazine46x30mmPistolFMJ
-  - Magazine46x30mmPistolRubber
   - Magazine46x30mmPistolIncendiary
   - Magazine46x30mmPistolPractice
   - Magazine46x30mmPistolEmpty
   - Magazine46x30mmPistolUranium
   - Magazine46x30mmSubMachineGunFMJ
-  - Magazine46x30mmSubMachineGunRubber
+  # - Magazine46x30mmPistolRubber
+  # - Magazine46x30mmSubMachineGunRubber
+  # - AmmoBox46x30mmRubber
   - Magazine46x30mmSubMachineGunIncendiary
   - Magazine46x30mmSubMachineGunPractice
   - Magazine46x30mmSubMachineGunEmpty
   - Magazine46x30mmSubMachineGunUranium
   - AmmoBox46x30mmFMJ
-  - AmmoBox46x30mmRubber
   - AmmoBox46x30mmIncendiary
   - AmmoBox46x30mmPractice
   - AmmoBox46x30mmUranium
   - Magazine45_magnumPistolFMJ
-  - Magazine45_magnumPistolRubber
   - Magazine45_magnumPistolIncendiary
   - Magazine45_magnumPistolPractice
   - Magazine45_magnumPistolEmpty
   - Magazine45_magnumPistolUranium
   - SpeedLoader45_magnumFMJ
-  - SpeedLoader45_magnumRubber
   - SpeedLoader45_magnumIncendiary
   - SpeedLoader45_magnumPractice
   - SpeedLoader45_magnumEmpty
   - SpeedLoader45_magnumUranium
   - AmmoBox45_magnumFMJ
-  - AmmoBox45_magnumRubber
+  # - Magazine45_magnumPistolRubber
+  # - SpeedLoader45_magnumRubber
+  # - AmmoBox45_magnumRubber
   - AmmoBox45_magnumIncendiary
   - AmmoBox45_magnumPractice
   - AmmoBox45_magnumUranium
   - Magazine762x39mmFMJ
-  - Magazine762x39mmRubber
   - Magazine762x39mmIncendiary
   - Magazine762x39mmPractice
   - Magazine762x39mmEmpty
@@ -103,24 +102,25 @@
   - SpeedLoader762x39mmFMJ
   - SpeedLoader762x54mmRFMJ
   - AmmoBox762x39mmFMJ
-  - AmmoBox762x39mmRubber
+  # - Magazine762x39mmRubber
+  # - AmmoBox762x39mmRubber
   - AmmoBox762x39mmIncendiary
   - AmmoBox762x39mmPractice
   - AmmoBox762x39mmUranium
   - Magazine556x45mmFMJ
-  - Magazine556x45mmRubber
+  # - Magazine556x45mmRubber
+  # - SpeedLoader556x45mmRubber
+  # - AmmoBox556x45mmRubber
   - Magazine556x45mmIncendiary
   - Magazine556x45mmPractice
   - Magazine556x45mmEmpty
   - Magazine556x45mmUranium
   - SpeedLoader556x45mmFMJ
-  - SpeedLoader556x45mmRubber
   - SpeedLoader556x45mmIncendiary
   - SpeedLoader556x45mmPractice
   - SpeedLoader556x45mmEmpty
   - SpeedLoader556x45mmUranium
   - AmmoBox556x45mmFMJ
-  - AmmoBox556x45mmRubber
   - AmmoBox556x45mmIncendiary
   - AmmoBox556x45mmPractice
   - AmmoBox556x45mmUranium
@@ -128,35 +128,35 @@
   - Magazine8x65mmEmpty
   - AmmoBox8x65mmSKR
   - Magazine762x54mmRFMJ
-  - Magazine762x54mmRRubber
   - Magazine762x54mmRIncendiary
   - Magazine762x54mmRPractice
   - Magazine762x54mmREmpty
   - Magazine762x54mmRUranium
   - AmmoBox762x54mmRFMJ
-  - AmmoBox762x54mmRRubber
   - AmmoBox762x54mmRIncendiary
   - AmmoBox762x54mmRPractice
   - AmmoBox762x54mmRUranium
   - Magazine762x51mmFMJ
-  - Magazine762x51mmRubber
   - Magazine762x51mmIncendiary
   - Magazine762x51mmPractice
   - Magazine762x51mmEmpty
   - Magazine762x51mmUranium
   - AmmoBox762x51mmFMJ
-  - AmmoBox762x51mmRubber
+  # - Magazine762x51mmRubber
+  # - AmmoBox762x51mmRubber
+  # - Magazine762x54mmRRubber
+  # - AmmoBox762x54mmRRubber
   - AmmoBox762x51mmIncendiary
   - AmmoBox762x51mmPractice
   - AmmoBox762x51mmUranium
   - Magazine12_gaugeBuckshot
-  - Magazine12_gaugeBeanbag
+  # - Magazine12_gaugeBeanbag
+  # - AmmoBox12_gaugeBeanbag
   - Magazine12_gaugeIncendiary
   - Magazine12_gaugePractice
   - Magazine12_gaugeEmpty
   - Magazine12_gaugeUranium
   - AmmoBox12_gaugeBuckshot
-  - AmmoBox12_gaugeBeanbag
   - AmmoBox12_gaugeIncendiary
   - AmmoBox12_gaugePractice
   - AmmoBox12_gaugeUranium
@@ -483,48 +483,48 @@
   - AmmoBox12_gaugePractice
   - AmmoBox23x75mmPractice
 #Rubber>
-  - Magazine45_ACPPistolRubber
-  - Magazine45_ACPSubMachineGunRubber
-  - AmmoBox45_ACPRubber
-  - Magazine9x19mmPistolRubber
-  - Magazine9x19mmSubMachineGunRubber
-  - SpeedLoader9x19mmRubber
-  - AmmoBox9x19mmRubber
-  - Magazine57x28mmPistolRubber
-  - Magazine57x28mmSubMachineGunRubber
-  - AmmoBox57x28mmRubber
-  - Magazine46x30mmPistolRubber
-  - Magazine46x30mmSubMachineGunRubber
-  - AmmoBox46x30mmRubber
-  - Magazine45_magnumPistolRubber
-  - SpeedLoader45_magnumRubber
-  - AmmoBox45_magnumRubber
-  - Magazine762x39mmRubber
-  - AmmoBox762x39mmRubber
-  - Magazine556x45mmRubber
-  - SpeedLoader556x45mmRubber
-  - AmmoBox556x45mmRubber
-  - Magazine762x54mmRRubber
-  - AmmoBox762x54mmRRubber
-  - Magazine762x51mmRubber
-  - AmmoBox762x51mmRubber
-  - Magazine12_gaugeBeanbag
-  - AmmoBox12_gaugeBeanbag
+  # - Magazine45_ACPPistolRubber
+  # - Magazine45_ACPSubMachineGunRubber
+  # - AmmoBox45_ACPRubber
+  # - Magazine9x19mmPistolRubber
+  # - Magazine9x19mmSubMachineGunRubber
+  # - SpeedLoader9x19mmRubber
+  # - AmmoBox9x19mmRubber
+  # - Magazine57x28mmPistolRubber
+  # - Magazine57x28mmSubMachineGunRubber
+  # - AmmoBox57x28mmRubber
+  # - Magazine46x30mmPistolRubber
+  # - Magazine46x30mmSubMachineGunRubber
+  # - AmmoBox46x30mmRubber
+  # - Magazine45_magnumPistolRubber
+  # - SpeedLoader45_magnumRubber
+  # - AmmoBox45_magnumRubber
+  # - Magazine762x39mmRubber
+  # - AmmoBox762x39mmRubber
+  # - Magazine556x45mmRubber
+  # - SpeedLoader556x45mmRubber
+  # - AmmoBox556x45mmRubber
+  # - Magazine762x54mmRRubber
+  # - AmmoBox762x54mmRRubber
+  # - Magazine762x51mmRubber
+  # - AmmoBox762x51mmRubber
+  # - Magazine12_gaugeBeanbag
+  # - AmmoBox12_gaugeBeanbag
 #Parts
   - BulletTip
   - BulletCasing9x19mm
   - BulletFlechette
 # big boxes
-  - AmmoBox46x30mmBig
-  - AmmoBox556x45mmBigFMJ
-  - AmmoBox635x40mmCaselessBig
-  - AmmoBox762x39mmBigFMJ
-  - AmmoBox762x51mmBigFMJ
-  - AmmoBox762x54mmRBigFMJ
-  - AmmoBox9x19mmBigFMJ
-  - AmmoBox762x51mmRubberBig
-  - AmmoBox762x39mmRubberBig
-  - AmmoBox762x54mmRRubberBig
+  # - AmmoBox46x30mmBig                    # WTF, aren't big boxes supposed to be only in the Ammo techfab???
+  # - AmmoBox556x45mmBigFMJ
+  # - AmmoBox635x40mmCaselessBig
+  # - AmmoBox762x39mmBigFMJ
+  # - AmmoBox762x51mmBigFMJ
+  # - AmmoBox762x54mmRBigFMJ
+  # - AmmoBox9x19mmBigFMJ
+  # - AmmoBox762x51mmRubberBig       
+  # - AmmoBox762x39mmRubberBig
+  # - AmmoBox762x54mmRRubberBig
 
 #advanced = Uranium + Incendiary
 

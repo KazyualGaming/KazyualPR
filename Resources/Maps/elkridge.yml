@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 03/25/2026 01:05:09
-  entityCount: 18834
+  time: 04/09/2026 10:16:47
+  entityCount: 18831
 maps:
 - 1
 grids:
@@ -110044,6 +110044,11 @@ entities:
     - type: Transform
       pos: -39.5,15.5
       parent: 2
+  - uid: 15125
+    components:
+    - type: Transform
+      pos: -13.5,13.5
+      parent: 2
 - proto: SpawnPointBotanist
   entities:
   - uid: 15076
@@ -110209,13 +110214,6 @@ entities:
     - type: Transform
       pos: 4.5,-26.5
       parent: 2
-- proto: SpawnPointEngineeringQuadborg
-  entities:
-  - uid: 15105
-    components:
-    - type: Transform
-      pos: 32.5,-21.5
-      parent: 2
   - uid: 15106
     components:
     - type: Transform
@@ -110330,13 +110328,6 @@ entities:
     components:
     - type: Transform
       pos: 40.5,18.5
-      parent: 2
-- proto: SpawnPointMedicalQuadborg
-  entities:
-  - uid: 15125
-    components:
-    - type: Transform
-      pos: 34.5,9.5
       parent: 2
   - uid: 15126
     components:
@@ -110459,6 +110450,13 @@ entities:
     - type: Transform
       pos: 1.5,20.5
       parent: 2
+- proto: SpawnPointQuadborg
+  entities:
+  - uid: 15105
+    components:
+    - type: Transform
+      pos: -13.5,14.5
+      parent: 2
 - proto: SpawnPointQuartermaster
   entities:
   - uid: 15147
@@ -110491,13 +110489,6 @@ entities:
     components:
     - type: Transform
       pos: -29.5,-11.5
-      parent: 2
-- proto: SpawnPointSalvageQuadborg
-  entities:
-  - uid: 15152
-    components:
-    - type: Transform
-      pos: 22.5,38.5
       parent: 2
   - uid: 15153
     components:
@@ -110572,13 +110563,6 @@ entities:
     - type: Transform
       pos: -0.5,-32.5
       parent: 2
-- proto: SpawnPointSecurityQuadborg
-  entities:
-  - uid: 15166
-    components:
-    - type: Transform
-      pos: -2.5,-25.5
-      parent: 2
   - uid: 15167
     components:
     - type: Transform
@@ -110588,13 +110572,6 @@ entities:
     components:
     - type: Transform
       pos: -3.5,-25.5
-      parent: 2
-- proto: SpawnPointServiceQuadborg
-  entities:
-  - uid: 15169
-    components:
-    - type: Transform
-      pos: -2.5,0.5
       parent: 2
   - uid: 15170
     components:

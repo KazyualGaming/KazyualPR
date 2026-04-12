@@ -251,3 +251,39 @@ Entries:
         for an update...)
   id: 22
   time: '2026-04-10T21:51:16.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Tweak
+      message: Changed companies
+  id: 23
+  time: '2026-04-10T22:06:25.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Add
+      message: Cyborg Selection System
+    - type: Add
+      message: Goob Research Tree
+    - type: Remove
+      message: Random Research System
+    - type: Remove
+      message: Researchable Hardsuits and misc from Head of Staffs
+    - type: Remove
+      message: Security Quadborg
+    - type: Remove
+      message: Security Cyborg Modules
+    - type: Remove
+      message: Quadborg hands and PDA slot
+    - type: Remove
+      message: Storage Cyborg Module
+    - type: Tweak
+      message: Bell Collar Sprite
+    - type: Tweak
+      message: Quadborgs move faster
+    - type: Tweak
+      message: Rubber munition now needs to be reasearched > "Nonlethals" research
+    - type: Tweak
+      message: CE hardsuit returned to 100% radiation protection
+    - type: Tweak
+      message: CE toolbelt has its whitelist returned + its old slot size
+  id: 24
+  time: '2026-04-11T17:09:23.0000000+00:00'

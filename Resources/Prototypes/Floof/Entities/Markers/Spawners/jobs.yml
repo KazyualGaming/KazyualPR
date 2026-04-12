@@ -1,0 +1,27 @@
+- type: entity
+  id: SpawnPointQuadborg
+  parent: SpawnPointJobBase
+  name: quadborg
+  components:
+  - type: SpawnPoint
+    job_id: QuadBorg
+  - type: Sprite
+    layers:
+    - sprite: Markers/jobs.rsi
+      state: green
+    - sprite: Floof/Mobs/Silicon/quad.rsi
+      state: quadsprite
+      scale: 0.7, 0.7
+      map: ["movement"]
+    - sprite: Floof/Mobs/Silicon/quad.rsi
+      state: quadspritel
+      scale: 0.7, 0.7
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - sprite: Floof/Mobs/Silicon/quad.rsi
+      state: quadspriter
+      scale: 0.7, 0.7
+      shader: unshaded
+      map: ["light"]
+      visible: false

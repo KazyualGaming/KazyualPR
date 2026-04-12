@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 03/13/2026 21:14:39
-  entityCount: 21446
+  time: 04/09/2026 10:06:00
+  entityCount: 21441
 maps:
 - 1
 grids:
@@ -7945,7 +7945,7 @@ entities:
       pos: -21.5,45.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -58911.473
+      secondsUntilStateChange: -59029.92
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8344,7 +8344,7 @@ entities:
       pos: 35.5,24.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -22399.918
+      secondsUntilStateChange: -22518.367
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8776,7 +8776,7 @@ entities:
       pos: -23.5,-12.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -145225.9
+      secondsUntilStateChange: -145344.36
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8788,7 +8788,7 @@ entities:
       pos: -23.5,-13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -145416.3
+      secondsUntilStateChange: -145534.75
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8821,7 +8821,7 @@ entities:
       pos: -23.5,-1.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -137054.98
+      secondsUntilStateChange: -137173.44
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8912,7 +8912,7 @@ entities:
       pos: 21.5,-13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -126445.445
+      secondsUntilStateChange: -126563.9
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8958,7 +8958,7 @@ entities:
       pos: 23.5,-5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -96416.14
+      secondsUntilStateChange: -96534.59
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9172,7 +9172,7 @@ entities:
       pos: 20.5,17.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -95964.08
+      secondsUntilStateChange: -96082.53
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9937,7 +9937,7 @@ entities:
       pos: -23.5,39.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -53389.215
+      secondsUntilStateChange: -53507.664
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -112846,7 +112846,7 @@ entities:
           - 620
           - 623
           - 624
-          - 627
+          - invalid
           - 625
           - 630
           - 626
@@ -131400,6 +131400,11 @@ entities:
       parent: 2
 - proto: SpawnPointBorg
   entities:
+  - uid: 627
+    components:
+    - type: Transform
+      pos: -28.5,25.5
+      parent: 2
   - uid: 17188
     components:
     - type: Transform
@@ -131527,13 +131532,6 @@ entities:
     - type: Transform
       pos: -35.5,36.5
       parent: 2
-- proto: SpawnPointEngineeringQuadborg
-  entities:
-  - uid: 17213
-    components:
-    - type: Transform
-      pos: 29.5,23.5
-      parent: 2
   - uid: 17214
     components:
     - type: Transform
@@ -131633,13 +131631,6 @@ entities:
     components:
     - type: Transform
       pos: 13.5,48.5
-      parent: 2
-- proto: SpawnPointMedicalQuadborg
-  entities:
-  - uid: 17230
-    components:
-    - type: Transform
-      pos: 8.5,55.5
       parent: 2
   - uid: 17231
     components:
@@ -131862,6 +131853,13 @@ entities:
     - type: Transform
       pos: -0.5,58.5
       parent: 2
+- proto: SpawnPointQuadborg
+  entities:
+  - uid: 17213
+    components:
+    - type: Transform
+      pos: -27.5,25.5
+      parent: 2
 - proto: SpawnPointQuartermaster
   entities:
   - uid: 17247
@@ -131894,18 +131892,6 @@ entities:
     components:
     - type: Transform
       pos: -43.5,26.5
-      parent: 2
-- proto: SpawnPointSalvageQuadborg
-  entities:
-  - uid: 17251
-    components:
-    - type: Transform
-      pos: 34.5,13.5
-      parent: 2
-  - uid: 17252
-    components:
-    - type: Transform
-      pos: 33.5,13.5
       parent: 2
 - proto: SpawnPointSalvageSpecialist
   entities:
@@ -131980,24 +131966,10 @@ entities:
     - type: Transform
       pos: -26.5,33.5
       parent: 2
-- proto: SpawnPointSecurityQuadborg
-  entities:
-  - uid: 17266
-    components:
-    - type: Transform
-      pos: -29.5,33.5
-      parent: 2
   - uid: 17267
     components:
     - type: Transform
       pos: -29.5,34.5
-      parent: 2
-- proto: SpawnPointServiceQuadborg
-  entities:
-  - uid: 17268
-    components:
-    - type: Transform
-      pos: -41.5,-11.5
       parent: 2
   - uid: 17269
     components:

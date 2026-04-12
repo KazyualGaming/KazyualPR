@@ -8,7 +8,8 @@ namespace Content.Shared.Overlays;
 /// <summary>
 /// This component allows you to see health bars above damageable mobs.
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)] // Shitmed Change
+[RegisterComponent, NetworkedComponent]
+[AutoGenerateComponentState(true)]
 public sealed partial class ShowHealthBarsComponent : Component
 {
     /// <summary>
@@ -21,5 +22,6 @@ public sealed partial class ShowHealthBarsComponent : Component
     };
 
     [DataField]
+    [AutoNetworkedField]
     public ProtoId<HealthIconPrototype>? HealthStatusIcon = "HealthIconFine";
 }

@@ -140,7 +140,7 @@
 # HL end
 
 - type: entity
-  parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
+  parent: ClothingBeltStorageBase # Shiba HL, returned old base because ClothingBeltStorageBase >> NFClothingBeltStorageBase
   id: ClothingBeltChiefEngineer
   name: chief engineer's toolbelt
   description: Holds tools, looks snazzy.
@@ -149,40 +149,43 @@
     sprite: Clothing/Belt/ce.rsi
   - type: Clothing
     sprite: Clothing/Belt/ce.rsi
-    #- type: Storage # Frontier
-    #grid: # Frontier
-    #- 0,0,9,1 # Frontier
-    # TODO: Fill this out more.
-    # whitelist: # Frontier: commented out whitelist
-    #   tags:
-    #     - Wirecutter
-    #     - Crowbar
-    #     - Screwdriver
-    #     - Flashlight
-    #     - Wrench
-    #     - GeigerCounter
-    #     - Flare
-    #     - CableCoil
-    #     - Powerdrill
-    #     - JawsOfLife
-    #     - CigPack
-    #     - Radio
-    #     - HolofanProjector
-    #     - Multitool
-    #     - AppraisalTool
-    #   components:
-    #     - StationMap
-    #     - SprayPainter
-    #     - NetworkConfigurator
-    #     - RCD
-    #     - RCDAmmo
-    #     - Welder
-    #     - Flash
-    #     - Handcuff
-    #     - PowerCell
-    #     - Geiger
-    #     - TrayScanner
-    #     - GasAnalyzer
+  - type: Storage 
+    grid:
+    - 0,0,9,1 
+    #TODO: Fill this out more.
+    whitelist:
+      tags:
+        - AppraisalTool
+        - CableCoil
+        - CigPack
+        - Crowbar
+        - Flare
+        - Flashlight
+        - GeigerCounter
+        - GPS
+        - HolofanProjector
+        - JawsOfLife
+        - Multitool
+        - Powerdrill
+        - Radio
+        - Screwdriver
+        - WeldingMask
+        - Wirecutter
+        - Wrench
+      components:
+        - Flash
+        - GasAnalyzer
+        - Geiger
+        - Handcuff
+        - HandLabeler
+        - NetworkConfigurator
+        - PowerCell
+        - RCD
+        - RCDAmmo
+        - SprayPainter
+        - StationMap
+        - TrayScanner
+        - Welder
   - type: ItemMapper
     mapLayers:
       drill:

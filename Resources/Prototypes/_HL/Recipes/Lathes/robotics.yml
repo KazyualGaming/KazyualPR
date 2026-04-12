@@ -15,12 +15,7 @@
   id: BorgModuleRCDShipyard
   result: BorgModuleRCDShipyard
 
-- type: latheRecipe
-  parent: BaseGoldBorgModuleRecipe
-  id: BorgModuleadvancedmeasures
-  result: BorgModuleadvancedmeasures
-
-- type: latheRecipe
-  parent: BaseBorgModuleRecipe
-  id: BorgModuleStorage
-  result: BorgModuleStorage
+# - type: latheRecipe                    #Doesnt exist, someone figure out why (ALSO THIS EXISTS DOUBLE IN Prototypes/Recipes/Lathes/robotics.yml, WHY?!??!?)
+#   parent: BaseGoldBorgModuleRecipe
+#   id: BorgModuleadvancedmeasures
+#   result: BorgModuleadvancedmeasures

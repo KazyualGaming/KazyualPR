@@ -208511,13 +208511,6 @@ entities:
     - type: Transform
       pos: 87.5,55.5
       parent: 2
-- proto: SpawnPointEngineeringQuadborg
-  entities:
-  - uid: 31477
-    components:
-    - type: Transform
-      pos: 60.5,94.5
-      parent: 2
 - proto: SpawnPointForensicMantis
   entities:
   - uid: 31478
@@ -208685,13 +208678,6 @@ entities:
     components:
     - type: Transform
       pos: 78.5,97.5
-      parent: 2
-- proto: SpawnPointMedicalQuadborg
-  entities:
-  - uid: 31508
-    components:
-    - type: Transform
-      pos: 62.5,94.5
       parent: 2
 - proto: SpawnPointMercenary
   entities:
@@ -208882,13 +208868,6 @@ entities:
     - type: Transform
       pos: 34.5,104.5
       parent: 2
-- proto: SpawnPointSalvageQuadborg
-  entities:
-  - uid: 31542
-    components:
-    - type: Transform
-      pos: 60.5,93.5
-      parent: 2
 - proto: SpawnPointSalvageSpecialist
   entities:
   - uid: 31543
@@ -209061,20 +209040,6 @@ entities:
     components:
     - type: Transform
       pos: 154.5,57.5
-      parent: 2
-- proto: SpawnPointSecurityQuadborg
-  entities:
-  - uid: 31576
-    components:
-    - type: Transform
-      pos: 60.5,92.5
-      parent: 2
-- proto: SpawnPointServiceQuadborg
-  entities:
-  - uid: 31577
-    components:
-    - type: Transform
-      pos: 62.5,92.5
       parent: 2
 - proto: SpawnPointServiceWorker
   entities:

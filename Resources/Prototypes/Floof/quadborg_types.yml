@@ -1,0 +1,191 @@
+# Generic Quadborg
+- type: borgType
+  id: genericQuad
+  chassisFamily: quad
+
+  # Description
+  dummyPrototype: BorgChassisQuad
+
+  # Functional
+  extraModuleCount: 3
+  moduleWhitelist:
+    tags:
+    - BorgModuleGeneric
+    - BorgModuleScience #until sciborgs are added
+
+  defaultModules:
+  - BorgModuleTool
+
+  radioChannels:
+  - Science
+
+  # Visual
+  inventoryTemplateId: borgquad
+  spriteBodyState: quadsprite
+  spriteBodyMovementState: quadsprite_moving
+  spriteHasMindState: quadspritel
+  spriteNoMindState: quadspriter
+  spriteToggleLightState: quadspritel
+
+  # Pet
+  petSuccessString: petting-success-generic-cyborg
+  petFailureString: petting-failure-generic-cyborg
+
+
+# Engineering borg
+- type: borgType
+  id: engineeringQuad
+  chassisFamily: quad
+
+  # Description
+  dummyPrototype: BorgChassisQuadEngineer
+
+  # Functional
+  extraModuleCount: 1
+  moduleWhitelist:
+    tags:
+    - BorgModuleGeneric
+    - BorgModuleEngineering
+
+  defaultModules:
+  - BorgModuleTool
+  - BorgModuleConstruction
+  - BorgModuleRCD
+  - BorgModuleCable
+
+  radioChannels:
+  - Engineering
+  - Science
+
+  # Visual
+  inventoryTemplateId: borgquad
+  spriteBodyState: engieborg
+  spriteBodyMovementState: engieborg_moving
+  spriteHasMindState: engieborgl
+  spriteNoMindState: engieborgr
+  spriteToggleLightState: engieborgl
+
+  # Pet
+  petSuccessString: petting-success-engineer-cyborg
+  petFailureString: petting-failure-engineer-cyborg
+
+
+# Salvage borg
+- type: borgType
+  id: miningQuad
+  chassisFamily: quad
+
+  # Description
+  dummyPrototype: BorgChassisQuadsalv
+
+  # Functional
+  extraModuleCount: 1
+  moduleWhitelist:
+    tags:
+    - BorgModuleGeneric
+    - BorgModuleCargo
+
+  defaultModules:
+  - BorgModuleMining
+  - BorgModuleGrapplingGun
+  - BorgModuleAppraisal
+  - BorgModuleTool
+
+  radioChannels:
+  - Supply
+  - Science
+
+  # Visual
+  inventoryTemplateId: borgquad
+  spriteBodyState: quadspritesalv
+  spriteBodyMovementState: quadspritesalv_moving
+  spriteHasMindState: quadspritesalvl
+  spriteNoMindState: quadspritesalvr
+  spriteToggleLightState: quadspritesalvl
+
+  # Pet
+  petSuccessString: petting-success-salvage-cyborg
+  petFailureString: petting-failure-salvage-cyborg
+
+
+# Medical borg
+- type: borgType
+  id: medicalQuad
+  chassisFamily: quad
+
+  # Description
+  dummyPrototype: BorgChassisQuadmed
+
+  # Functional
+  extraModuleCount: 1
+  moduleWhitelist:
+    tags:
+    - BorgModuleGeneric
+    - BorgModuleMedical
+
+  defaultModules:
+  - BorgModuleTreatment
+
+  radioChannels:
+  - Science
+  - Medical
+
+  addComponents:
+  - type: SolutionScanner
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+
+  # Visual
+  inventoryTemplateId: borgquad
+  spriteBodyState: quadspritemed
+  spriteBodyMovementState: quadspritemed_moving
+  spriteHasMindState: quadspritemedl
+  spriteNoMindState: quadspritemedr
+  spriteToggleLightState: quadspritemedl
+
+  # Pet
+  petSuccessString: petting-success-medical-cyborg
+  petFailureString: petting-failure-medical-cyborg
+  
+
+# Service borg
+- type: borgType
+  id: serviceQuad
+  chassisFamily: quad
+
+  # Description
+  dummyPrototype: BorgChassisQuadserv
+
+  # Functional
+  extraModuleCount: 1
+  moduleWhitelist:
+    tags:
+    - BorgModuleGeneric
+    - BorgModuleService
+
+  defaultModules:
+  - BorgModuleMusique
+  # - BorgModuleService # Frontier: deprecated, use NF variant
+  - BorgModuleClowning
+  - BorgModuleBureaucracy # Frontier
+  - BorgModuleNFService # Frontier
+
+  radioChannels:
+  - Science
+  - Service
+
+  # Visual
+  inventoryTemplateId: borgquad
+  spriteBodyState: quadspriteserv
+  spriteBodyMovementState: quadspriteserv_moving
+  spriteHasMindState: quadspriteservl
+  spriteNoMindState: quadspriteservr
+  spriteToggleLightState: quadspriteservl
+
+  # Pet
+  petSuccessString: petting-success-service-cyborg
+  petFailureString: petting-failure-service-cyborg

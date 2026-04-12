@@ -692,7 +692,6 @@
     - SecurityPracticeStatic
     - CivilianAmmoRecipePack
     - SecurityWeaponsStatic
-    - SecBorgLimbsStatic # HardLight addition
     dynamicPacks:
     - SalvageSecurityBoards
     - SalvageSecurityWeapons
@@ -701,6 +700,7 @@
     - SecurityExplosives
     - AdvancedAmmoRecipePack
     - SecurityWeapons
+    - SecurityAmmo           # Sandwich edit
     - SecurityDisablers
     - SMCybernetics
     # Mono - Mechs

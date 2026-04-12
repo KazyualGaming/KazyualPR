@@ -27,34 +27,14 @@
   job: StationTrafficController
 
 - type: stationPay
-  id: EngineeringQuadBorgPay
-  payPerHour: 24000 # Specialisation
-  job: EngineeringQuadBorg
-
-- type: stationPay
-  id: SecurityQuadBorgPay
-  payPerHour: 26000 # Danger
-  job: SecurityQuadBorg
-
-- type: stationPay
-  id: SalvageQuadBorgPay
-  payPerHour: 20000 # New Minimum
-  job: SalvageQuadBorg
-
-- type: stationPay
-  id: ServiceQuadBorgPay
-  payPerHour: 20000 # New Minimum
-  job: ServiceQuadBorg
-
-- type: stationPay
-  id: MedicalQuadBorgPay
-  payPerHour: 24000 # Specialisation
-  job: MedicalQuadBorg
-
-- type: stationPay
   id: BorgPay
   payPerHour: 20000 # New Minimum
   job: Borg
+
+- type: stationPay
+  id: QuadBorgPay
+  payPerHour: 20000 # New Minimum
+  job: QuadBorg
 
 - type: stationPay
   id: StationAiPay

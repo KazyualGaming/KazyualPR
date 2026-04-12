@@ -13,3 +13,8 @@
     - SyringeDart
     - NFDartTracking
     - DartGun
+  # Goobstation R&D Console rework start
+  position: 3,7
+  technologyPrerequisites:
+  - BiochemicalStasis
+  #Goobstation R&D Console rework end

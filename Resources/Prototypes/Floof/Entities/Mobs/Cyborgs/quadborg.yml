@@ -1,25 +1,25 @@
 - type: entity
-  id: BorgChassisQuad
+  id: BorgChassisQuadSelectable
   parent: BaseBorgChassisNT
   components:
   - type: Body
     prototype: Quadborg
   - type: Inventory
     speciesId: quadborg
-    templateId: borgquad #Hardlight - Changes Quadborgs over to use our armor slots
+    templateId: borgquad 
   - type: Sprite
     sprite: Floof/Mobs/Silicon/quad.rsi
     scale: 0.7, 0.7
     layers:
     - state: quadsprite
-      map: ["movement"]
+      map: ["enum.BorgVisualLayers.Body", "movement"]
     - state: quadspritel
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
       visible: false
     - state: quadspriter
       shader: unshaded
-      map: ["light"]
+      map: ["light", "enum.BorgVisualLayers.LightStatus"]
       visible: false
   - type: SpriteMovement
     movementLayers:
@@ -28,7 +28,6 @@
     noMovementLayers:
       movement:
         state: quadsprite
-  - type: Stripping
   - type: Strap # HardLight: Enables buckling to borgs
     blacklist: # HardLight: Stop crashing the damned clients and server!
       components:
@@ -41,38 +40,9 @@
       components:
       - RoboticsConsole
   - type: Sanitized
-  - type: Hands
-  # - type: Cuffable # Removed due to not having a cuffed sprite, throwing errors.
   - type: ComplexInteraction
-  #- type: IdExaminable # HardLight: Quadborgs have hands and ID slots again!
-  # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    preserveExistingChannels: true
-    intrinsicChannels:
-    - Binary
-    - Science
-    - Common
-  - type: IntrinsicRadioTransmitter
-    intrinsicChannels:
-    - Binary
-    - Science
-    - Common
-  - type: ActiveRadio
-    intrinsicChannels:
-    - Binary
-    - Science
-    - Common
-  # HardLight end
   - type: BorgChassis
-    maxModules: 5
-    moduleWhitelist:
-      tags:
-      - BorgModuleGeneric
-      - XenoborgModuleGeneric
-      - BorgModuleSecurity
-      - BorgModuleSyndicate
-      - BorgModuleSyndicateAssault
+    maxModules: 0
     hasMindState: quadspritel
     noMindState: quadspriter
   - type: BorgTransponder
@@ -80,103 +50,67 @@
       sprite: Floof/Mobs/Silicon/quad.rsi
       state: quadsprite
     name: cyborg
-  - type: Construction
-    node: cyborg
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.5         # Vanilla Borgs have 2.5
+    baseSprintSpeed: 5.5       # Vanilla Borgs have 4.5
+  - type: BorgSwitchableType
+    chassisFamily: quad
+    inherentRadioChannels:
+    - Common
+    - Binary
   - type: Speech
     speechVerb: Robotic
   - type: LayingDown
-  - type: AccessReader
-    access: [["Security"], ["Command"], ["Research"], ["Mercenary"]]
-  - type: SiliconLawProvider
-    laws: Qborg
-  - type: InteractionPopup  # Hardlight change
+  - type: InteractionPopup 
     interactSuccessString: petting-success-generic-cyborg
     interactFailureString: petting-failure-generic-cyborg
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
-  - type: SpriteStateToggle
-    spriteLayer: movement
-    stateOff: quadsprite
-    stateOn: quadspriteballz
-    movementStateOff: quadsprite_moving
-    movementStateOn: quadsprite_movingballz
 
 - type: entity
-  id: BorgChassisQuadSec
-  parent: [BorgChassisQuad, ShowSecurityIcons]
+  id: BorgChassisQuad
+  parent: BorgChassisQuadSelectable
+  name: generic quadborg
+  suffix: type picked
   components:
-  - type: Sprite
-    sprite: Floof/Mobs/Silicon/quad.rsi
-    scale: 0.7, 0.7
-    layers:
-    - state: quadsprite
-      map: ["movement"]
-    - state: quadspritel
-      map: ["enum.BorgVisualLayers.Light"]
-      shader: unshaded
-      visible: false
-    - state: quadspriter
-      shader: unshaded
-      map: ["light"]
-      visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: quadsprite_moving
-    noMovementLayers:
-      movement:
-        state: quadsprite
-  # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    preserveExistingChannels: true
-    intrinsicChannels:
-    - Binary
-    - ColSec
-    - Security
-    - Science
-    - Common
-  - type: IntrinsicRadioTransmitter
-    intrinsicChannels:
-    - Binary
-    - ColSec
-    - Security
-    - Science
-    - Common
-  - type: ActiveRadio
-    intrinsicChannels:
-    - Binary
-    - ColSec
-    - Security
-    - Science
-    - Common
-  # HardLight end
-  - type: BorgChassis
-    maxModules: 5
-    moduleWhitelist:
-      tags:
-      - BorgModuleGeneric
-      - XenoborgModuleGeneric
-      - BorgModuleSecurity
-      - BorgModuleSyndicate
-      - BorgModuleSyndicateAssault
-    hasMindState: quadspritel
-    noMindState: quadspriter
-  - type: AccessReader
-    access: [["Security"], ["Command"]]
-  - type: SiliconLawProvider
-    laws: Qborg
-  - type: FlashImmunity
-  - type: SpriteStateToggle
-    spriteLayer: movement
-    stateOff: quadspritesec
-    stateOn: quadspritesecballz
-    movementStateOff: quadspritesec_moving
-    movementStateOn: quadspritesec_movingballz
+  - type: BorgSwitchableType
+    selectedBorgType: genericQuad
+
+- type: entity
+  id: BorgChassisQuadEngineer
+  parent: BorgChassisQuadSelectable
+  name: engineer quadborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: engineeringQuad
+
+- type: entity
+  id: BorgChassisQuadsalv
+  parent: BorgChassisQuadSelectable
+  name: salvage quadborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: miningQuad
+
+- type: entity
+  id: BorgChassisQuadserv
+  parent: BorgChassisQuadSelectable
+  name: service quadborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: serviceQuad
+
+- type: entity
+  id: BorgChassisQuadmed
+  parent: [BorgChassisQuadSelectable, ShowMedicalIcons]
+  name: medical quadborg
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: medicalQuad
 
 - type: entity
   id: SyndiQuad
-  parent: [BorgChassisQuad, BaseBorgChassisSyndicate]
+  parent: [BorgChassisQuadSelectable, BaseBorgChassisSyndicate]
   components:
   - type: Sprite
     sprite: Floof/Mobs/Silicon/quad.rsi
@@ -199,25 +133,6 @@
     noMovementLayers:
       movement:
         state: SyndQuad
-  # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    preserveExistingChannels: true
-    intrinsicChannels:
-    - Binary
-    - Syndicate
-    - Common
-  - type: IntrinsicRadioTransmitter
-    intrinsicChannels:
-    - Binary
-    - Syndicate
-    - Common
-  - type: ActiveRadio
-    intrinsicChannels:
-    - Binary
-    - Syndicate
-    - Common
-  # HardLight end
   - type: NpcFactionMember
     factions:
     - Syndicate
@@ -233,10 +148,10 @@
       - XenoborgModuleGeneric
     hasMindState: SyndQuadl
     noMindState: SyndQuadr
-  - type: Access #HL
-    tags:  #HL
-    - SyndicateAgent #HL
-    - NuclearOperative #HL
+  - type: Access 
+    tags: 
+    - SyndicateAgent 
+    - NuclearOperative 
   - type: AccessReader
     access: [["NuclearOperative"], ["SyndicateAgent"]]
   - type: BorgTransponder
@@ -244,17 +159,10 @@
       sprite: Floof/Mobs/Silicon/quad.rsi
       state: SyndQuad
     name: cyborg
-  - type: SpriteStateToggle
-    spriteLayer: movement
-    stateOff: SyndQuad
-    stateOn: SyndQuadballz
-    movementStateOff: SyndQuad_moving
-    movementStateOn: SyndQuad_movingballz
-  # Note: No toggle added here; no provided SyndQuad ballz states.
 
 - type: entity
   id: BorgChassisQuadCC
-  parent: BorgChassisQuad
+  parent: BorgChassisQuadSelectable
   components:
   - type: Sprite
     sprite: Floof/Mobs/Silicon/quad.rsi
@@ -270,51 +178,8 @@
       shader: unshaded
       map: ["light"]
       visible: false
-  # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    preserveExistingChannels: true
-    intrinsicChannels:
-    - Binary
-    - CentCom
-    - Command
-    - ColSec
-    - Security
-    - Medical
-    - Engineering
-    - Science
-    - Supply
-    - Service
-    - Common
-  - type: IntrinsicRadioTransmitter
-    intrinsicChannels:
-    - Binary
-    - CentCom
-    - Command
-    - ColSec
-    - Security
-    - Medical
-    - Engineering
-    - Science
-    - Supply
-    - Service
-    - Common
-  - type: ActiveRadio
-    intrinsicChannels:
-    - Binary
-    - CentCom
-    - Command
-    - ColSec
-    - Security
-    - Medical
-    - Engineering
-    - Science
-    - Supply
-    - Service
-    - Common
-  # HardLight end
   - type: BorgChassis
-    maxModules: 12 #HL
+    maxModules: 12 
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -328,9 +193,9 @@
       - BorgModuleSyndicateAssault
       - BorgModuleJanitor
       - XenoborgModuleGeneric
-  - type: Access #HL
-    tags: #HL
-    - CentralCommand #HL
+  - type: Access 
+    tags: 
+    - CentralCommand 
   - type: AccessReader
     access: [["CentralCommand"]]
   - type: SpriteMovement
@@ -342,318 +207,6 @@
         state: quadspriteCC
   - type: SiliconLawProvider
     laws: CentCom
-  - type: SpriteStateToggle
-    spriteLayer: movement
-    stateOff: quadspriteCC
-    stateOn: quadspriteCCballz
-    movementStateOff: quadspriteCC_moving
-    movementStateOn: quadspriteCC_movingballz
-
-- type: entity
-  id: BorgChassisQuadsalv
-  parent: BorgChassisQuad
-  components:
-  - type: Sprite
-    sprite: Floof/Mobs/Silicon/quad.rsi
-    scale: 0.7, 0.7
-    layers:
-    - state: quadspritesalv
-      map: ["movement"]
-    - state: quadspritesalvl
-      map: ["enum.BorgVisualLayers.Light"]
-      shader: unshaded
-      visible: false
-    - state: quadspritesalvr
-      shader: unshaded
-      map: ["light"]
-      visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: quadspritesalv_moving
-    noMovementLayers:
-      movement:
-        state: quadspritesalv
-  # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    preserveExistingChannels: true
-    intrinsicChannels:
-    - Binary
-    - Science
-    - Supply
-    - Common
-  - type: IntrinsicRadioTransmitter
-    intrinsicChannels:
-    - Binary
-    - Science
-    - Supply
-    - Common
-  - type: ActiveRadio
-    intrinsicChannels:
-    - Binary
-    - Science
-    - Supply
-    - Common
-  # HardLight end
-  - type: BorgChassis
-    maxModules: 7
-    moduleWhitelist:
-      tags:
-      - BorgModuleGeneric
-      - BorgModuleCargo
-      - BorgModuleSyndicate
-      - BorgModuleSyndicateAssault
-      - XenoborgModuleGeneric
-    hasMindState: quadspritesalvl
-    noMindState: quadspritesalvr
-  - type: AccessReader
-    access: [["Command"], ["Research"]]
-  - type: SiliconLawProvider
-    laws: Corporate
-  - type: SpriteStateToggle
-    spriteLayer: movement
-    stateOff: quadspritesalv
-    stateOn: quadspritesalvballz
-    movementStateOff: quadspritesalv_moving
-    movementStateOn: quadspritesalv_movingballz
-
-- type: entity
-  id: BorgChassisQuadserv
-  parent: BorgChassisQuad
-  components:
-  - type: Sprite
-    sprite: Floof/Mobs/Silicon/quad.rsi
-    scale: 0.7, 0.7
-    layers:
-    - state: quadspriteserv
-      map: ["movement"]
-    - state: quadspriteservl
-      map: ["enum.BorgVisualLayers.Light"]
-      shader: unshaded
-      visible: false
-    - state: quadspriteservr
-      shader: unshaded
-      map: ["light"]
-      visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: quadspriteserv_moving
-    noMovementLayers:
-      movement:
-        state: quadspriteserv
-  # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    preserveExistingChannels: true
-    intrinsicChannels:
-    - Binary
-    - Science
-    - Service
-    - Common
-  - type: IntrinsicRadioTransmitter
-    intrinsicChannels:
-    - Binary
-    - Science
-    - Service
-    - Common
-  - type: ActiveRadio
-    intrinsicChannels:
-    - Binary
-    - Science
-    - Service
-    - Common
-  # HardLight end
-  - type: BorgChassis
-    maxModules: 8
-    moduleWhitelist:
-      tags:
-      - BorgModuleGeneric
-      - BorgModuleService
-      - BorgModuleJanitor #HL
-      - BorgModuleSyndicate
-      - BorgModuleSyndicateAssault
-      - XenoborgModuleGeneric
-    hasMindState: quadspriteservl
-    noMindState: quadspriteservr
-  - type: AccessReader
-    access: [["Command"], ["Research"]]
-  - type: SiliconLawProvider
-    laws: StationEfficiency
-  - type: SpriteStateToggle
-    spriteLayer: movement
-    stateOff: quadspriteserv
-    stateOn: quadspriteservballz
-    movementStateOff: quadspriteserv_moving
-    movementStateOn: quadspriteserv_movingballz
-
-- type: entity
-  id: BorgChassisQuadEngineer
-  parent: BorgChassisQuad
-  components:
-  - type: Sprite
-    sprite: Floof/Mobs/Silicon/quad.rsi
-    scale: 0.7, 0.7
-    layers:
-    - state: engieborg
-      map: ["movement"]
-    - state: engieborgl
-      map: ["enum.BorgVisualLayers.Light"]
-      shader: unshaded
-      visible: false
-    - state: engieborgr
-      shader: unshaded
-      map: ["light"]
-      visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: engieborg_moving
-    noMovementLayers:
-      movement:
-        state: engieborg
-  # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    preserveExistingChannels: true
-    intrinsicChannels:
-    - Binary
-    - Engineering
-    - Science
-    - Common
-  - type: IntrinsicRadioTransmitter
-    intrinsicChannels:
-    - Binary
-    - Engineering
-    - Science
-    - Common
-  - type: ActiveRadio
-    intrinsicChannels:
-    - Binary
-    - Engineering
-    - Science
-    - Common
-  # HardLight end
-  - type: BorgChassis
-    maxModules: 8
-    moduleWhitelist:
-      tags:
-      - BorgModuleGeneric
-      - BorgModuleEngineering
-      - BorgModuleSyndicate
-      - BorgModuleSyndicateAssault
-      - XenoborgModuleGeneric
-    hasMindState: engieborgl
-    noMindState: engieborgr
-  - type: AccessReader
-    access: [["Command"], ["Research"]]
-  - type: SiliconLawProvider
-    laws: StationEfficiency
-  - type: ShowHealthBars
-    damageContainers:
-    - Inorganic
-    - Silicon
-  - type: SpriteStateToggle
-    spriteLayer: movement
-    stateOff: engieborg
-    stateOn: engieborgballz
-    movementStateOff: engieborg_moving
-    movementStateOn: engieborg_movingballz
-  # Note: No toggle added here; no provided engieborg ballz states.
-
-- type: entity
-  id: BorgChassisQuadmed
-  parent: [BorgChassisQuad, ShowMedicalIcons]
-  components:
-  - type: Sprite
-    sprite: Floof/Mobs/Silicon/quad.rsi
-    scale: 0.7, 0.7
-    layers:
-    - state: quadspritemed
-      map: ["movement"]
-    - state: quadspritemedl
-      map: ["enum.BorgVisualLayers.Light"]
-      shader: unshaded
-      visible: false
-    - state: quadspritemedr
-      shader: unshaded
-      map: ["light"]
-      visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: quadspritemed_moving
-    noMovementLayers:
-      movement:
-        state: quadspritemed
-  # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    preserveExistingChannels: true
-    intrinsicChannels:
-    - Binary
-    - Medical
-    - Science
-    - Common
-  - type: IntrinsicRadioTransmitter
-    intrinsicChannels:
-    - Binary
-    - Medical
-    - Science
-    - Common
-  - type: ActiveRadio
-    intrinsicChannels:
-    - Binary
-    - Medical
-    - Science
-    - Common
-  - type: SurgerySpeedModifier #shitmed
-    speedModifier: 1.75
-  # HardLight end
-  - type: BorgChassis
-    maxModules: 7
-    moduleWhitelist:
-      tags:
-      - BorgModuleGeneric
-      - BorgModuleMedical
-      - BorgModuleSyndicate
-      - BorgModuleSyndicateAssault
-      - XenoborgModuleGeneric
-    hasMindState: quadspritemedl
-    noMindState: quadspritemedr
-  - type: AccessReader
-    access: [["Command"], ["Research"]]
-  - type: SiliconLawProvider
-    laws: Medical
-  - type: SolutionScanner
-  - type: FabricateActions
-    actions:
-    - ActionFabricateLollipop
-    - ActionFabricateGumball
-  - type: SpriteStateToggle
-    spriteLayer: movement
-    stateOff: quadspritemed
-    stateOn: quadspritemedballz
-    movementStateOff: quadspritemed_moving
-    movementStateOn: quadspritemed_movingballz
-  # - type: LanguageKnowledge
-    # speaks:
-    # - TauCetiBasic
-    # - SolCommon
-    # - Tradeband
-    # - Freespeak
-    # - Elyran
-    # - RobotTalk
-    # - Sign
-    # understands:
-    # - TauCetiBasic
-    # - SolCommon
-    # - Tradeband
-    # - Freespeak
-    # - Elyran
-    # - RobotTalk
-    # - Sign
 
 - type: entity
   id: BorgChassisApex
@@ -680,31 +233,6 @@
     noMovementLayers:
       movement:
         state: Apex
-  - type: BorgChassis
-    maxModules: 10
-    moduleWhitelist:
-      tags:
-      - BorgModuleGeneric
-      - BorgModuleMedical
-      - BorgModuleService
-      - BorgModuleSecurity
-      - BorgModuleCargo
-      - BorgModuleEngineering
-      - BorgModuleSyndicate
-      - BorgModuleSyndicateAssault
-      - XenoborgModuleGeneric
-    hasMindState: quadspritel
-    noMindState: quadspriter
-  - type: AccessReader
-    access: [["CentralCommand"]]
-  - type: SiliconLawProvider
-    laws: Qborg
-  - type: SpriteStateToggle
-    spriteLayer: movement
-    stateOff: Apex
-    stateOn: Apexballz
-    movementStateOff: apex_moving
-    movementStateOn: Apex_movingballz
 
 - type: entity
   id: BorgChassisChip
@@ -731,26 +259,6 @@
     noMovementLayers:
       movement:
         state: Chip
-  - type: BorgChassis
-    maxModules: 10
-    moduleWhitelist:
-      tags:
-      - BorgModuleGeneric
-      - BorgModuleMedical
-      - BorgModuleService
-      - BorgModuleSecurity
-      - BorgModuleCargo
-      - BorgModuleEngineering
-      - BorgModuleSyndicate
-      - BorgModuleSyndicateAssault
-      - XenoborgModuleGeneric
-    hasMindState: quadspritel
-    noMindState: quadspriter
-  - type: AccessReader
-    access: [["CentralCommand"]]
-  - type: SiliconLawProvider
-    laws: Qborg
-  # Note: No toggle added here; no provided Chip ballz states.
 
 - type: entity
   parent: [ BaseXenoborgChassis, BaseXenoborgTransponder ]
@@ -786,7 +294,6 @@
       - MMIFilled
       borg_module:
       - XenoborgModuleBasic
-      - BorgModuleKill
       - BorgModuleConstruction
       - BorgModuleRCD
       - BorgModuleTool
@@ -816,12 +323,6 @@
       shader: unshaded
       map: ["light"]
       visible: false
-  - type: SpriteStateToggle
-    spriteLayer: movement
-    stateOff: XenoQuad
-    stateOn: XenoQuadballz
-    movementStateOff: XenoQuad_moving
-    movementStateOn: XenoQuad_movingballz
   - type: SpriteMovement
     movementLayers:
       movement:

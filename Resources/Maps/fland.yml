@@ -213528,14 +213528,6 @@ entities:
     - type: Transform
       pos: -22.5,41.5
       parent: 2
-- proto: SpawnPointEngineeringQuadborg
-  entities:
-  - uid: 29134
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 33.5,-21.5
-      parent: 2
 - proto: SpawnPointForensicMantis
   entities:
   - uid: 29135
@@ -213673,14 +213665,6 @@ entities:
     components:
     - type: Transform
       pos: 7.5,65.5
-      parent: 2
-- proto: SpawnPointMedicalQuadborg
-  entities:
-  - uid: 29159
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 36.5,-21.5
       parent: 2
 - proto: SpawnPointMercenary
   entities:
@@ -213846,14 +213830,6 @@ entities:
     - type: Transform
       pos: 52.5,-38.5
       parent: 2
-- proto: SpawnPointSalvageQuadborg
-  entities:
-  - uid: 29185
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 34.5,-21.5
-      parent: 2
 - proto: SpawnPointSalvageSpecialist
   entities:
   - uid: 29186
@@ -213986,22 +213962,6 @@ entities:
     components:
     - type: Transform
       pos: 35.5,10.5
-      parent: 2
-- proto: SpawnPointSecurityQuadborg
-  entities:
-  - uid: 29211
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 35.5,-21.5
-      parent: 2
-- proto: SpawnPointServiceQuadborg
-  entities:
-  - uid: 29212
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 37.5,-21.5
       parent: 2
 - proto: SpawnPointServiceWorker
   entities:

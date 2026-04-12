@@ -12,3 +12,8 @@
   recipeUnlocks:
   # - RCDRecharging # Frontier
   - BorgModuleRCD # Frontier
+  # Goobstation R&D Console rework start
+  position: 3,-7
+  technologyPrerequisites:
+  - RapidConstruction
+  # Goobstation R&D Console rework end

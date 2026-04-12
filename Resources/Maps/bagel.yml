@@ -130136,13 +130136,6 @@ entities:
     - type: Transform
       pos: -26.5,-29.5
       parent: 2
-- proto: SpawnPointEngineeringQuadborg
-  entities:
-  - uid: 20250
-    components:
-    - type: Transform
-      pos: -33.5,14.5
-      parent: 2
 - proto: SpawnPointForensicMantis
   entities:
   - uid: 20251
@@ -130285,13 +130278,6 @@ entities:
     components:
     - type: Transform
       pos: 36.5,-17.5
-      parent: 2
-- proto: SpawnPointMedicalQuadborg
-  entities:
-  - uid: 20276
-    components:
-    - type: Transform
-      pos: -31.5,12.5
       parent: 2
 - proto: SpawnPointMercenary
   entities:
@@ -130516,20 +130502,6 @@ entities:
     components:
     - type: Transform
       pos: -25.5,-17.5
-      parent: 2
-- proto: SpawnPointSecurityQuadborg
-  entities:
-  - uid: 20315
-    components:
-    - type: Transform
-      pos: -31.5,14.5
-      parent: 2
-- proto: SpawnPointServiceQuadborg
-  entities:
-  - uid: 20316
-    components:
-    - type: Transform
-      pos: -33.5,12.5
       parent: 2
 - proto: SpawnPointServiceWorker
   entities:
