@@ -2466,3 +2466,101 @@ Entries:
         (because they literally could not use that one)
   id: 275
   time: '2026-04-13T01:11:35.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Add
+      message: >-
+        Jet injectors are now available to medical staff and may be crafted at a
+        medical techfab.
+    - type: Add
+      message: >-
+        Parrots are now better at remembering things said around them, but only
+        slightly.
+    - type: Add
+      message: Stamina damage now has a visual effect both before and during stam crit.
+    - type: Add
+      message: >-
+        Certain items may now be caught when thrown should the receiving
+        entity's skill be sufficient.
+    - type: Add
+      message: >-
+        Tennis balls now exist conceptually and may be found where other toys
+        could be.
+    - type: Add
+      message: >-
+        Cameras will now react to the AI-eye and change states to show they are
+        being used.
+    - type: Add
+      message: Added status-effect relay events.
+    - type: Add
+      message: Miniguns now have in-hand visuals.
+    - type: Add
+      message: New modules and tools are now available to Cyborgs.
+    - type: Add
+      message: >-
+        Janitors now have access to wirebrushes, allowing for the derusting of
+        metal walls.
+    - type: Add
+      message: >-
+        Sloths now have a dedicated accent that makes them... talk... real...
+        slow...
+    - type: Remove
+      message: Removed height trait hand restrictions.
+    - type: Remove
+      message: >-
+        Vestine-based chems may no longer be randomly mutated from plants, and
+        instead require vestine to mutate.
+    - type: Tweak
+      message: Refactored the way triggers work.
+    - type: Tweak
+      message: >-
+        Refactored the way injectors work and merged the injector/hypospray
+        systems into one system.
+    - type: Tweak
+      message: Refactored the way research works, specifically around artifacts.
+    - type: Tweak
+      message: Refactored the way hands work, especially Borg hands.
+    - type: Tweak
+      message: Refactored the way flashes work.
+    - type: Tweak
+      message: Many entity effects have been refactored to be status effects instead.
+    - type: Tweak
+      message: >-
+        Replaced crawling and knockdown with a newer, smoother system that
+        should feel better.
+    - type: Tweak
+      message: >-
+        Replaced FoodComponent with EdibleComponent and merged food/drink
+        systems into one system.
+    - type: Tweak
+      message: Entity effect definitions have been moved to shared handling.
+    - type: Tweak
+      message: Identity handling has been moved to support a predicted structure.
+    - type: Tweak
+      message: >-
+        Bloodstream and certain healing handling has been moved to support a
+        predicted structure.
+    - type: Tweak
+      message: >-
+        Accent and certain speech-effect handling has been moved to support a
+        predicted structure.
+    - type: Tweak
+      message: Mob collision has been slightly tweaked, but left disabled.
+    - type: Tweak
+      message: Ephedrine, desoxyephedrine and hyperzine have been tweaked.
+    - type: Tweak
+      message: >-
+        Lathe menus now populate with the name of the lathe, instead of simply
+        "lathe menu".
+    - type: Tweak
+      message: Quotation marks in the chat panel should now appear italicized.
+    - type: Tweak
+      message: >-
+        Attempting to open the crew manifest when not on an appropriate grid now
+        returns a fail message, instead of loading indefinitely.
+    - type: Tweak
+      message: Hypopens now have a short doafter when attempting to refill them.
+    - type: Fix
+      message: Ghosts should now correctly state time since death.
+  id: 276
+  time: '2026-04-13T03:25:01.0000000+00:00'
