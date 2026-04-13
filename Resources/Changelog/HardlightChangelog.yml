@@ -2582,3 +2582,28 @@ Entries:
         more using a lathe as a FUC printer.
   id: 278
   time: '2026-04-13T03:26:05.0000000+00:00'
+- author: R3v3l4t1on
+  changes:
+    - type: Add
+      message: Added an ore hand to the (advanced) mining module
+    - type: Add
+      message: Added a station map and handicomms to the frontier module
+    - type: Add
+      message: >-
+        Added a slot for fuel canisters, AME jars and reactor fuel rods to the
+        engineering borg's construction module
+    - type: Remove
+      message: Thruster module.
+    - type: Remove
+      message: Handicomms from the appraisal/(advanced) mining modules
+    - type: Tweak
+      message: >-
+        The Traversal module now has a jetpack instead of a big fire
+        extinguisher, and additionally comes with a station map, clock and
+        Handicomms
+    - type: Fix
+      message: >-
+        Fixed secborg missing locales and appropriate sprites for the default
+        borg
+  id: 279
+  time: '2026-04-13T17:55:24.0000000+00:00'
