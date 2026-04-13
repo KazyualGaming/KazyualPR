@@ -260,10 +260,10 @@
   - OreBagOfHolding
   - MiningDrillDiamond
   - AdvancedMineralScannerEmpty
+  - BorgModuleAdvancedMining
   - NFBlueprintOreBagOfHolding # Frontier
   - NFBlueprintMiningDrillDiamond # Frontier
   - NFBlueprintAdvancedMineralScannerEmpty # Frontier
-  - BorgModuleAdvancedMining # Frontier
   - MechEquipmentDrillDiamond
   # Goobstation R&D Console rework start
   position: 0,-7

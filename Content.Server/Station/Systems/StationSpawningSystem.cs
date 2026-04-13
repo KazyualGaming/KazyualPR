@@ -1,9 +1,12 @@
 using Content.Server.Access.Systems;
 using Content.Server.Humanoid;
-using Content.Server.IdentityManagement;
 using Content.Server.Mind.Commands;
 using Content.Server.PDA;
+using Content.Server.Preferences.Managers; // Frontier
+using Content.Server.Spawners.Components;
 using Content.Server.Station.Components;
+using Content.Server._NF.Bank; // Frontier
+using Content.Shared._NF.Bank.Components; // Delta V
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.CCVar;
@@ -11,6 +14,8 @@ using Content.Shared.Clothing;
 using Content.Shared.DetailExaminable;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
+using Content.Shared.IdentityManagement;
+using Content.Shared.NameIdentifier; // Frontier
 using Content.Shared.PDA;
 using Content.Shared.Preferences;
 using Content.Shared.Preferences.Loadouts;
@@ -25,12 +30,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
-using Content.Server.Spawners.Components;
-using Content.Shared._NF.Bank.Components; // DeltaV
-using Content.Server._NF.Bank; // Frontier
-using Content.Server.Preferences.Managers; // Frontier
 using System.Linq;
-using Content.Shared.NameIdentifier; // Frontier
 
 namespace Content.Server.Station.Systems;
 
