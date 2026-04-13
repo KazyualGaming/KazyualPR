@@ -2574,3 +2574,11 @@ Entries:
       message: Tabletop computers are now craftable
   id: 277
   time: '2026-04-13T03:25:39.0000000+00:00'
+- author: TrylobyteWasTaken
+  changes:
+    - type: Fix
+      message: >-
+        The holopickaxe is no longer worth FUCs due to it being craftable.  No
+        more using a lathe as a FUC printer.
+  id: 278
+  time: '2026-04-13T03:26:05.0000000+00:00'
