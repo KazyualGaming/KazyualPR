@@ -2440,3 +2440,29 @@ Entries:
         the AI 
   id: 274
   time: '2026-04-13T01:11:08.0000000+00:00'
+- author: R3v3l4t1on
+  changes:
+    - type: Add
+      message: Mediborgs now start with a defibrilator module.
+    - type: Add
+      message: >-
+        Mercenaries can now unlock all normal quadborgs and cyborgs, making it
+        easier for them to configure their synthetic companion between expeds.
+    - type: Add
+      message: Cyborgs can now unlock themselves.
+    - type: Remove
+      message: >-
+        Removed Matter-Energy conversion from the tech tree as the only item it
+        unlocked is no longer needed to be researched (both borgs that can use
+        it start with it) and the module was already being unlocked in a
+        different research.
+    - type: Remove
+      message: >-
+        Advanced tools no longer unlocks the RCD module for the same reason as
+        above
+    - type: Tweak
+      message: >-
+        Engineering borgs get an RCD module instead of a Shipyard RCD module
+        (because they literally could not use that one)
+  id: 275
+  time: '2026-04-13T01:11:35.0000000+00:00'
