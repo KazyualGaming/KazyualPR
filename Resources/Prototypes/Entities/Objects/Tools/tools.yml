@@ -457,6 +457,10 @@
     - PlatingNW
     - PlatingSE
     - PlatingSW
+    - WindowDirectionalShuttle
+    - WallShuttleDiagonal
+    - WallReinforcedDiagonal
+    - WallSolidDiagonal
   - type: LimitedCharges
     maxCharges: 30
   - type: Sprite
