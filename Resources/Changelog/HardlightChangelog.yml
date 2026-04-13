@@ -2400,3 +2400,9 @@ Entries:
       message: Peregrine mags being general use batteries
   id: 269
   time: '2026-04-09T21:27:02.0000000+00:00'
+- author: Illumos
+  changes:
+    - type: Add
+      message: Pettable trait!
+  id: 270
+  time: '2026-04-13T01:01:47.0000000+00:00'
