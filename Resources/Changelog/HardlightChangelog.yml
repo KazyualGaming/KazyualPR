@@ -2412,3 +2412,9 @@ Entries:
       message: Rev sponsorship change
   id: 271
   time: '2026-04-13T01:02:44.0000000+00:00'
+- author: SeaborneProto
+  changes:
+    - type: Add
+      message: Adds the ability for ties to restrain humanoids
+  id: 272
+  time: '2026-04-13T01:03:08.0000000+00:00'
