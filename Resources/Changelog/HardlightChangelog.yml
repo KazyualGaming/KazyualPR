@@ -2564,3 +2564,13 @@ Entries:
       message: Ghosts should now correctly state time since death.
   id: 276
   time: '2026-04-13T03:25:01.0000000+00:00'
+- author: VoidedDevNull
+  changes:
+    - type: Add
+      message: More crafting recipes!
+    - type: Add
+      message: More spray painter functions!
+    - type: Fix
+      message: Tabletop computers are now craftable
+  id: 277
+  time: '2026-04-13T03:25:39.0000000+00:00'
