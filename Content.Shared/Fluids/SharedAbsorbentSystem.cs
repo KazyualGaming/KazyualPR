@@ -325,8 +325,7 @@ public abstract class SharedAbsorbentSystem : EntitySystem
         }
         else
         {
-            // Note: arguably shouldn't this get all solutions?
-            puddleSplit = puddleSolution.SplitSolutionWithout(absorber.PickupAmount, Puddle.GetAbsorbentReagents(puddleSolution));
+            puddleSplit = puddleSolution.SplitSolution(absorber.PickupAmount);
             // Despawn if we're done
             if (puddleSolution.Volume == FixedPoint2.Zero)
             {
