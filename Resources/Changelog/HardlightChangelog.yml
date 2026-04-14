@@ -2629,3 +2629,9 @@ Entries:
         download.
   id: 282
   time: '2026-04-14T18:51:56.0000000+00:00'
+- author: Magniras
+  changes:
+    - type: Add
+      message: Added name and description to the syndicate uplink for chameleon gloves.
+  id: 283
+  time: '2026-04-14T18:52:18.0000000+00:00'
