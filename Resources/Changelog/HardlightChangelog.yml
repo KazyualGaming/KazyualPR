@@ -2621,3 +2621,11 @@ Entries:
       message: More marrkings for shadekin
   id: 281
   time: '2026-04-13T18:27:20.0000000+00:00'
+- author: R3v3l4t1on
+  changes:
+    - type: Remove
+      message: >-
+        Removed duplicated files meaning the content should be quicker to
+        download.
+  id: 282
+  time: '2026-04-14T18:51:56.0000000+00:00'
