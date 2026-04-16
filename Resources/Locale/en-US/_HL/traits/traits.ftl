@@ -22,6 +22,9 @@ cryo-resistant-text = Your body is highly resistant to cold damage.
 natural-regen-name = Natural Regeneration
 natural-regen-text = Your body passively heals from minor injuries over time.
 
+unnatural-regen-name = Unnatural Regeneration
+unnatural-regen-text = Your body passively heals from injuries even while in critical condition.
+
 big-name = Big
 big-text = You are noticeably larger than average.
 big-trait-cannot-wield-ranged = You are too large to wield this weapon.
