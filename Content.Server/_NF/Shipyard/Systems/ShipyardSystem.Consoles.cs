@@ -495,7 +495,25 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         bool loaded = false;
         try
         {
-            loaded = TryPurchaseShuttleFromYamlData(uid, args.YamlData, out shuttleUidOut, player);
+            // HardLight start
+            if (!string.IsNullOrWhiteSpace(args.YamlData))
+            {
+                loaded = TryPurchaseShuttleFromYamlData(uid, args.YamlData, out shuttleUidOut);
+            }
+
+            if (!loaded && !string.IsNullOrWhiteSpace(args.SourceFilePath))
+            // HardLight end
+            {
+                // Normalize to a ResPath under /UserData
+                var norm = args.SourceFilePath!.Replace('\\', '/');
+                if (!norm.StartsWith("/"))
+                    norm = "/" + norm;
+                if (!norm.StartsWith("/UserData", StringComparison.OrdinalIgnoreCase))
+                    norm = "/UserData/" + norm.TrimStart('/');
+
+                var resPath = new ResPath(norm);
+                loaded = TryPurchaseShuttleFromFile(uid, resPath, out shuttleUidOut);
+            }
         }
         catch (Exception ex)
         {
