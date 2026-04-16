@@ -72,12 +72,12 @@
             # frontier
             #Contractor: [ -1, -1 ]
             #Pilot: [ 5, 5 ]
-            QuadBorg: [-1, -1]
+            #QuadBorg: [-1, -1] #Sandwich: We dont want quadborgs
             Mercenary: [ 5, 40 ]
             Valet: [ 1, 1 ]
             MailCarrier: [ 1, 1 ]
             Prisoner: [ 3, 3 ]
-            ForensicMantis: [ 1, 1 ]
+            #ForensicMantis: [ 1, 1 ] #Sandwich: Mantis b gone
         - type: StationDeadDrop
           maxDeadDrops: 2 # medium station
         - type: StationDeadDropReporting

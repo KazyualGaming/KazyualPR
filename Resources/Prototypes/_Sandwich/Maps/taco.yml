@@ -72,7 +72,7 @@
           #frontier
           #Contractor: [ -1, -1 ]
           #Pilot: [ 5, 5 ]
-          Mercenary: [ 0, 0 ]
+          Mercenary: [ 5, 10 ]
           Valet: [ 0, 0 ]
           MailCarrier: [ 0, 0 ]
           Prisoner: [ 0, 0 ]
