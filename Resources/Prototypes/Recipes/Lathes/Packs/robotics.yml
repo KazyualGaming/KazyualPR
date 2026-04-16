@@ -16,19 +16,19 @@
   - BorgModuleCable
   - BorgModuleFireExtinguisher
   - BorgModuleRadiationDetection
+  # Hardlight change start
+  #- BorgModuleGrapplingGun             # No Content.Shared.Research.Prototypes.LatheRecipePrototype found with id BorgModuleGrapplingGun - deactivate for now, not sure if needed
+  #- BorgModuleLightReplacer            # "
+  #- BorgModuleClowning                 # "
+  #- BorgModuleMusique                  # "
 
 - type: latheRecipePack
   id: BorgModulesDynamic
   recipes:
   - BorgModuleAdvancedSurgery
   # Hardlight change start
-  #- BorgModuleClowning            #Doesnt exist, someone figure out why
-  #- BorgModuleMusique             #Doesnt exist, someone figure out why
   - BorgModuleTreatment
-  #- BorgModuleadvancedmeasures    #Doesnt exist, someone figure out why
-  - BorgModuleAdvancedTreatment 
-  #- BorgModuleGrapplingGun        #Doesnt exist, someone figure out why
-  #- BorgModuleLightReplacer       #Doesnt exist, someone figure out why
+  - BorgModuleAdvancedTreatment
   - BorgModuleAdvancedParamedic
 
 - type: latheRecipePack

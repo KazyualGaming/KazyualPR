@@ -34,7 +34,7 @@
     baseWalkSpeed : 2.5
     baseSprintSpeed : 4.5
   - type: Sprite
-    sprite: Mobs/Silicon/chassis.rsi
+    sprite: Mobs/Silicon/Chassis/generic/default.rsi
   - type: RotationVisuals
     horizontalRotation: 90
   - type: MobState
@@ -89,7 +89,7 @@
   - type: SiliconLawProvider
     laws: Crewsimov
   - type: Inventory
-    templateId: borg
+    templateId: borgHL   # to fix template conflicts
   - type: Hands
     showInHands: false
     disableExplosionRecursion: true
@@ -264,6 +264,12 @@
     damageProtection:
       flatReductions:
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
+  #region Starlight
+  # - type: CyborgSparkEffect # Hardlight we don't have these yet...
+  # - type: StationAIShunt #Starlight allow shunting into all borgs # Hardlight TOO SOON
+  # - type: Crawler # Hardlight TOO SOON
+  # end region starlight
+  - type: BorgSwitchableSubtype # CD change
   - type: PreventDropOnDowned # Frontier: borgs don't drop items when falling (e.g. critical/dead)
   - type: InteractionPopup   # Hardlight change should be able to pet the borgs now
     interactSuccessString: petting-success-generic-cyborg
@@ -353,6 +359,9 @@
   - type: InteractionPopup
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: SurgeryTarget # SandwichStation - ability to do surgery, until mocho refactors and we don't need this anymore.
+  - type: Targeting     # SandwichStation - ability to target limbs, useful for a variety of reasons.
+  - type: Sanitized     # SandwichStation - so borgs don't murder people with poison.
 
 - type: entity
   id: BaseBorgChassisSyndicate
@@ -450,7 +459,7 @@
   - type: NameIdentifier
     group: Xenoborg
   - type: Sprite
-    sprite: Mobs/Silicon/chassis.rsi
+    sprite: Mobs/Silicon/Chassis/xeno_engi.rsi
   - type: MobThresholds
     thresholds: # slightly tankier than a normal borg
       0: Alive

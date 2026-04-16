@@ -125,6 +125,8 @@
 
   defaultModules:
   - BorgModuleTreatment
+  - BorgModuleDefibrillator # Sandwich
+  - BorgModuleSurgery # Sandwich
 
   radioChannels:
   - Science

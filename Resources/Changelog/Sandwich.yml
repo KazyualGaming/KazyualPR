@@ -299,3 +299,23 @@ Entries:
       message: CE suit sprites and light color
   id: 26
   time: '2026-04-12T23:33:51.0000000+00:00'
+- author: BodenPflanze
+  changes:
+    - type: Add
+      message: Cyborg Skins selection
+    - type: Fix
+      message: Cyborgs now can target limbs
+    - type: Tweak
+      message: Medborg standart modules
+    - type: Tweak
+      message: Unselected cyborg entity name
+  id: 27
+  time: '2026-04-16T09:48:34.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Tweak
+      message: Ship loading/saving system
+    - type: Fix
+      message: incompatable ships (due to updates) can now load!
+  id: 28
+  time: '2026-04-16T09:53:20.0000000+00:00'

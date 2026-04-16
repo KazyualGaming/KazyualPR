@@ -1,4 +1,5 @@
-﻿using Content.Shared.Actions;
+﻿using Content.Shared._CD.Silicons.Borgs;
+using Content.Shared.Actions;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Components;
 using Content.Shared.Movement.Components;
@@ -74,14 +75,14 @@ public abstract class SharedBorgSwitchableTypeSystem : EntitySystem
         if (ent.Comp.SelectedBorgType != null)
             return;
 
-        // Floof Quad Changes start
+        // Sandwich Changes for Floof Quads - start
         if (!Prototypes.TryIndex(args.Prototype, out var prototype))
             return;
 
-        // Wenn die Familien nicht übereinstimmen, brich den Versuch sofort ab!
+        // If families don't match imidiently abort attempt
         if (prototype.ChassisFamily != ent.Comp.ChassisFamily)
             return;
-        // Floof Quad Changes end
+        // Sandwich Changes for Floof Quads - end
 
         SelectBorgModule(ent, args.Prototype);
     }
@@ -103,6 +104,10 @@ public abstract class SharedBorgSwitchableTypeSystem : EntitySystem
         _userInterface.CloseUi((ent.Owner, null), BorgSwitchableTypeUiKey.SelectBorgType);
 
         UpdateEntityAppearance(ent);
+
+        // CD - event for subtype system, always runs at end of borg type code
+        var ev = new AfterBorgTypeSelectEvent();
+        RaiseLocalEvent(ent, ref ev);
     }
 
     protected void UpdateEntityAppearance(Entity<BorgSwitchableTypeComponent> entity)
@@ -127,5 +132,30 @@ public abstract class SharedBorgSwitchableTypeSystem : EntitySystem
         {
             footstepModifier.FootstepSoundCollection = prototype.FootstepCollection;
         }
+
+        // Starlight-start: Movement sprite state
+        if (!(TryComp<BorgSwitchableSubtypeComponent>(entity, out var subtype) && subtype.BorgSubtype != null))
+        {
+            if (prototype.SpriteBodyMovementState is { } movementState)
+            {
+                var spriteMovement = EnsureComp<SpriteMovementComponent>(entity);
+                spriteMovement.NoMovementLayers.Clear();
+                spriteMovement.NoMovementLayers["movement"] = new PrototypeLayerData
+                {
+                    State = prototype.SpriteBodyState,
+                };
+                spriteMovement.MovementLayers.Clear();
+                spriteMovement.MovementLayers["movement"] = new PrototypeLayerData
+                {
+                    State = movementState,
+                };
+            }
+            else
+            {
+                RemComp<SpriteMovementComponent>(entity);
+            }
+        }
+
+        // Starlight-end
     }
 }

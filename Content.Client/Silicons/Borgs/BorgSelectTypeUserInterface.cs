@@ -1,4 +1,6 @@
-﻿using Content.Shared.Silicons.Borgs.Components;
+﻿using Content.Shared._CD.Silicons;
+using Content.Shared._CD.Silicons.Borgs;
+using Content.Shared.Silicons.Borgs.Components;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
 
@@ -26,13 +28,14 @@ public sealed class BorgSelectTypeUserInterface : BoundUserInterface
 
         _menu = this.CreateWindow<BorgSelectTypeMenu>();
         
-        // Floof Quad Changes start
+        // Sandwich Changes for Floof Quads - start
         if (EntMan.TryGetComponent<BorgSwitchableTypeComponent>(Owner, out var switchable))
         {
             _menu.PopulateMenu(switchable.ChassisFamily);
         }
-        // Floof Quad Changes end
+        // Sandwich Changes for Floof Quads - end
 
-        _menu.ConfirmedBorgType += prototype => SendMessage(new BorgSelectTypeMessage(prototype));
+        _menu.ConfirmedBorgType += prototype => SendPredictedMessage(new BorgSelectTypeMessage(prototype));
+        _menu.ConfirmedBorgSubtype += subtypePrototype => SendPredictedMessage(new BorgSelectSubtypeMessage(subtypePrototype?.ID)); // CD - borg subtypes
     }
 }

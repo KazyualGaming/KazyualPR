@@ -19,11 +19,8 @@
   - Science
 
   # Visual
-  inventoryTemplateId: borgShort
-  spriteBodyState: robot
-  spriteHasMindState: robot_e
-  spriteNoMindState: robot_e_r
-  spriteToggleLightState: robot_l
+  inventoryTemplateId: borgShortHL #HL
+  spritePath: Mobs/Silicon/Chassis/generic/default.rsi
 
   # Pet
   petSuccessString: petting-success-generic-cyborg
@@ -55,11 +52,8 @@
   - Science
 
   # Visual
-  inventoryTemplateId: borgShort
-  spriteBodyState: engineer
-  spriteHasMindState: engineer_e
-  spriteNoMindState: engineer_e_r
-  spriteToggleLightState: engineer_l
+  inventoryTemplateId: borgShortHL #HL
+  spritePath: Mobs/Silicon/Chassis/engineering/default.rsi
 
   # Pet
   petSuccessString: petting-success-engineer-cyborg
@@ -81,22 +75,19 @@
     - BorgModuleCargo
 
   defaultModules:
+  - BorgModuleTool
   - BorgModuleMining
   - BorgModuleGrapplingGun
   - BorgModuleAppraisal
-  - BorgModuleTool
 
   radioChannels:
   - Supply
   - Science
 
   # Visual
-  inventoryTemplateId: borgTall
-  spriteBodyState: miner
-  spriteBodyMovementState: miner_moving
-  spriteHasMindState: miner_e
-  spriteNoMindState: miner_e_r
-  spriteToggleLightState: miner_l
+  inventoryTemplateId: borgTallHL #HL
+  spritePath: Mobs/Silicon/Chassis/mining/default.rsi
+  spriteBodyMovementState: borg_moving
 
   # Pet
   petSuccessString: petting-success-salvage-cyborg
@@ -126,12 +117,9 @@
   - Service
 
   # Visual
-  inventoryTemplateId: borgShort
-  spriteBodyState: janitor
-  spriteBodyMovementState: janitor_moving
-  spriteHasMindState: janitor_e
-  spriteNoMindState: janitor_e_r
-  spriteToggleLightState: janitor_l
+  inventoryTemplateId: borgShortHL # HL
+  spritePath: Mobs/Silicon/Chassis/janitor/default.rsi
+  spriteBodyMovementState: borg_moving
 
   # Pet
   petSuccessString: petting-success-janitor-cyborg
@@ -153,7 +141,10 @@
     - BorgModuleMedical
 
   defaultModules:
+  - BorgModuleTool # Starlight
   - BorgModuleTreatment
+  - BorgModuleDefibrillator # Sandwich
+  - BorgModuleSurgery # Sandwich
 
   radioChannels:
   - Science
@@ -169,12 +160,9 @@
     - Biological
 
   # Visual
-  inventoryTemplateId: borgDutch
-  spriteBodyState: medical
-  spriteBodyMovementState: medical_moving
-  spriteHasMindState: medical_e
-  spriteNoMindState: medical_e_r
-  spriteToggleLightState: medical_l
+  inventoryTemplateId: borgDutchHL # HL
+  spritePath: Mobs/Silicon/Chassis/medical/default.rsi
+  spriteBodyMovementState: borg_moving
 
   # Pet
   petSuccessString: petting-success-medical-cyborg
@@ -211,11 +199,8 @@
   - Service
 
   # Visual
-  inventoryTemplateId: borgTall
-  spriteBodyState: service
-  spriteHasMindState: service_e
-  spriteNoMindState: service_e_r
-  spriteToggleLightState: service_l
+  inventoryTemplateId: borgTallHL # HL
+  spritePath: Mobs/Silicon/Chassis/service/default.rsi
 
   # Pet
   petSuccessString: petting-success-service-cyborg

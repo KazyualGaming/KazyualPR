@@ -555,6 +555,7 @@
 - type: entity
   id: PlayerBorgBattery
   parent: BorgChassisSelectable
+  name: Unselected Cyborg
   suffix: Battery
   components:
   - type: ContainerFill

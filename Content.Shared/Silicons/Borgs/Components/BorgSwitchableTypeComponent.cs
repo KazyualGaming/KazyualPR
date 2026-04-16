@@ -40,13 +40,13 @@ public sealed partial class BorgSwitchableTypeComponent : Component
     [DataField, AutoNetworkedField]
     public ProtoId<BorgTypePrototype>? SelectedBorgType;
 
-    // Floof Quad Changes start
+    // Sandwich Changes for Floof Quads - start
     /// <summary>
     /// Defines the chassis family this entity accepts (e.g. "bipedal", "quad").
     /// </summary>
     [DataField("chassisFamily")]
     public string ChassisFamily = "bipedal";
-    // Floof Quad Changes end
+    // Sandwich Changes for Floof Quads - end
 
     /// <summary>
     /// Radio channels that the borg will always have. These are added on top of the selected type's radio channels.

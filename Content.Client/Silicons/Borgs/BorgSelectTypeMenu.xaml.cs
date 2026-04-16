@@ -1,6 +1,9 @@
 ﻿using System.Linq;
+using Content.Client._CD.Silicons.Borgs.UI;
 using Content.Client.UserInterface.Controls;
 using Content.Client.UserInterface.Systems.Guidebook;
+using Content.Shared._CD.Silicons;
+using Content.Shared._CD.Silicons.Borgs;
 using Content.Shared.Guidebook;
 using Content.Shared.Silicons.Borgs;
 using Content.Shared.Silicons.Borgs.Components;
@@ -24,6 +27,7 @@ public sealed partial class BorgSelectTypeMenu : FancyWindow
     private BorgTypePrototype? _selectedBorgType;
 
     public event Action<ProtoId<BorgTypePrototype>>? ConfirmedBorgType;
+    public event Action<BorgSubtypePrototype?>? ConfirmedBorgSubtype; // CD event - borg subtypes
 
     [ValidatePrototypeId<GuideEntryPrototype>]
     private static readonly List<ProtoId<GuideEntryPrototype>> GuidebookEntries = new() { "Cyborgs", "Robotics" };
@@ -34,7 +38,7 @@ public sealed partial class BorgSelectTypeMenu : FancyWindow
         IoCManager.InjectDependencies(this);
 
         var group = new ButtonGroup();
-        /* Floof Quad Changes
+        /* Sandwich Changes for Floof Quads
         foreach (var borgType in _prototypeManager.EnumeratePrototypes<BorgTypePrototype>().OrderBy(PrototypeName))
         {
             var button = new Button
@@ -49,14 +53,19 @@ public sealed partial class BorgSelectTypeMenu : FancyWindow
             };
             SelectionsContainer.AddChild(button);
         }
-        */
+        */ 
 
         ConfirmTypeButton.OnPressed += ConfirmButtonPressed;
         HelpGuidebookIds = GuidebookEntries;
+
+        // CD - borg subtype
+        ChassisSpriteSelection.SubtypeSelected += () =>
+        {
+            ConfirmTypeButton.Disabled = false;
+        };
     }
 
-    // Floof Quad Changes start
-    // Diese Methode steht EIGENSTÄNDIG unter dem Konstruktor
+    // Sandwich Changes for Floof Quads - start
     public void PopulateMenu(string allowedFamily)
     {
         SelectionsContainer.DisposeAllChildren();
@@ -64,7 +73,7 @@ public sealed partial class BorgSelectTypeMenu : FancyWindow
         foreach (var borgType in _prototypeManager.EnumeratePrototypes<BorgTypePrototype>().OrderBy(PrototypeName))
         {
             if (borgType.ChassisFamily != allowedFamily)
-                continue; // Wenn es die falsche Familie ist, überspringen und gar nicht erst anzeigen!
+                continue; // If wrong family skip, don't show up
 
             var button = new Button
             {
@@ -79,7 +88,7 @@ public sealed partial class BorgSelectTypeMenu : FancyWindow
             SelectionsContainer.AddChild(button);
         }
     }
-    // Floof Quad Changes end
+    // Sandwich Changes for Floof Quads - end
 
     private void UpdateInformation(BorgTypePrototype prototype)
     {
@@ -87,11 +96,17 @@ public sealed partial class BorgSelectTypeMenu : FancyWindow
 
         InfoContents.Visible = true;
         InfoPlaceholder.Visible = false;
-        ConfirmTypeButton.Disabled = false;
 
         NameLabel.Text = PrototypeName(prototype);
         DescriptionLabel.Text = Loc.GetString($"borg-type-{prototype.ID}-desc");
         ChassisView.SetPrototype(prototype.DummyPrototype);
+
+        // CD changes below
+        if (_selectedBorgType != null)
+        {
+            ConfirmTypeButton.Disabled = true;
+            ChassisSpriteSelection.Update(_selectedBorgType);
+        }
     }
 
     private void ConfirmButtonPressed(BaseButton.ButtonEventArgs obj)
@@ -99,6 +114,7 @@ public sealed partial class BorgSelectTypeMenu : FancyWindow
         if (_selectedBorgType == null)
             return;
 
+        ConfirmedBorgSubtype?.Invoke(ChassisSpriteSelection.SubtypePrototype); // CD - borg subtype
         ConfirmedBorgType?.Invoke(_selectedBorgType);
     }
 
