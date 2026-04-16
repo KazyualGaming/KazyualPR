@@ -20,6 +20,13 @@ ghost-role-information-rules-team-antagonist = You are a [color={role-type-team-
                                                You don't remember any of your previous life, and you don't remember anything you learned as a ghost.
                                                You are allowed to remember knowledge about the game in general, such as how to cook, how to use objects, etc.
                                                You are absolutely [color=red]NOT[/color] allowed to remember, say, the name, appearance, etc. of your previous character.
+ghost-role-information-rules-team-pirate = You are a [color={role-type-team-pirate-name-color}][bold]{role-type-team-pirate-name}[/bold][/color]. Your intentions are clear, and harmful to Freelancers and station crew.
+                                               You must [bold]work with your team[/bold] and follow the orders of the Captain.
+                                               You are a Pirate with standards, You Must [bold]Minimize the destruction of NT ships, stations and murder of crew[/bold] while stealing and looting.
+                                               You Must [bold]Announce which ship you are robbing[/bold] and negotiate a surrender of goods.
+                                               You don't remember any of your previous life, and you don't remember anything you learned as a ghost.
+                                               You are allowed to remember knowledge about the game in general, such as how to cook, how to use objects, etc.
+                                               You are absolutely [color=red]NOT[/color] allowed to remember, say, the name, appearance, etc. of your previous character.
 ghost-role-information-familiar-rules = You are a [color={role-type-familiar-color}][bold]{role-type-familiar-name}[/bold][/color]. Serve the interests of your master, whatever those may be.
                                         You don't remember any of your previous life, and you don't remember anything you learned as a ghost.
                                         You are allowed to remember knowledge about the game in general, such as how to cook, how to use objects, etc.
