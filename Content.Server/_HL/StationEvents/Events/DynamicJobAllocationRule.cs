@@ -160,12 +160,12 @@ public sealed class DynamicJobAllocationRule : StationEventSystem<DynamicJobAllo
             if (_stationJobs.IsJobManuallyOverridden(stationUid, component.MercenaryJob))
                 continue;
 
-            var desiredTotalSlots = Math.Max(component.MercenaryMinimum, Math.Min(counts.staffedNonMercenary, component.MercenaryCap));
-            var availableSlots = Math.Max(0, desiredTotalSlots - counts.filledMercenary);
+            var desiredTotalSlots = Math.Max(component.MercenaryMinimum, Math.Min(totalNonMercenary, component.MercenaryCap));
+            var availableSlotsForStation = Math.Max(0, desiredTotalSlots - totalFilledMercenary);
 
             _stationJobs.TrySetJobMidRoundMax(stationUid, component.MercenaryJob, desiredTotalSlots);
 
-            _stationJobs.TrySetJobSlot(stationUid, component.MercenaryJob, availableSlots);
+            _stationJobs.TrySetJobSlot(stationUid, component.MercenaryJob, availableSlotsForStation);
         }
     }
 
