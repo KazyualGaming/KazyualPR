@@ -29,8 +29,6 @@ public sealed class BrainwashVizorSystem : SharedBrainwashVizorSystem
     [Dependency] private readonly StatusEffectsSystem _statusEffectsSystem = default!;
     [Dependency] private readonly SharedFlashSystem _flashSystem = default!;
     [Dependency] private readonly MovementModStatusSystem _movementMod = default!;
-    [Dependency] private readonly ConsentSystem _consentSystem = default!;
-    [Dependency] private readonly StunSystem _stun = default!;
     [Dependency] private readonly PopupSystem _popupSystem = default!;
     public override void Initialize()
     {
