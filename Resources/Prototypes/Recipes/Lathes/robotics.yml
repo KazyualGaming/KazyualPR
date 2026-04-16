@@ -146,11 +146,6 @@
   id: BorgModuleAppraisal
   result: BorgModuleAppraisal
 
-- type: latheRecipe
-  parent: BaseBorgModuleRecipe
-  id: BorgModuleTool
-  result: BorgModuleTool
-
 # Engineering Modules
 
 - type: latheRecipe

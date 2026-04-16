@@ -11,6 +11,21 @@
   result: BorgModuleStorage
 
 - type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleStun
+  result: BorgModuleStun
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleKill
+  result: BorgModuleKill
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleInvestigation
+  result: BorgModuleInvestigation
+
+- type: latheRecipe
   id: OmniHandRight
   result: CyberneticsOmnihandRight
   completetime: 30

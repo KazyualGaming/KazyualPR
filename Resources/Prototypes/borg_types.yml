@@ -160,15 +160,14 @@
     - BorgModuleSyndicate # HardLight
     - BorgModuleSyndicateAssault # HardLight
     - XenoborgModuleGeneric # HardLight
-
-  - BorgModuleTool
-  - BorgModuleChemical
-  - BorgModuleTopicals
-  - BorgModuleRescue
-  - BorgModuleJetpack # Frontier
-  - BorgModuleTreatment
-  - BorgModuleDefibrillator # Sandwich
-  - BorgModuleSurgery # Sandwich
+    - BorgModuleTool
+    - BorgModuleChemical
+    - BorgModuleTopicals
+    - BorgModuleRescue
+    - BorgModuleJetpack # Frontier
+    - BorgModuleTreatment
+    - BorgModuleDefibrillator # Sandwich
+    - BorgModuleSurgery # Sandwich
 
   radioChannels:
   - Science
@@ -219,15 +218,14 @@
     - BorgModuleSyndicate # HardLight
     - BorgModuleSyndicateAssault # HardLight
     - XenoborgModuleGeneric # HardLight
-
-  - BorgModuleTool # Starlight
-  - BorgModuleMusique
-  - BorgModuleService
-  - BorgModuleClowning
-  - BorgModuleGardening
-  - BorgModuleHarvesting
-  - BorgModuleBureaucracy # Frontier
-  - BorgModuleJetpack # Frontier
+    - BorgModuleTool # Starlight
+    - BorgModuleMusique
+    - BorgModuleService
+    - BorgModuleClowning
+    - BorgModuleGardening
+    - BorgModuleHarvesting
+    - BorgModuleBureaucracy # Frontier
+    - BorgModuleJetpack # Frontier
 
   radioChannels:
   - Science
