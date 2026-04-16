@@ -356,20 +356,18 @@ namespace Content.Client.Shuttles.Save
         }
 
         // Return list of ships available from server and cached locally
-        return AvailableShips.Where(path => !IsRoomGridFile(path)).ToList();
-    }
+        public List<string> GetAvailableShips()
+        {
+            // Return list of ships available from server and cached locally
+            return AvailableShips.Where(path => !IsRoomGridFile(path)).ToList();
+        }
 
-    private static bool IsRoomGridFile(string filePath)
-    {
-        // Room grid files are managed by RoomGridFileManagementSystem and should not be treated as ships
-        // This logic must match the path logic in RoomGridFileManagementSystem
-        return filePath.StartsWith("/Exports/room_grids/room_", StringComparison.OrdinalIgnoreCase)
-            || filePath.StartsWith("/Exports/room_", StringComparison.OrdinalIgnoreCase);
-            }
-
-    public bool HasShipData(string shipName)
-    {
-        return CachedShipData.ContainsKey(shipName);
+        private static bool IsRoomGridFile(string filePath)
+        {
+            // Room grid files are managed by RoomGridFileManagementSystem and should not be treated as ships
+            // This logic must match the path logic in RoomGridFileManagementSystem
+            return filePath.StartsWith("/Exports/room_grids/room_", StringComparison.OrdinalIgnoreCase)
+                || filePath.StartsWith("/Exports/room_", StringComparison.OrdinalIgnoreCase);
         }
 
         public List<string> GetSavedShipFiles() => new List<string>(AvailableShips);
