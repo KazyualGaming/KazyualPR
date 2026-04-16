@@ -21,12 +21,6 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
     private static readonly string[] PushUpLayerNames = { "gloves", "shoes" };
 
-    private static readonly HumanoidVisualLayers[] PushDownLayers =
-    {
-        HumanoidVisualLayers.Head, HumanoidVisualLayers.Snout
-    };
-
-    private static readonly string[] PushDownLayerNames = { "head", "mask", "ears", "eyes" };
 
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly MarkingManager _markingManager = default!;
@@ -88,35 +82,6 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
     }
     // HardLight end
 
-        // 2. Parts that are pushed DOWN (-Y) (head, snout + headgear)
-        foreach (var layerEnum in PushDownLayers)
-        {
-            if (_sprite.LayerMapTryGet((uid, sprite), layerEnum, out var layerIndex, false))
-                _sprite.LayerSetOffset((uid, sprite), layerIndex, pushDownOffset);
-        }
-        foreach (var layerString in PushDownLayerNames)
-        {
-            if (_sprite.LayerMapTryGet((uid, sprite), layerString, out var layerIndex, false))
-                _sprite.LayerSetOffset((uid, sprite), layerIndex, pushDownOffset);
-        }
-        // ---------------------------------------------------------------------
-    }
-
-    private void OnAppearanceChange(EntityUid uid, HumanoidAppearanceComponent comp, ref AppearanceChangeEvent args)
-    {
-        if (args.Sprite == null)
-            return;
-
-        // If the server pushed a visuals value for scale, apply it directly.
-        if (_appearance.TryGetData<Vector2>(uid, HumanoidVisuals.Scale, out var scale, args.Component))
-        {
-            _sprite.SetScale((uid, args.Sprite!), scale);
-        }
-    }
-
-    private static bool IsHidden(HumanoidAppearanceComponent humanoid, HumanoidVisualLayers layer)
-        => humanoid.HiddenLayers.ContainsKey(layer) || humanoid.PermanentlyHidden.Contains(layer);
-
     private void UpdateLayers(EntityUid uid, HumanoidAppearanceComponent component, SpriteComponent sprite)
     {
         var oldLayers = new HashSet<HumanoidVisualLayers>(component.BaseLayers.Keys);
@@ -148,6 +113,21 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
                 _sprite.LayerSetVisible((uid, sprite), index, false);
         }
     }
+
+    private void OnAppearanceChange(EntityUid uid, HumanoidAppearanceComponent comp, ref AppearanceChangeEvent args)
+    {
+        if (args.Sprite == null)
+            return;
+
+        // If the server pushed a visuals value for scale, apply it directly.
+        if (_appearance.TryGetData<Vector2>(uid, HumanoidVisuals.Scale, out var scale, args.Component))
+        {
+            _sprite.SetScale((uid, args.Sprite!), scale);
+        }
+    }
+
+    private static bool IsHidden(HumanoidAppearanceComponent humanoid, HumanoidVisualLayers layer)
+        => humanoid.HiddenLayers.ContainsKey(layer) || humanoid.PermanentlyHidden.Contains(layer);
 
     private void SetLayerData(
         EntityUid uid,
