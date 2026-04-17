@@ -172155,13 +172155,6 @@ entities:
     - type: Transform
       pos: 39.5,-7.5
       parent: 2
-- proto: WhipTeal
-  entities:
-  - uid: 24205
-    components:
-    - type: Transform
-      pos: -32.452297,31.464119
-      parent: 2
 - proto: Windoor
   entities:
   - uid: 24206

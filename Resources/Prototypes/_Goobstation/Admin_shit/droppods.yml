@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   parent: BaseItem
   id: DropPodspawner
   name: drop pod
@@ -38,6 +38,7 @@
     damageContainer: Inorganic
   - type: TimerTrigger
     delay: 0.9
+  - type: TriggerOnActivate
   - type: Destructible
     thresholds:
     - trigger:

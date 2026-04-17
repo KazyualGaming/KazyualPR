@@ -81,7 +81,7 @@ namespace Content.Server.Entry
 
             foreach (var callback in TestingCallbacks)
             {
-                var cast = (ServerModuleTestingCallbacks) callback;
+                var cast = (ServerModuleTestingCallbacks)callback;
                 cast.ServerBeforeIoC?.Invoke();
             }
 
@@ -89,7 +89,6 @@ namespace Content.Server.Entry
             factory.GenerateNetIds();
             var configManager = IoCManager.Resolve<IConfigurationManager>();
             var dest = configManager.GetCVar(CCVars.DestinationFile);
-            IoCManager.Resolve<ContentLocalizationManager>().Initialize();
             if (string.IsNullOrEmpty(dest)) //hacky but it keeps load times for the generator down.
             {
                 _euiManager = IoCManager.Resolve<EuiManager>();
@@ -130,6 +129,7 @@ namespace Content.Server.Entry
         {
             base.PostInit();
 
+            IoCManager.Resolve<ContentLocalizationManager>().Initialize();
             IoCManager.Resolve<IChatSanitizationManager>().Initialize();
             IoCManager.Resolve<IChatManager>().Initialize();
             var configManager = IoCManager.Resolve<IConfigurationManager>();
