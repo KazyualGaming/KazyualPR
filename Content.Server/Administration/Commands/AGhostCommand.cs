@@ -166,8 +166,8 @@ public sealed class AGhostCommand : LocalizedCommands
 
         if (!hidden && (player.Name == "FuelRat" || player.Name == "localhost@FuelRat"))
         {
-            ghostSystem.SetRainbowCycle((ghost, comp), true);
-            ghostSystem.SetColor((ghost, comp), Color.FromHex("#FF0000FF"));
+            ghostSystem.SetRainbowCycle((ghost, comp), false);
+            ghostSystem.SetColor((ghost, comp), Color.FromHex("#00FF00FF"));
             metaDataSystem.SetEntityDescription(ghost, "Its the master-in-chief themselves!");
             metaDataSystem.SetEntityName(ghost, "Yuuchan");
         }
