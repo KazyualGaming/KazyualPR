@@ -14,37 +14,37 @@
   recipes:
   - BorgModuleTool
   # - BorgModuleFireExtinguisher # Hardlight
-  - BorgModuleStun # Floof
-  - BorgModuleKill # Floof
-  - BorgModuleInvestigation
+  #- BorgModuleStun # Floof
+  #- BorgModuleKill # Floof
+  #- BorgModuleInvestigation
   - BorgModuleSurgery # Shitmed
   # HardLight start
-  - BorgModuleCleaning
-  - BorgModuleCustodial
-  - BorgModuleTopicals
+  #- BorgModuleCleaning
+  #- BorgModuleCustodial
+  #- BorgModuleTopicals
   - BorgModuleBureaucracy
   - BorgModuleJetpack
-  - BorgModuleConstruction
+  #- BorgModuleConstruction
   - BorgModuleRescue
-  - BorgModuleDiagnosis
-  - BorgModuleClowning
-  - BorgModuleMusique
-  - BorgModuleMining
+  #- BorgModuleDiagnosis
+  #- BorgModuleClowning
+  #- BorgModuleMusique
+  #- BorgModuleMining
   # HardLight end
-  - BorgModuleRadiationDetection
+  #- BorgModuleRadiationDetection
 
 - type: latheRecipePack # HardLight: Why is this up here and not merged with the dynamic BorgModules?
   id: BorgModulesDynamic
   recipes:
   - BorgModuleAdvancedSurgery
   # HardLight start
-  - BorgModuleTopicals
+  #- BorgModuleTopicals
   # - BorgModuleHoS
   # - BorgModuleWarden
   - BorgModuleChemical
   # Hardlight change start
-  - BorgModuleTreatment
-  - BorgModuleAdvancedTreatment
+  #- BorgModuleTreatment
+  #- BorgModuleAdvancedTreatment
   - BorgModuleAdvancedParamedic
   # HardLight end
 
@@ -102,7 +102,7 @@
   - BorgModuleAdvancedTool
   # - BorgModuleAdvancedClowning # HardLight: We don't have most of the items in this module, so I'm commenting it out for now until we do.
   - BorgModuleAdvancedChemical
-  - BorgModuleAdvancedMining
+  #- BorgModuleAdvancedMining
   - BorgModuleAdvancedParamedic # Frontier
   - BorgModuleChef # Frontier
 

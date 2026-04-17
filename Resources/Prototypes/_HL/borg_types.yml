@@ -17,9 +17,9 @@
 
   defaultModules:
     - BorgModuleTool
-    - BorgModuleStun
-    - BorgModuleKill
-    - BorgModuleInvestigation
+    #- BorgModuleStun
+    #- BorgModuleKill
+    #- BorgModuleInvestigation
 
   radioChannels:
   - Science

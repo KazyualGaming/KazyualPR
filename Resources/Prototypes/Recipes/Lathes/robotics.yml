@@ -164,10 +164,10 @@
 
 # Medical Modules
 
-- type: latheRecipe
-  parent: BaseBorgModuleRecipe
-  id: BorgModuleTreatment
-  result: BorgModuleTreatment
+#- type: latheRecipe
+#  parent: BaseBorgModuleRecipe
+#  id: BorgModuleTreatment
+#  result: BorgModuleTreatment
 
 # Frontier: base modules for a medical cyborg
 

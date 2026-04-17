@@ -260,7 +260,7 @@
   - OreBagOfHolding
   - MiningDrillDiamond
   - AdvancedMineralScannerEmpty
-  - BorgModuleAdvancedMining
+  #- BorgModuleAdvancedMining #Sandwich: Broken
   - NFBlueprintOreBagOfHolding # Frontier
   - NFBlueprintMiningDrillDiamond # Frontier
   - NFBlueprintAdvancedMineralScannerEmpty # Frontier
