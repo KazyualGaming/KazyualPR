@@ -186,7 +186,7 @@
       supportedChannels:
       - Common
       - Traffic # Frontier
-      - ColCom # HardLight: CentCom<ColCom
+      - CentCom
       - Command
       - Engineering
       - Medical
