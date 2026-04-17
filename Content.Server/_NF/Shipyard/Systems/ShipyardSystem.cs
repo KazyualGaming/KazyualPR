@@ -156,6 +156,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
     private void OnRoundRestart(RoundRestartCleanupEvent ev)
     {
+        _shipyardActionDelayUntil.Clear(); // HardLight
+        _lastLoadCharge.Clear(); // HardLight
         CleanupShipyard();
     }
 

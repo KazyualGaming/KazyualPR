@@ -37,6 +37,7 @@
   - MachineGCSLowCircuitboard
   - MachineGCSMediumCircuitboard
   - MachineGCSHighCircuitboard
+  - MachineGCSUltraCircuitboard # HL
   # Goobstation R&D Console rework start
   technologyPrerequisites:
   - LightShuttleWeapons

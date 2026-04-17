@@ -8,15 +8,7 @@
   },
   "states": [
     {
-      "name": "borg_e_r",
-      "directions": 4
-    },
-    {
-      "name": "borg_e",
-      "directions": 4
-    },
-    {
-      "name": "borg_l",
+      "name": "borg",
       "directions": 4
     },
     {
@@ -27,13 +19,6 @@
     },
     {
       "name": "borg-rest"
-    },
-    {
-      "name": "borg",
-      "directions": 4
-    },
-    {
-      "name": "credit"
     }
   ]
 }

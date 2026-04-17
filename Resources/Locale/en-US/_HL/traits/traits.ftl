@@ -24,3 +24,23 @@ natural-regen-text = Your body passively heals from minor injuries over time.
 
 unnatural-regen-name = Unnatural Regeneration
 unnatural-regen-text = Your body passively heals from injuries even while in critical condition.
+
+big-name = Big
+big-text = You are noticeably larger than average.
+big-trait-cannot-wield-ranged = You are too large to wield this weapon.
+
+small-name = Small
+small-text = You are noticeably smaller than average.
+small-trait-cannot-use-wield-required = You are too small to use { THE($item) }.
+small-trait-must-wield-weapon = You are too small to use { THE($item) } unless it's wielded.
+small-trait-cannot-wield-weapon = You are too small to wield { THE($item) }.
+
+tiny-name = Tiny
+tiny-text = You are substantially smaller than average.
+tiny-trait-cannot-pickup-weapon = You are too small to pick up { THE($item) }.
+tiny-trait-cannot-attack-with-tool = You are too small to attack with { THE($item) }.
+tiny-trait-cannot-wield = You are too small to wield { THE($item) }.
+tiny-trait-requires-two-hands = You are too small to hold { THE($item) } with only one hand.
+
+pettable-name = Pettable
+pettable-text = You enjoy being pet on your soft floofy head!

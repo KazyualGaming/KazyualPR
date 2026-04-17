@@ -9,3 +9,133 @@
 #  collisionMask: FullTileMask
 #  rotation: Camera
 #  fx: EffectRCDConstruct3
+
+- type: rcd
+  id: PlatingNE
+  name: NE plating
+  category: Floors
+  sprite: /Textures/_Mono/Tiles/plating/ne.png
+  mode: ConstructTile
+  prototype: PlatingCornerNE
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingNW
+  name: NW plating
+  category: Floors
+  sprite: /Textures/_Mono/Tiles/plating/nw.png
+  mode: ConstructTile
+  prototype: PlatingCornerNW
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingSE
+  name: SE plating
+  category: Floors
+  sprite: /Textures/_Mono/Tiles/plating/se.png
+  mode: ConstructTile
+  prototype: PlatingCornerSE
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: PlatingSW
+  name: SW plating
+  category: Floors
+  sprite: /Textures/_Mono/Tiles/plating/sw.png
+  mode: ConstructTile
+  prototype: PlatingCornerSW
+  cost: 1
+  delay: 1
+  collisionMask: InteractImpassable
+  rules:
+    - CanBuildOnEmptyTile
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: WindowDirectionalShuttle
+  category: WindowsAndGrilles
+  sprite: /Textures/_HL/RCD/shuttlewindowdiagonal.png
+  mode: ConstructObject
+  prototype: ShuttleWindowDiagonal
+  cost: 2
+  delay: 1
+  collisionMask: Impassable
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct1
+  allowMultiDirection: true
+
+- type: rcd
+  id: WindowDirectionalReinforced
+  category: WindowsAndGrilles
+  sprite: /Textures/_HL/RCD/reinforcedwindowdiagonal.png
+  mode: ConstructObject
+  prototype: ReinforcedWindowDiagonal
+  cost: 2
+  delay: 1
+  collisionMask: Impassable
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct1
+  allowMultiDirection: true
+
+- type: rcd
+  id: WallShuttleDiagonal
+  category: Walls
+  sprite: /Textures/_HL/RCD/shuttlewalldiag.png
+  mode: ConstructObject
+  prototype: WallShuttleDiagonal
+  cost: 4
+  delay: 2
+  collisionMask: Impassable
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rotation: User
+  fx: EffectRCDConstruct2
+  allowMultiDirection: true
+
+- type: rcd
+  id: WallReinforcedDiagonal
+  category: Walls
+  sprite: /Textures/_HL/RCD/reinfwalldiag.png
+  mode: ConstructObject
+  prototype: WallReinforcedDiagonal
+  cost: 4
+  delay: 2
+  collisionMask: Impassable
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rotation: User
+  fx: EffectRCDConstruct2
+  allowMultiDirection: true
+
+- type: rcd
+  id: WallSolidDiagonal
+  category: Walls
+  sprite: /Textures/_HL/RCD/solidwalldiag.png
+  mode: ConstructObject
+  prototype: WallSolidDiagonal
+  cost: 4
+  delay: 2
+  collisionMask: Impassable
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rotation: User
+  fx: EffectRCDConstruct2
+  allowMultiDirection: true

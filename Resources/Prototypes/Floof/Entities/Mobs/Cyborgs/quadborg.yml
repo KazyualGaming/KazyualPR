@@ -4,6 +4,11 @@
   components:
   - type: Body
     prototype: Quadborg
+  - type: QuadborgSpriteOffset # HardLight
+    defaultOffset: 0,0.2
+    bigOffset: 0,0.3
+    smallOffset: 0,0.1
+    tinyOffset: 0,0.075
   - type: Inventory
     speciesId: quadborg
     templateId: borgquad 

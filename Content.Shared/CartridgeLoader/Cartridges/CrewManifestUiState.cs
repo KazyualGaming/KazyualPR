@@ -6,12 +6,12 @@ namespace Content.Shared.CartridgeLoader.Cartridges;
 [Serializable, NetSerializable]
 public sealed class CrewManifestUiState : BoundUserInterfaceState
 {
-    public string StationName;
     public CrewManifestEntries? Entries;
+    public string? Message;
 
-    public CrewManifestUiState(string stationName, CrewManifestEntries? entries)
+    public CrewManifestUiState(CrewManifestEntries? entries, string? message = null)
     {
-        StationName = stationName;
         Entries = entries;
+        Message = message;
     }
 }

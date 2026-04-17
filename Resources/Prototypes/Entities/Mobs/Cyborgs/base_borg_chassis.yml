@@ -101,10 +101,9 @@
   - type: LockingWhitelist
     blacklist:
       components:
-      - BorgChassis
+      # - BorgChassis Hardlight if quads can do it then so can we damn it.
       - RoboticsConsole
   - type: WiresPanel
-    openingTool: Prying
   - type: ActivatableUIRequiresPanel
   - type: NameIdentifier
     group: Silicon
@@ -157,9 +156,6 @@
   - type: Body
   - type: StatusEffects
     allowed:
-    - Stun
-    - KnockedDown
-    - SlowedDown
     - Flashed
   - type: TypingIndicator
     proto: robot
@@ -264,11 +260,6 @@
     damageProtection:
       flatReductions:
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
-  #region Starlight
-  # - type: CyborgSparkEffect # Hardlight we don't have these yet...
-  # - type: StationAIShunt #Starlight allow shunting into all borgs # Hardlight TOO SOON
-  # - type: Crawler # Hardlight TOO SOON
-  # end region starlight
   - type: BorgSwitchableSubtype # CD change
   - type: PreventDropOnDowned # Frontier: borgs don't drop items when falling (e.g. critical/dead)
   - type: InteractionPopup   # Hardlight change should be able to pet the borgs now
@@ -276,9 +267,16 @@
     interactFailureString: petting-failure-generic-cyborg
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: BypassLock
+    openWiresPanel: true
+  - type: BypassLockRequiresMobState
+    requiredMobState:
+    - Critical
+    - Dead
   - type: Blindable
   - type: EyeProtection
   - type: Stripping
+  
 
 - type: entity
   abstract: true
@@ -297,7 +295,7 @@
     receiveFrequencyId: CyborgControl
     transmitFrequencyId: RoboticsConsole
     savableAddress: false
-  - type: OnUseTimerTrigger
+  - type: TimerTrigger
     delay: 10
     examinable: false
     beepSound:
@@ -305,8 +303,9 @@
       params:
         volume: -4
   # prevent any funnies if someone makes a cyborg item...
-  - type: AutomatedTimer
   - type: ExplodeOnTrigger
+    keysIn:
+    - timer
   # explosion does most of its damage in the center and less at the edges
   - type: Explosive
     explosionType: Minibomb
@@ -354,7 +353,7 @@
     tags:
     - Borg
   - type: AccessReader
-    access: [["Command"], ["Research"]]
+    access: [["Command"], ["Research"], ["Mercenary"]] # Hardlight allow freelancers to unlock borgs.
   - type: ShowJobIcons
   - type: InteractionPopup
     interactSuccessSound:
@@ -408,6 +407,8 @@
       Unsexed: UnisexSiliconSyndicate
   - type: PointLight
     color: "#dd200b"
+  - type: BypassLock
+    bypassDelay: 15 # We don't want people to easily be able to remove syndieborg brains.
 
 - type: entity
   id: BaseBorgChassisDerelict
@@ -572,3 +573,5 @@
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
   - type: Xenoborg
+  - type: BypassLock
+    bypassDelay: 15 # We don't want people to easily be able to remove xenoborg brains.

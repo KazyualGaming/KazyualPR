@@ -92,6 +92,31 @@
         Shock: -5.44
         Cold: -5.44
   # EE Change End
+  # FH Start - Protogen Healing
+  - type: ConditionalHealing
+    healingDefinitions:
+      - allowedTags: [Protogen, ProtoArachnid, ProtoAvali, ProtoDawi, ProtoDionae, ProtoFeline, ProtoHumie, ProtoMoth, ProtoReptile, ProtoResomi, ProtoSlimePerson, ProtoThaven, ProtoVox, ProtoVulp, ProtoKin]
+        healing:
+          damageContainers:
+            - Biological
+          delay: 2
+          damage:
+            types:
+              Heat: -10
+              Cold: -10
+              Shock: -10
+              Caustic: -10
+          healingBeginSound:
+            path: "/Audio/Items/Medical/ointment_begin.ogg"
+            params:
+              volume: 1.0
+              variation: 0.125
+          healingEndSound:
+            path: "/Audio/Items/Medical/ointment_end.ogg"
+            params:
+              volume: 1.0
+              variation: 0.125
+  # FH End - Protogen Healing
 
 - type: entity
   parent: CableHVStack
@@ -101,15 +126,6 @@
   - type: Sprite
     state: coilhv-10
   - type: Stack
-    count: 10
-
-- type: entity
-  parent: CableHVStack10
-  id: CableHVStackLingering10
-  suffix: Lingering, 10
-  components:
-  - type: Stack
-    lingering: true
     count: 10
 
 - type: entity
@@ -168,6 +184,31 @@
         Shock: -4.33
         Cold: -4.33
   # EE Change End
+  # FH Start - Protogen Healing
+  - type: ConditionalHealing
+    healingDefinitions:
+      - allowedTags: [Protogen, ProtoArachnid, ProtoAvali, ProtoDawi, ProtoDionae, ProtoFeline, ProtoHumie, ProtoMoth, ProtoReptile, ProtoResomi, ProtoSlimePerson, ProtoThaven, ProtoVox, ProtoVulp, ProtoKin]
+        healing:
+          damageContainers:
+            - Biological
+          delay: 2
+          damage:
+            types:
+              Heat: -5
+              Cold: -5
+              Shock: -5
+              Caustic: -2
+          healingBeginSound:
+            path: "/Audio/Items/Medical/ointment_begin.ogg"
+            params:
+              volume: 1.0
+              variation: 0.125
+          healingEndSound:
+            path: "/Audio/Items/Medical/ointment_end.ogg"
+            params:
+              volume: 1.0
+              variation: 0.125
+  # FH End - Protogen Healing
 
 - type: entity
   parent: CableMVStack
@@ -177,15 +218,6 @@
   - type: Sprite
     state: coilmv-10
   - type: Stack
-    count: 10
-
-- type: entity
-  parent: CableMVStack10
-  id: CableMVStackLingering10
-  suffix: Lingering, 10
-  components:
-  - type: Stack
-    lingering: true
     count: 10
 
 - type: entity
@@ -243,6 +275,30 @@
         Shock: -3.22
         Cold: -3.22
   # EE Change End
+  # FH Start - Protogen Healing
+  - type: ConditionalHealing
+    healingDefinitions:
+      - allowedTags: [Protogen, ProtoArachnid, ProtoAvali, ProtoDawi, ProtoDionae, ProtoFeline, ProtoHumie, ProtoMoth, ProtoReptile, ProtoResomi, ProtoSlimePerson, ProtoThaven, ProtoVox, ProtoVulp, ProtoKin]
+        healing:
+          damageContainers:
+            - Biological
+          delay: 2
+          damage:
+            types:
+              Heat: -3
+              Cold: -3
+              Shock: -3
+          healingBeginSound:
+            path: "/Audio/Items/Medical/ointment_begin.ogg"
+            params:
+              volume: 1.0
+              variation: 0.125
+          healingEndSound:
+            path: "/Audio/Items/Medical/ointment_end.ogg"
+            params:
+              volume: 1.0
+              variation: 0.125
+  # FH End - Protogen Healing
 
 - type: entity
   parent: CableApcStack
@@ -254,17 +310,8 @@
     - type: Stack
       count: 10
     - type: Construction # Frontier
-      graph: CableApcStack10 # Frontier
-      node: CableApcStack10 # Frontier
-
-- type: entity
-  parent: CableApcStack10
-  id: CableApcStackLingering10
-  suffix: Lingering, 10
-  components:
-  - type: Stack
-    lingering: true
-    count: 10
+      graph: CableApcStack10
+      node: CableApcStack10
 
 - type: entity
   parent: CableApcStack

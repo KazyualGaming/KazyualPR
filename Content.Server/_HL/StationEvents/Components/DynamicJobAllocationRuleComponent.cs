@@ -28,4 +28,10 @@ public sealed partial class DynamicJobAllocationRuleComponent : Component
     /// </summary>
     [DataField("mercenaryCap")]
     public int MercenaryCap = 40;
+
+    /// <summary>
+    /// Minimum number of mercenary slots to always have available
+    /// </summary>
+    [DataField("mercenaryMinimum")]
+    public int MercenaryMinimum = 3;
 }

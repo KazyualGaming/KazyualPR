@@ -60,6 +60,107 @@
   - type: BorgSwitchableSubtype
     borgSubtype: BorgEngineerSubtypeK4tAlt
 
+# region generic
+
+# Missing prototype: BorgGenericSubtypeMekaFNinja
+# - type: entity
+#   id: BorgChassisGenericMekaFNinja
+#   parent: BorgChassisSelectable
+#   name: Meka-F (Ninja)
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: generic
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgGenericSubtypeMekaFNinja
+
+# Missing prototype: BorgGenericSubtypeMekaNinja
+# - type: entity
+#   id: BorgChassisGenericMekaNinja
+#   parent: BorgChassisSelectable
+#   name: Meka (Ninja)
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: generic
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgGenericSubtypeMekaNinja
+
+# Missing prototype: BorgGenericSubtypeMekaMNinja
+# - type: entity
+#   id: BorgChassisGenericMekaMNinja
+#   parent: BorgChassisSelectable
+#   name: Meka-M (Ninja)
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: generic
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgGenericSubtypeMekaMNinja
+
+# The sprites for this one are broken, so I am commenting it TODO fix sprites.
+# - type: entity
+#   id: BorgChassisGenericK4tNinja
+#   parent: BorgChassisSelectable
+#   name: K4t-NNJ
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: generic
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgGenericSubtypeK4tNinja
+
+# Missing prototype: BorgGenericSubtypeMekaFPeace
+# - type: entity
+#   id: BorgChassisGenericMekaFPeace
+#   parent: BorgChassisSelectable
+#   name: Meka-F (Peace)
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: generic
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgGenericSubtypeMekaFPeace
+
+# Missing prototype: BorgGenericSubtypeMekaPeace
+# - type: entity
+#   id: BorgChassisGenericMekaPeace
+#   parent: BorgChassisSelectable
+#   name: Meka (Peace)
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: generic
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgGenericSubtypeMekaPeace
+
+# Missing prototype: BorgGenericSubtypeMekaMPeace
+# - type: entity
+#   id: BorgChassisGenericMekaMPeace
+#   parent: BorgChassisSelectable
+#   name: Meka-M (Peace)
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: generic
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgGenericSubtypeMekaMPeace
+
+# Missing prototype: BorgGenericSubtypeMekaSFPeace
+# - type: entity
+#   id: BorgChassisGenericMekaSFPeace
+#   parent: BorgChassisSelectable
+#   name: Meka-SF (Peace)
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: generic
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgGenericSubtypeMekaSFPeace
+
+# Missing prototype: BorgGenericSubtypeK4tPeace
+# - type: entity
+#   id: BorgChassisGenericK4tPeace
+#   parent: BorgChassisSelectable
+#   name: K4t-PCE
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: generic
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgGenericSubtypeK4tPeace
+
 # region janitor
 
 - type: entity
@@ -235,6 +336,163 @@
     selectedBorgType: mining
   - type: BorgSwitchableSubtype
     borgSubtype: BorgMiningSubtypeK4tAlt
+
+# TODO if the cargo borg is ported from SL, move these over to the cargo subtype.
+
+# Missing prototype: BorgCargoSubtypeMekaF
+# - type: entity
+#   id: BorgChassisCargoMekaF
+#   parent: BorgChassisSelectable
+#   name: Meka-F (Cargo)
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: mining
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgCargoSubtypeMekaF
+
+# Missing prototype: BorgCargoSubtypeMeka
+# - type: entity
+#   id: BorgChassisCargoMeka
+#   parent: BorgChassisSelectable
+#   name: Meka (Cargo)
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: mining
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgCargoSubtypeMeka
+
+# Missing prototype: BorgCargoSubtypeMekaM
+# - type: entity
+#   id: BorgChassisCargoMekaM
+#   parent: BorgChassisSelectable
+#   name: Meka-M (Cargo)
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: mining
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgCargoSubtypeMekaM
+
+# Missing prototype: BorgCargoSubtypeMekaSF
+# - type: entity
+#   id: BorgChassisCargoMekaSF
+#   parent: BorgChassisSelectable
+#   name: Meka-SF (Cargo)
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: mining
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgCargoSubtypeMekaSF
+
+# Missing prototype: BorgCargoSubtypeK4t
+# - type: entity
+#   id: BorgChassisCargoK4t
+#   parent: BorgChassisSelectable
+#   name: K4t-CRG
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: mining
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgCargoSubtypeK4t
+
+- type: entity
+  id: BorgChassisCargoK4tAlt
+  parent: BorgChassisSelectable
+  name: K4t-CRG-Alt
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: mining
+  - type: BorgSwitchableSubtype
+    borgSubtype: BorgCargoSubtypeK4tAlt
+
+# region security
+
+# Missing prototype: BorgSecuritySubtypeMekaF
+# - type: entity
+#   id: BorgChassisSecurityMekaF
+#   parent: BorgChassisSelectable
+#   name: Meka-F
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: security
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgSecuritySubtypeMekaF
+
+# Missing prototype: BorgSecuritySubtypeMeka
+# - type: entity
+#   id: BorgChassisSecurityMeka
+#   parent: BorgChassisSelectable
+#   name: Meka
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: security
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgSecuritySubtypeMeka
+
+# Missing prototype: BorgSecuritySubtypeMekaM
+# - type: entity
+#   id: BorgChassisSecurityMekaM
+#   parent: BorgChassisSelectable
+#   name: Meka-M
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: security
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgSecuritySubtypeMekaM
+
+# Missing prototype: BorgSecuritySubtypeK4t
+# - type: entity
+#   id: BorgChassisSecurityK4t
+#   parent: BorgChassisSelectable
+#   name: K4t-SEC
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: security
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgSecuritySubtypeK4t
+
+# Missing prototype: BorgSecuritySubtypeMekaFSyndie
+# - type: entity
+#   id: BorgChassisSecurityMekaFSyndie
+#   parent: BorgChassisSelectable
+#   name: Meka-F (Syndie)
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: security
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgSecuritySubtypeMekaFSyndie
+
+# Missing prototype: BorgSecuritySubtypeMekaSyndie
+# - type: entity
+#   id: BorgChassisSecurityMekaSyndie
+#   parent: BorgChassisSelectable
+#   name: Meka (Syndie)
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: security
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgSecuritySubtypeMekaSyndie
+
+# Missing prototype: BorgSecuritySubtypeMekaMSyndie
+# - type: entity
+#   id: BorgChassisSecurityMekaMSyndie
+#   parent: BorgChassisSelectable
+#   name: Meka-M (Syndie)
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: security
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgSecuritySubtypeMekaMSyndie
+
+# Missing prototype: BorgSecuritySubtypeK4tSyndie
+# - type: entity
+#   id: BorgChassisSecurityK4tSyndie
+#   parent: BorgChassisSelectable
+#   name: K4t-SYN
+#   components:
+#   - type: BorgSwitchableType
+#     selectedBorgType: security
+#   - type: BorgSwitchableSubtype
+#     borgSubtype: BorgSecuritySubtypeK4tSyndie
 
 # region service
 

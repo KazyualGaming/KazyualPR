@@ -7,29 +7,46 @@
   - PositronicBrain
   - SciFlash
   - CyborgEndoskeleton
-  - Quadborgendoskeleton
+  - Quadborgendoskeleton # Floof
 
 - type: latheRecipePack
   id: BorgModulesStatic
   recipes:
   - BorgModuleTool
-  - BorgModuleCable
-  - BorgModuleFireExtinguisher
-  - BorgModuleRadiationDetection
-  # Hardlight change start
-  #- BorgModuleGrapplingGun             # No Content.Shared.Research.Prototypes.LatheRecipePrototype found with id BorgModuleGrapplingGun - deactivate for now, not sure if needed
-  #- BorgModuleLightReplacer            # "
-  #- BorgModuleClowning                 # "
-  #- BorgModuleMusique                  # "
+  # - BorgModuleFireExtinguisher # Hardlight
+  #- BorgModuleStun # Floof
+  #- BorgModuleKill # Floof
+  #- BorgModuleInvestigation
+  - BorgModuleSurgery # Shitmed
+  # HardLight start
+  #- BorgModuleCleaning
+  #- BorgModuleCustodial
+  #- BorgModuleTopicals
+  - BorgModuleBureaucracy
+  - BorgModuleJetpack
+  #- BorgModuleConstruction
+  - BorgModuleRescue
+  #- BorgModuleDiagnosis
+  #- BorgModuleClowning
+  #- BorgModuleMusique
+  #- BorgModuleMining
+  # HardLight end
+  #- BorgModuleRadiationDetection
 
-- type: latheRecipePack
+- type: latheRecipePack # HardLight: Why is this up here and not merged with the dynamic BorgModules?
   id: BorgModulesDynamic
   recipes:
   - BorgModuleAdvancedSurgery
+  # HardLight start
+  #- BorgModuleTopicals
+  # - BorgModuleHoS
+  # - BorgModuleWarden
+  - BorgModuleChemical
   # Hardlight change start
-  - BorgModuleTreatment
-  - BorgModuleAdvancedTreatment
+  #- BorgModuleTreatment
+  #- BorgModuleAdvancedTreatment
   - BorgModuleAdvancedParamedic
+  # HardLight end
 
 - type: latheRecipePack
   id: SMCybernetics
@@ -83,15 +100,10 @@
   recipes:
   - BorgModuleAdvancedCleaning
   - BorgModuleAdvancedTool
-  # - BorgModuleGPS # Frontier: useless
-  - BorgModuleArtifact
-  - BorgModuleAnomaly
-  - BorgModuleGardening
-  - BorgModuleHarvesting
-  #- BorgModuleDefibrillator # Frontier: base module
-  #- BorgModuleAdvancedTreatment # Frontier: base module
+  # - BorgModuleAdvancedClowning # HardLight: We don't have most of the items in this module, so I'm commenting it out for now until we do.
+  - BorgModuleAdvancedChemical
+  #- BorgModuleAdvancedMining
   - BorgModuleAdvancedParamedic # Frontier
-  - BorgModuleAdvancedMining # Frontier
   - BorgModuleChef # Frontier
 
 - type: latheRecipePack

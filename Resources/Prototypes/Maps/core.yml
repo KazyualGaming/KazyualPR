@@ -3,7 +3,7 @@
   mapName: 'Hardlight Core Station'
   mapPath: /Maps/core.yml
   minPlayers: 0
-  maxPlayers: 100
+  maxPlayers: 200
   stations:
     Core:
       stationProto: StandardNanotrasenStation
@@ -62,7 +62,7 @@
             CargoTechnician: [ 3, 3 ]
             SalvageSpecialist: [ 2, 2 ]
             #civilian (3+)
-#            Passenger: [ -1, -1 ] #infinite, not counted
+            Passenger: [ -1, -1 ] #infinite, not counted
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]

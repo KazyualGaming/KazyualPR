@@ -3,7 +3,7 @@
   mapName: 'Bagel Station'
   mapPath: /Maps/bagel.yml
   minPlayers: 0
-  maxPlayers: 80
+  maxPlayers: 200
   stations:
     Bagel:
       stationProto: StandardNanotrasenStation
@@ -58,7 +58,7 @@
             SalvageSpecialist: [ 3, 3 ]
             CargoTechnician: [ 3, 3 ]
             #civilian (3+)
-            #Passenger: [ -1, -1 ] #infinite, not counted
+            Passenger: [ -1, -1 ] #infinite, not counted
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]

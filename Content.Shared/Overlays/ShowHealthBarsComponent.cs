@@ -13,12 +13,13 @@ namespace Content.Shared.Overlays;
 public sealed partial class ShowHealthBarsComponent : Component
 {
     /// <summary>
-    /// Displays health bars of the damage containers.
+    /// Displays health bars of the damage containers. HL - added synth to medhuds
     /// </summary>
     [DataField, AutoNetworkedField] // Shitmed Change
     public List<ProtoId<DamageContainerPrototype>> DamageContainers = new()
     {
-        "Biological"
+        "Biological",
+		"Synth"
     };
 
     [DataField]

@@ -1,8 +1,11 @@
-﻿using Content.Shared.Mobs;
+using Content.Shared.Mobs;
+using Content.Shared._HL.Traits.Physical; // HardLight
+using Content.Shared.Floof.Silicons.Borgs; // HardLight
 using Content.Shared.Silicons.Borgs;
 using Content.Shared.Silicons.Borgs.Components;
 using Robust.Client.GameObjects;
 using Robust.Shared.Containers;
+using System.Numerics; // HardLight
 
 namespace Content.Client.Silicons.Borgs;
 
