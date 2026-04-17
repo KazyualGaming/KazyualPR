@@ -319,3 +319,95 @@ Entries:
       message: incompatable ships (due to updates) can now load!
   id: 28
   time: '2026-04-16T09:53:20.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Add
+      message: >-
+        Updated to latest of HL branch (300 updates!) Here is a small list of
+        the major changes, please check github for more!
+    - type: Add
+      message: >-
+        Mega-Update to the MercVend. Giving it a large majority of new utility,
+        armors, weapons, etc.
+    - type: Tweak
+      message: MagiVend never spawn on Expeds anymore
+    - type: Add
+      message: Plant analyzers (advanced ones too!)
+    - type: Tweak
+      message: >-
+        Station roles are no longer able to purchase or load ships from shipyard
+        consoles.
+    - type: Fix
+      message: Fixed station captain spawn on multiple maps
+    - type: Add
+      message: New dock!
+    - type: Fix
+      message: >-
+        Certain prototypes that would normally cause ship load fails should no
+        longer cause said fails.
+    - type: Tweak
+      message: >-
+        Job payout calculation now persists between rounds (no more punishment
+        for round ending, no payday)
+    - type: Add
+      message: Many, MANY fashion items from Coyote Sector.
+    - type: Fix
+      message: Fixed a bug where succumbing to your fate deleted your character
+    - type: Fix
+      message: Fixed a bug that failed to populate the character fields in lobby
+    - type: Add
+      message: Microwaves can now be used as bludgeoning weapons?!
+    - type: Add
+      message: >-
+        Freezer Pouch so now you can live out your space warlord organ trading
+        simulator fantasy.
+    - type: Tweak
+      message: Gunnery servers now require increasingly expensive amounts of materials.
+    - type: Add
+      message: Added new craftable bone items and some interesting drops from dinosaurs
+    - type: Tweak
+      message: Wagging has been improved!
+    - type: Add
+      message: Pettable trait!
+    - type: Add
+      message: New accessibility options!
+    - type: Add
+      message: >-
+        Janitors now have access to wirebrushes, allowing for the derusting of
+        metal walls.
+    - type: Tweak
+      message: >-
+        Cameras will now react to the AI-eye and change states to show they are
+        being used.
+    - type: Fix
+      message: >-
+        Attempting to open the crew manifest when not on an appropriate grid now
+        returns a fail message, instead of loading indefinitely.
+    - type: Fix
+      message: >-
+        crew manifest is now actually actual (no more seeing a full list when
+        no-one is around)
+    - type: Add
+      message: Alot more crafting recipes!
+    - type: Add
+      message: Tabletop computers are now craftable
+    - type: Remove
+      message: >-
+        Removed duplicated files meaning the content should be quicker to
+        download.
+    - type: Tweak
+      message: The AME now generates 180kW per core, instead of 8MW (Nerfed)
+    - type: Tweak
+      message: >-
+        There are now ALWAYS 3 jobs for freelancer at roundstart (more appear
+        based on station crew amount)
+    - type: Add
+      message: Many other new things!
+    - type: Remove
+      message: Not much, mostly depricated/duplicate and broken stuff
+    - type: Tweak
+      message: Alot has changed!
+    - type: Fix
+      message: MANY MANY BUGS!
+  id: 29
+  time: '2026-04-17T11:55:25.0000000+00:00'
