@@ -269,13 +269,13 @@
     requiredMobState:
     - Critical
     - Dead
-    interactSuccessString: petting-success-generic-cyborg
-    interactFailureString: petting-failure-generic-cyborg
-    interactSuccessSound:
-      path: /Audio/Ambience/Objects/periodic_beep.ogg
   - type: Blindable
   - type: EyeProtection
   - type: Stripping
+  interactSuccessString: petting-success-generic-cyborg
+  interactFailureString: petting-failure-generic-cyborg
+  interactSuccessSound:
+    path: /Audio/Ambience/Objects/periodic_beep.ogg
 
 - type: entity
   abstract: true
