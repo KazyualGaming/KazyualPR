@@ -49,10 +49,10 @@ alert-level-delta-instructions = Crewmembers are advised to listen to heads of s
 # alert-level-delta-instructions = Crews are advised to listen to sector command for more information.
 
 alert-level-epsilon = Epsilon
-alert-level-epsilon-announcement = Central Command has ordered the Epsilon security level on the station. Consider all contracts terminated.
-alert-level-epsilon-instructions = Consider all contracts terminated.
-# alert-level-epsilon-announcement = Central Command has ordered the Epsilon security level in the sector. Consider all contracts terminated.
+# alert-level-epsilon-announcement = Central Command has ordered the Epsilon security level on the station. Consider all contracts terminated.
 # alert-level-epsilon-instructions = Consider all contracts terminated.
+alert-level-epsilon-announcement = Central Command has ordered the Epsilon security level in the sector and now supersedes all Station authority. Compliance is mandatory.
+alert-level-epsilon-instructions = Compliance is mandatory.
 
 alert-level-omicron = Omicron
 alert-level-omicron-announcement = Station override activated. Await further orders from Central Command staff, stay in your departments.

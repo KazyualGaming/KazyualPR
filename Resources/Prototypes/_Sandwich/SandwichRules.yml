@@ -9,7 +9,6 @@
   - SandwichRoleplayRules
   - SandwichJobExpectations
   - SOP
-  - SandwichSiliconRules
   - SandwichShipRules
 
 - type: guideEntry # Main page for the rules
@@ -23,7 +22,6 @@
   - SandwichRoleplayRules
   - SandwichJobExpectations
   - SOP
-  - SandwichSiliconRules
   - SandwichShipRules
 
 - type: guideEntry
@@ -53,7 +51,6 @@
   - SandwichRuleC11
   - SandwichRuleC12
   - SandwichRuleC13
-  - SandwichShipRules
 
 - type: guideEntry
   id: SandwichRuleUA0

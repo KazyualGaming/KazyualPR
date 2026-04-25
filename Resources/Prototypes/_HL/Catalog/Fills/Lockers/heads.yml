@@ -51,7 +51,7 @@
     - id: ClothingHeadsetAltCommand
     - id: ClothingOuterArmorCaptainCarapace
     - id: CommsComputerCircuitboard
-    - id: DoorRemoteCommand
+    - id: DoorRemoteCustom
     - id: MedalCase
     - id: NukeDisk
     - id: PinpointerNuclear
@@ -173,6 +173,7 @@
     - id: ShipyardRCDAmmo
     - id: trayScanner
     - id: CEIDCard
+    - id: BoxFolderEngiForms
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -234,6 +235,9 @@
     - id: ClothingBeltMedicalFilled
     - id: RubberStampDoctor
     - id: CMOIDCard
+    # Hardlight Shitmed :3
+    - id: MedicalBiofabMachineBoard
+    - id: BiomassReclaimerMachineCircuitboard
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -333,7 +337,7 @@
   id: HLLockerFillHeadOfSecurityNoHardsuit
   table: !type:AllSelector
     children:
-    - id: WeaponEnergyShotgun
+    - id: WeaponCaseLongESAR550
     - id: NFHyperlinkBookSpaceLaw
     - id: BoxEncryptionKeySecurity
     - id: CigarGoldCase

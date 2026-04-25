@@ -1,8 +1,8 @@
 using Content.Server.Actions;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
+using Content.Shared.Body.Events;
 using Content.Server.DeviceNetwork.Systems;
-using Content.Server.Explosion.EntitySystems;
 using Content.Server.Hands.Systems;
 using Content.Server.PowerCell;
 using Content.Server.Radio.Components;
@@ -27,6 +27,7 @@ using Content.Shared.Roles;
 using Content.Shared.Silicons.Borgs;
 using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Throwing;
+using Content.Shared.Trigger.Systems;
 using Content.Shared.Whitelist;
 using Content.Shared.Wires;
 using Robust.Server.GameObjects;
@@ -106,6 +107,10 @@ public sealed partial class BorgSystem : SharedBorgSystem
         TryComp<BorgBrainComponent>(used, out var brain);
         TryComp<BorgModuleComponent>(used, out var module);
 
+        // HardLight: Ignore unrelated tools
+        if (brain == null && module == null)
+            return;
+
         if (TryComp<WiresPanelComponent>(uid, out var panel) && !panel.Open)
         {
             {
@@ -136,12 +141,25 @@ public sealed partial class BorgSystem : SharedBorgSystem
 
         if (module != null && CanInsertModule(uid, used, component, module, args.User))
         {
-            _container.Insert(used, component.ModuleContainer);
+            InsertModule((uid, component), used);
             _adminLog.Add(LogType.Action, LogImpact.Low,
                 $"{ToPrettyString(args.User):player} installed module {ToPrettyString(used)} into borg {ToPrettyString(uid)}");
             args.Handled = true;
             UpdateUI(uid, component);
         }
+    }
+
+    /// <summary>
+    /// Inserts a new module into a borg, the same as if a player inserted it manually.
+    /// </summary>
+    /// <para>
+    /// This does not run checks to see if the borg is actually allowed to be inserted, such as whitelists.
+    /// </para>
+    /// <param name="ent">The borg to insert into.</param>
+    /// <param name="module">The module to insert.</param>
+    public void InsertModule(Entity<BorgChassisComponent> ent, EntityUid module)
+    {
+        _container.Insert(module, ent.Comp.ModuleContainer);
     }
 
     // todo: consider transferring over the ghost role? managing that might suck.

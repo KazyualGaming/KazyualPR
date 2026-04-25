@@ -1151,6 +1151,8 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Deterrence
+    - type: InitRepairSnapshot
+      id: Deterrence
     - type: IFF
       color: '#FFFFFFFF'
   - uid: 1934

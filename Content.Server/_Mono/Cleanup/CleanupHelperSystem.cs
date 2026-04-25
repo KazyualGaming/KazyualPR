@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Shared.Ghost;
 using Robust.Server.Player;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
@@ -12,6 +13,14 @@ public sealed class CleanupHelperSystem : EntitySystem
 {
     [Dependency] private readonly IPlayerManager _players = default!;
     [Dependency] private readonly SharedTransformSystem _xform = default!;
+
+    private EntityQuery<GhostComponent> _ghostQuery;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+        _ghostQuery = GetEntityQuery<GhostComponent>();
+    }
 
     public bool HasNearbyPlayers(EntityCoordinates coordinates, float maxDistance)
     {
@@ -30,6 +39,10 @@ public sealed class CleanupHelperSystem : EntitySystem
         {
             var player = session.AttachedEntity;
             if (player is not { Valid: true })
+                continue;
+
+            // Skip regular ghosts/observers, but count admin ghosts (CanGhostInteract).
+            if (_ghostQuery.TryComp(player.Value, out var ghost) && !ghost.CanGhostInteract)
                 continue;
 
             if (!TryComp<TransformComponent>(player.Value, out var xform))

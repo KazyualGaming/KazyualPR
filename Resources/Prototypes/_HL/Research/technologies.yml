@@ -1,34 +1,4 @@
-#Borgo Research
-#Also for some reason we didn't have one of these files.
-- type: technology
-  id: AdvancedRobotics
-  name: research-technology-advanced-robotics
-  icon:
-    sprite: Structures/Machines/exosuit_fabricator.rsi
-    state: fab-idle
-  discipline: Experimental
-  tier: 3
-  cost: 20000
-  recipeUnlocks:
-  - BorgArmorMk1
-  - BorgArmorMk2
-  - BorgArmorMk3
-
-- type: technology
-  id: EnergyBarriers
-  name: research-technology-energy_barriers
-  icon:
-    sprite: Objects/Tools/EnergyDome/reinhardt.rsi
-    state: icon
-  discipline: Arsenal
-  tier: 3 #Energy Shields are pretty high-end tech. Should be end-game for anyone looking to make them directly.
-  cost: 30000 #Ditto
-  recipeUnlocks:
-  - EnergyDomeDirectionalTurtle
-  - BorgEnergyArmorMk1
-  - BorgEnergyArmorMk2
-  - BorgEnergyArmorMk3
-
+# Tier 1
 - type: technology
   id: LightShuttleWeapons
   name: research-technology-light-shuttle-weapons
@@ -43,6 +13,41 @@
   - L85AutocannonWeaponBoard
   - AdderScattercannonWeaponBoard
   - LightShieldBoard
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - AdvancedShuttleWeapon
+  position: 5,-3 
+  # Goobstation R&D Console rework end
+
+- type: technology
+  id: ShuttleWeaponMaterials
+  name: research-technology-shuttle-weapon-materials
+  icon:
+    sprite: _HL/Logo/shuttle_armament_research_t1.rsi
+    state: T1
+  discipline: Arsenal
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - LightShipWeaponFrame
+  - LightShipWeaponServo
+  - LightShipWeaponInternal
+  - MediumShipWeaponFrame
+  - MediumShipWeaponServo
+  - MediumShipWeaponInternal
+  - HeavyShipWeaponFrame
+  - HeavyShipWeaponServo
+  - HeavyShipWeaponInternal
+  - CapitalShipWeaponFrame
+  - CapitalShipWeaponServo
+  - CapitalShipWeaponInternal
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - AdvancedShuttleWeapon
+  position: 4,-4
+  # Goobstation R&D Console rework end
+
+# Tier 2
 
 - type: technology
   id: MediumShuttleWeapons
@@ -70,61 +75,11 @@
   - VanykWeaponBoard
   - TovekWeaponBoard
   - MediumShieldBoard
-
-- type: technology
-  id: HeavyShuttleWeapons
-  name: research-technology-heavy-shuttle-weapons
-  icon:
-    sprite: _HL/Logo/shuttle_armament_research_t3.rsi
-    state: T3
-  discipline: Arsenal
-  tier: 3
-  cost: 30000
-  recipeUnlocks:
-  - ApolloWeaponBoard
-  - TarnyxReloadWeaponBoard
-  - LongbowWeaponBoard
-  - CharonetteWeaponBoard
-  - SerpentMissileWeaponBoard
-  - HeavyShieldBoard
-
-- type: technology
-  id: CapitalShuttleWeapons
-  name: research-technology-capital-shuttle-weapons
-  icon:
-    sprite: _HL/Logo/shuttle_armament_research_t4.rsi
-    state: T4
-  discipline: Arsenal
-  tier: 3
-  cost: 40000
-  recipeUnlocks:
-  - CharonReloadWeaponBoard
-  - HadesWeaponBoard
-  - HydraWeaponBoard
-  #- CapitalShieldBoard
-
-- type: technology
-  id: ShuttleWeaponMaterials
-  name: research-technology-shuttle-weapon-materials
-  icon:
-    sprite: _HL/Logo/shuttle_armament_research_t1.rsi
-    state: T1
-  discipline: Arsenal
-  tier: 1
-  cost: 10000
-  recipeUnlocks:
-  - LightShipWeaponFrame
-  - LightShipWeaponServo
-  - LightShipWeaponInternal
-  - MediumShipWeaponFrame
-  - MediumShipWeaponServo
-  - MediumShipWeaponInternal
-  - HeavyShipWeaponFrame
-  - HeavyShipWeaponServo
-  - HeavyShipWeaponInternal
-  - CapitalShipWeaponFrame
-  - CapitalShipWeaponServo
-  - CapitalShipWeaponInternal
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - LightShuttleWeapons
+  position: 5,-4 
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: CyberneticWarfare
@@ -145,6 +100,11 @@
   - CyberneticsHiggsAnchor
   - CyberneticsHiggsDisplacer
   - CyberneticsBloodPump
+  # Goobstation R&D Console rework start
+  position: 4,2
+  technologyPrerequisites:
+  - UraniumMunitions
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: CivilianShuttleWeapons
@@ -175,6 +135,77 @@
   - CivReaperWeaponBoard
   - CivHarbringerWeaponBoard
   - CivBigThrusterBoard
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - ShuttleWeaponMaterials
+  position: 4,-5
+  # Goobstation R&D Console rework end
+
+
+# Tier 3
+
+#Borgo Research
+#Also for some reason we didn't have one of these files.
+- type: technology
+  id: AdvancedRobotics
+  name: research-technology-advanced-robotics
+  icon:
+    sprite: Structures/Machines/exosuit_fabricator.rsi
+    state: fab-idle
+  discipline: Experimental
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - BorgArmorMk1
+  - BorgArmorMk2
+  - BorgArmorMk3
+  # Goobstation R&D Console rework start
+  position: -4,0
+  technologyPrerequisites:
+  - AdvancedAnomalyResearch
+  # Goobstation R&D Console rework end
+
+- type: technology
+  id: EnergyBarriers
+  name: research-technology-energy_barriers
+  icon:
+    sprite: Objects/Tools/EnergyDome/reinhardt.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 3 #Energy Shields are pretty high-end tech. Should be end-game for anyone looking to make them directly.
+  cost: 30000 #Ditto
+  recipeUnlocks:
+  - EnergyDomeDirectionalTurtle
+  - BorgEnergyArmorMk1
+  - BorgEnergyArmorMk2
+  - BorgEnergyArmorMk3
+  # Goobstation R&D Console rework start
+  position: -5,0
+  technologyPrerequisites:
+  - AdvancedRobotics
+  # Goobstation R&D Console rework end
+
+- type: technology
+  id: HeavyShuttleWeapons
+  name: research-technology-heavy-shuttle-weapons
+  icon:
+    sprite: _HL/Logo/shuttle_armament_research_t3.rsi
+    state: T3
+  discipline: Arsenal
+  tier: 3
+  cost: 30000
+  recipeUnlocks:
+  - ApolloWeaponBoard
+  - TarnyxReloadWeaponBoard
+  - LongbowWeaponBoard
+  - CharonetteWeaponBoard
+  - SerpentMissileWeaponBoard
+  - HeavyShieldBoard
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - MediumShuttleWeapons
+  position: 5,-5 
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: HighPressureAtmospherics
@@ -187,3 +218,30 @@
   cost: 15000
   recipeUnlocks:
   - HighPressureCasing
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - AdvancedAtmospherics
+  position: -3,-5
+  # Goobstation R&D Console rework end
+
+# Tier 4
+
+- type: technology
+  id: CapitalShuttleWeapons
+  name: research-technology-capital-shuttle-weapons
+  icon:
+    sprite: _HL/Logo/shuttle_armament_research_t4.rsi
+    state: T4
+  discipline: Arsenal
+  tier: 3
+  cost: 40000
+  recipeUnlocks:
+  - CharonReloadWeaponBoard
+  - HadesWeaponBoard
+  - HydraWeaponBoard
+  #- CapitalShieldBoard
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - HeavyShuttleWeapons
+  position: 5,-6
+  # Goobstation R&D Console rework end

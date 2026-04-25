@@ -5,7 +5,6 @@ _SandwichStation_ originally was a fork of _ShibaStation_<sup>†</sup> since th
 This codebase is based on _HardLight_ <br>
 However, this fork is mainly customized to our own standards and balances.
 
-
 ## Licenses
 
 [You can find more information about the multiple licenses here](https://github.com/SandwichStation/SandwichStation-HL?tab=License-1-ov-file)
@@ -41,3 +40,6 @@ We are actively checking PR's to rectify any missing credits and ensure all orig
 | `_RMC14` | RMC-14 | https://github.com/RMC-14/RMC-14 | MIT |
 | `Space Station 14` | Vanilla/WizDen | https://github.com/space-wizards/space-station-14 | MIT |
 | `_Emberfall` | Emberfall | https://github.com/emberfall-14/emberfall | MPL 2.0 |
+| `_FarHorizons` | Far-Horizons | https://github.com/Far-Horizons-SS14/Far-Horizons-SS14.git | MIT |
+| `_Crescent` | Hullrot | https://github.com/Sector-Crescent/Hullrot.git | AGPL 3.0|
+| `_CS` | Coyote Station | https://github.com/ARF-SS13/coyote-frontier/ | AGPL 3.0|

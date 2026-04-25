@@ -4,6 +4,8 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+# Tier 1
+
 - type: technology
   id: UniversalRailgunAmmo
   name: research-technology-universal-railgun-ammo
@@ -15,45 +17,11 @@
   cost: 20000
   recipeUnlocks:
   - CharonSlugUniversal
-
-- type: technology
-  id: UniversalSubnuclearRailgunAmmo
-  name: research-technology-universal-railgun-ammo-subnuclear
-  icon:
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/charonslug.rsi
-    state: subnuclear
-  discipline: Arsenal
-  tier: 3
-  cost: 20000
-  recipeUnlocks:
-  - CharonSubnuclearSlugUniversal
+  # Goobstation R&D Console rework start
   technologyPrerequisites:
-  - UniversalRailgunAmmo
-
-- type: technology
-  id: UniversalTorpedoAmmo
-  name: research-technology-universal-asm220-ammo
-  icon:
-    sprite: _Mono/Objects/ShuttleWeapons/asm220.rsi
-    state: space_artillery
-  discipline: Arsenal
-  tier: 2
-  cost: 30000
-  recipeUnlocks:
-  - ASM220TorpedoHEUniversal
-  - ASM220TorpedoECMUniversal
-
-- type: technology
-  id: UniversalTorpedoAmmoAdvanced
-  name: research-technology-universal-asm220-advanced
-  icon:
-    sprite: _Mono/Objects/ShuttleWeapons/asm220.rsi
-    state: space_artillery
-  discipline: Arsenal
-  tier: 3
-  cost: 20000
-  recipeUnlocks:
-  - ASM220TorpedoLOSATUniversal
+  - ShuttleArmamentComponentsResearch
+  position: 7,-3 
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: Universal150mmAmmo
@@ -67,6 +35,11 @@
   recipeUnlocks:
   - 150mmApShellUniversal
   - 150mmEmpShellUniversal
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - ShuttleArmamentComponentsResearch
+  position: 7,-5 
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: UniversalLightFighterOrdinance
@@ -80,6 +53,67 @@
   recipeUnlocks:
   - GPOL50BombUniversal
   - ZenithRocketUniversal
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - ShuttleArmamentComponentsResearch
+  position: 7,-6 
+  # Goobstation R&D Console rework end
+
+  # Tier 2
+
+- type: technology
+  id: UniversalTorpedoAmmo
+  name: research-technology-universal-asm220-ammo
+  icon:
+    sprite: _Mono/Objects/ShuttleWeapons/asm220.rsi
+    state: space_artillery
+  discipline: Arsenal
+  tier: 2
+  cost: 30000
+  recipeUnlocks:
+  - ASM220TorpedoHEUniversal
+  - ASM220TorpedoECMUniversal
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - ShuttleArmamentComponentsResearch
+  position: 7,-4 
+  # Goobstation R&D Console rework end
+
+  # Tier 3
+
+- type: technology
+  id: UniversalSubnuclearRailgunAmmo
+  name: research-technology-universal-railgun-ammo-subnuclear
+  icon:
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/charonslug.rsi
+    state: subnuclear
+  discipline: Arsenal
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - CharonSubnuclearSlugUniversal
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - UniversalRailgunAmmo
+  position: 8,-3  
+  # Goobstation R&D Console rework end
+
+- type: technology
+  id: UniversalTorpedoAmmoAdvanced
+  name: research-technology-universal-asm220-advanced
+  icon:
+    sprite: _Mono/Objects/ShuttleWeapons/asm220.rsi
+    state: space_artillery
+  discipline: Arsenal
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - ASM220TorpedoLOSATUniversal
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - UniversalTorpedoAmmo
+  position: 8,-4  
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: UniversalAdvancedLightFighterOrdinance
@@ -92,3 +126,8 @@
   cost: 40000
   recipeUnlocks:
   - QuasarAcceleratorUniversal
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - UniversalLightFighterOrdinance
+  position: 8,-6  
+  # Goobstation R&D Console rework end

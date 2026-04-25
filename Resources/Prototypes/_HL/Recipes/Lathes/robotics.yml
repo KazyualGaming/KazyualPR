@@ -5,22 +5,43 @@
   id: BorgModuleBureaucracy
   result: BorgModuleBureaucracy
 
-- type: latheRecipe
-  parent: BaseBorgModuleRecipe
-  id: BorgModuleNFService
-  result: BorgModuleNFService
+#- type: latheRecipe
+#  parent: BaseBorgModuleRecipe
+#  id: BorgModuleStorage
+#  result: BorgModuleStorage
+
+#- type: latheRecipe
+#  parent: BaseBorgModuleRecipe
+#  id: BorgModuleStun
+#  result: BorgModuleStun
+
+#- type: latheRecipe
+#  parent: BaseBorgModuleRecipe
+#  id: BorgModuleKill
+#  result: BorgModuleKill
+
+#- type: latheRecipe
+#  parent: BaseBorgModuleRecipe
+#  id: BorgModuleInvestigation
+#  result: BorgModuleInvestigation
 
 - type: latheRecipe
-  parent: BaseBorgModuleRecipe
-  id: BorgModuleRCDShipyard
-  result: BorgModuleRCDShipyard
+  id: OmniHandRight
+  result: CyberneticsOmnihandRight
+  completetime: 30
+  materials:
+    Steel: 3000
+    Plastic: 300
+    Plasma: 500
+    Gold: 100
 
 - type: latheRecipe
-  parent: BaseGoldBorgModuleRecipe
-  id: BorgModuleadvancedmeasures
-  result: BorgModuleadvancedmeasures
+  id: OmniHandLeft
+  result: CyberneticsOmnihandLeft
+  completetime: 30
+  materials:
+    Steel: 3000
+    Plastic: 300
+    Plasma: 500
+    Gold: 100
 
-- type: latheRecipe
-  parent: BaseBorgModuleRecipe
-  id: BorgModuleStorage
-  result: BorgModuleStorage

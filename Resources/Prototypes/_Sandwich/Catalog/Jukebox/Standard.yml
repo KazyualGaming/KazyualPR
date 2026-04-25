@@ -71,6 +71,18 @@
     path: /Audio/_Sandwich/Jukebox/Electro/we-got-hostiles.ogg
 
 - type: jukebox
+  id: arcade_slayer
+  name: Kazyu the Avali - Arcade Slayer
+  path:
+    path: /Audio/_Sandwich/Jukebox/Electro/arcade_slayer.ogg
+
+- type: jukebox
+  id: the_heist_by_kaz
+  name: Kazyu the Avali - The Heist
+  path:
+    path: /Audio/_Sandwich/Jukebox/Electro/the_heist_by_kaz.ogg
+
+- type: jukebox
   id: burytheloly_eurobeat
   name: Vikas Music - Bury the Loly
   path:

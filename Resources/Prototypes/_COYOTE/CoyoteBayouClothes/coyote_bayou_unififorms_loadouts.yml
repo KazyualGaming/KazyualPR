@@ -1663,15 +1663,6 @@
   equipment:
     jumpsuit: CoolCoyoteClothesYellowwshort
 
-- type: loadout
-  id: LoadoutCoolCoyoteClothesGearHarness
-  price: 100
-#  effects:
-#  - !type:GroupLoadoutEffect
-#    proto: ContractorT1
-  equipment:
-    jumpsuit: CoolCoyoteClothesGearHarness
-
 
 
 

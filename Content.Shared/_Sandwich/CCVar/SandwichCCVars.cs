@@ -13,6 +13,12 @@ public sealed partial class SandwichCCVars
         CVarDef.Create("sandwich.vote.evac_autovote_enabled", false, CVar.SERVERONLY);
 
     /// <summary>
+    /// Countdown duration in minutes for automatically called emergency evac.
+    /// </summary>
+    public static readonly CVarDef<int> EvacAutoCallCountdownMinutes =
+        CVarDef.Create("sandwich.shuttle.evac_auto_call_countdown_minutes", 15, CVar.SERVERONLY);
+
+    /// <summary>
     /// Client-side jukebox volume multiplier.
     /// </summary>
     public static readonly CVarDef<float> JukeboxVolume =

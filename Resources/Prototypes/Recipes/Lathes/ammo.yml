@@ -363,16 +363,16 @@
 #    Steel: 240
 #    Plastic: 160
 
-#- type: latheRecipe
-#  parent: BaseAmmoBoxRecipe
-#  id: AmmoBox12_gaugeTranquilizer
-#  result: AmmoBox12_gaugeTranquilizer
-#  materials:
-#    Plastic: 240
-#    Steel: 160
-#    Glass: 80
-#    Plasma: 160
-#    Silver: 80
+# - type: latheRecipe
+#   parent: BaseAmmoRecipe
+#   id: AmmoBox12_gaugeTranquilizer
+#   result: AmmoBox12_gaugeTranquilizer
+#   materials:
+#     Plastic: 240
+#     Steel: 160
+#     Glass: 80
+#     Plasma: 160
+#     Silver: 80
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe

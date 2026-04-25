@@ -59,23 +59,19 @@
             SalvageSpecialist: [ 2, 2 ]
             CargoTechnician: [ 2, 3 ]
             #civilian (3+)
-#            Passenger: [ -1, -1 ] #infinite, not counted
+            Passenger: [ -1, -1 ] #infinite, not counted
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
             #silicon (3)
             StationAi: [ 1, 1 ]
-            Borg: [ -1, -1 ]
+            Borg: [ 4, 4 ]
             # hardlight
             #Contractor: [ -1, -1 ]
             #Pilot: [ 5, 5 ]
-            Mercenary: [ 0, 40 ]
+            QuadBorg: [ 4, 4 ]
+            Mercenary: [ 5, 40 ]
             StationTrafficController: [ 1, 1 ]
-            MedicalQuadBorg: [ 3, 3 ]
-            ServiceQuadBorg: [ 3, 3 ]
-            SalvageQuadBorg: [ 3, 3 ]
-            SecurityQuadBorg: [ 3, 3 ]
-            EngineeringQuadBorg: [ 3, 3 ]
             MailCarrier: [ 1, 1 ]
             Prisoner: [ 3, 3 ]
             ForensicMantis: [ 1, 1 ]

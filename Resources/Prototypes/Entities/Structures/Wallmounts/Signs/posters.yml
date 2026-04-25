@@ -1461,9 +1461,6 @@
   name: "Bagel Map"
   description: "A map of Bagel Station."
   components:
-  - type: Construction # HardLight
-    graph: Poster
-    node: PosterMapBagel
   - type: Sprite
     state: bagelmap
 
@@ -1473,9 +1470,6 @@
   name: "Delta Map"
   description: "A map of Delta Station."
   components:
-  - type: Construction # HardLight
-    graph: Poster
-    node: PosterMapDelta
   - type: Sprite
     state: deltamap
 
@@ -1485,9 +1479,6 @@
   name: "Marathon Map"
   description: "A map of Marathon Station."
   components:
-  - type: Construction # HardLight
-    graph: Poster
-    node: PosterMapMarathon
   - type: Sprite
     state: marathonmap
 
@@ -1497,9 +1488,6 @@
   name: "Moose Map"
   description: "A map of Moose Station."
   components:
-  - type: Construction # HardLight
-    graph: Poster
-    node: PosterMapMoose
   - type: Sprite
     state: moosemap
 
@@ -1509,9 +1497,6 @@
   name: "Packed Map"
   description: "A map of Packed Station."
   components:
-  - type: Construction # HardLight
-    graph: Poster
-    node: PosterMapPacked
   - type: Sprite
     state: packedmap
 
@@ -1521,9 +1506,6 @@
   name: "Pillar Map"
   description: "A map of NSS Pillar."
   components:
-  - type: Construction # HardLight
-    graph: Poster
-    node: PosterMapPillar
   - type: Sprite
     state: pillarmap
 
@@ -1533,9 +1515,6 @@
   name: "Saltern Map"
   description: "A map of Saltern Station."
   components:
-  - type: Construction # HardLight
-    graph: Poster
-    node: PosterMapSaltern
   - type: Sprite
     state: salternmap
 
@@ -1545,9 +1524,6 @@
   name: "Split Station Map"
   description: "A map of Split Station."
   components:
-  - type: Construction # HardLight
-    graph: Poster
-    node: PosterMapSplit
   - type: Sprite
     state: splitmap
 
@@ -1557,9 +1533,6 @@
   name: "Lighthouse Map"
   description: "A map of Lighthouse."
   components:
-  - type: Construction # HardLight
-    graph: Poster
-    node: PosterMapLighthouse
   - type: Sprite
     state: lighthousemap
 
@@ -1569,9 +1542,6 @@
   name: "Waystation Map"
   description: "A map of Waystation... wait isn't this packed upside down?"
   components:
-  - type: Construction # HardLight
-    graph: Poster
-    node: PosterMapWaystation
   - type: Sprite
     state: waystationmap
 
@@ -1581,9 +1551,6 @@
   name: "origin map"
   description: "A map of Origin Station."
   components:
-  - type: Construction # HardLight
-    graph: Poster
-    node: PosterMapOrigin
   - type: Sprite
     state: originmap
 

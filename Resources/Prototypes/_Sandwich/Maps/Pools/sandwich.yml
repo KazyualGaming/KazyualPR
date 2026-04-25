@@ -1,21 +1,13 @@
 - type: gameMapPool
   id: SandwichMapPool
   maps:
-  - Taco
-  - Amber
+  - HardCore
+  - Reach
+  #- Amber
   - Bagel
   - Box
+  - Eaglerock
   - Convex
-  #- Core
   - Elkridge
   - Fland
-  #- Gate
-  - Loop
-  - Marathon
-  - Meta
-  - Oasis
-  - Omega
-  - Packed
-  - Plasma
-  - Reach
-  #- Train
+  - HardlightSilica

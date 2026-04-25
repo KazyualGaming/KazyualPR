@@ -48,6 +48,8 @@ public sealed class SpawnPointSystem : EntitySystem
                     default:
                         continue;
                 }
+
+                continue; // Delta-V: Don't fall through to standard spawn point logic below
             }
 
             if (_gameTicker.RunLevel == GameRunLevel.InRound && spawnPoint.SpawnType == SpawnPointType.LateJoin)
@@ -63,15 +65,42 @@ public sealed class SpawnPointSystem : EntitySystem
             }
         }
 
+        // Frontier: fallback - if looking for job-specific spawn points but none exist, try LateJoin points on the same station.
+        if (possiblePositions.Count == 0 && args.DesiredSpawnPointType == SpawnPointType.Job)
+        {
+            var lateJoinPoints = EntityQueryEnumerator<SpawnPointComponent, TransformComponent>();
+            while (lateJoinPoints.MoveNext(out var uid2, out var sp2, out var xform2))
+            {
+                if (args.Station != null && _stationSystem.GetOwningStation(uid2, xform2) != args.Station)
+                    continue;
+
+                if (sp2.SpawnType == SpawnPointType.LateJoin)
+                    possiblePositions.Add(xform2.Coordinates);
+            }
+        }
+
         if (possiblePositions.Count == 0)
         {
             // Ok we've still not returned, but we need to put them /somewhere/.
-            // TODO: Refactor gameticker spawning code so we don't have to do this!
+            // Frontier: try any spawn point on the correct station first.
             var points2 = EntityQueryEnumerator<SpawnPointComponent, TransformComponent>();
-
-            if (points2.MoveNext(out var spawnPoint, out var xform))
+            while (points2.MoveNext(out var uid2, out _, out var xform2))
             {
-                possiblePositions.Add(xform.Coordinates);
+                if (args.Station == null || _stationSystem.GetOwningStation(uid2, xform2) == args.Station)
+                {
+                    possiblePositions.Add(xform2.Coordinates);
+                    break;
+                }
+            }
+        }
+
+        if (possiblePositions.Count == 0)
+        {
+            // Last resort: any spawn point at all.
+            var points3 = EntityQueryEnumerator<SpawnPointComponent, TransformComponent>();
+            if (points3.MoveNext(out _, out _, out var xform3))
+            {
+                possiblePositions.Add(xform3.Coordinates);
             }
             else
             {

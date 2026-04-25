@@ -10,21 +10,23 @@
   moduleWhitelist:
     tags:
     - BorgModuleGeneric
-    - BorgModuleScience #until sciborgs are added
+    - BorgModuleScience # Until sciborgs are added
+    - BorgModuleSyndicate # HardLight
+    - BorgModuleSyndicateAssault # HardLight
+    - XenoborgModuleGeneric # HardLight
 
   defaultModules:
-  - BorgModuleTool
-  - BorgModuleJetpack # Frontier
+  #- BorgModuleTool
+  - BorgModuleArtifact
+  - BorgModuleAnomaly
+  #- BorgModuleJetpack # Frontier
 
   radioChannels:
   - Science
 
   # Visual
-  inventoryTemplateId: borgShort
-  spriteBodyState: robot
-  spriteHasMindState: robot_e
-  spriteNoMindState: robot_e_r
-  spriteToggleLightState: robot_l
+  inventoryTemplateId: borgShortHL # HardLight
+  spritePath: Mobs/Silicon/Chassis/generic/default.rsi
 
   # Pet
   petSuccessString: petting-success-generic-cyborg
@@ -44,24 +46,23 @@
     tags:
     - BorgModuleGeneric
     - BorgModuleEngineering
+    - BorgModuleSyndicate # HardLight
+    - BorgModuleSyndicateAssault # HardLight
+    - XenoborgModuleGeneric # HardLight
 
   defaultModules:
-  - BorgModuleTool
+  #- BorgModuleTool
   - BorgModuleConstruction
-  - BorgModuleRCDShipyard # Frontier: RCD<RCDShipyard
+  - BorgModuleRCD
   - BorgModuleCable
-  - BorgModuleJetpack # Frontier
 
   radioChannels:
   - Engineering
   - Science
 
   # Visual
-  inventoryTemplateId: borgShort
-  spriteBodyState: engineer
-  spriteHasMindState: engineer_e
-  spriteNoMindState: engineer_e_r
-  spriteToggleLightState: engineer_l
+  inventoryTemplateId: borgShortHL # HardLight: borgShort<borgShortHL
+  spritePath: Mobs/Silicon/Chassis/engineering/default.rsi
 
   # Pet
   petSuccessString: petting-success-engineer-cyborg
@@ -81,25 +82,24 @@
     tags:
     - BorgModuleGeneric
     - BorgModuleCargo
+    - BorgModuleSyndicate # Hardlight
+    - BorgModuleSyndicateAssault # Hardlight
+    - XenoborgModuleGeneric # Hardlight
 
   defaultModules:
+  #- BorgModuleTool
   - BorgModuleMining
-  - BorgModuleGrapplingGun
+  - BorgModuleTraversal
   - BorgModuleAppraisal
-  - BorgModuleTool
-  - BorgModuleJetpack # Frontier
 
   radioChannels:
   - Supply
   - Science
 
   # Visual
-  inventoryTemplateId: borgTall
-  spriteBodyState: miner
-  spriteBodyMovementState: miner_moving
-  spriteHasMindState: miner_e
-  spriteNoMindState: miner_e_r
-  spriteToggleLightState: miner_l
+  inventoryTemplateId: borgTallHL # HardLight: borgTall<borgTallHL
+  spritePath: Mobs/Silicon/Chassis/mining/default.rsi
+  spriteBodyMovementState: borg_moving
 
   # Pet
   petSuccessString: petting-success-salvage-cyborg
@@ -119,23 +119,25 @@
     tags:
     - BorgModuleGeneric
     - BorgModuleJanitor
+    - BorgModuleSyndicate # HardLight
+    - BorgModuleSyndicateAssault # HardLight
+    - XenoborgModuleGeneric # HardLight
 
   defaultModules:
-  - BorgModuleLightReplacer
+  #- BorgModuleTool
+  #- BorgModuleLightReplacer
   - BorgModuleCleaning
-  - BorgModuleJetpack # Frontier
+  - BorgModuleCustodial
+  #- BorgModuleJetpack # Frontier
 
   radioChannels:
   - Science
   - Service
 
   # Visual
-  inventoryTemplateId: borgShort
-  spriteBodyState: janitor
-  spriteBodyMovementState: janitor_moving
-  spriteHasMindState: janitor_e
-  spriteNoMindState: janitor_e_r
-  spriteToggleLightState: janitor_l
+  inventoryTemplateId: borgShortHL # HardLight: borgShort<borgShortHL
+  spritePath: Mobs/Silicon/Chassis/janitor/default.rsi
+  spriteBodyMovementState: borg_moving
 
   # Pet
   petSuccessString: petting-success-janitor-cyborg
@@ -155,12 +157,17 @@
     tags:
     - BorgModuleGeneric
     - BorgModuleMedical
-
-  defaultModules:
-  - BorgModuleTreatment
-  # - BorgModuleAdvancedTreatment # Frontier
-  # - BorgModuleDefibrillator # Frontier
-  - BorgModuleJetpack # Frontier
+    - BorgModuleSyndicate # HardLight
+    - BorgModuleSyndicateAssault # HardLight
+    - XenoborgModuleGeneric # HardLight
+    #- BorgModuleTool
+    #- BorgModuleChemical
+    #- BorgModuleTopicals
+    #- BorgModuleRescue
+    #- BorgModuleJetpack # Frontier
+    #- BorgModuleTreatment
+    #- BorgModuleDefibrillator # Sandwich
+    #- BorgModuleSurgery # Sandwich
 
   radioChannels:
   - Science
@@ -171,17 +178,20 @@
   - type: ShowHealthBars
     damageContainers:
     - Biological
+    - Synth # HardLight
   - type: ShowHealthIcons
     damageContainers:
     - Biological
+  #Start HL
+  - type: SurgerySpeedModifier
+    speedModifier: 1.75
+  - type: Sanitized
+  #End HL
 
   # Visual
-  inventoryTemplateId: borgDutch
-  spriteBodyState: medical
-  spriteBodyMovementState: medical_moving
-  spriteHasMindState: medical_e
-  spriteNoMindState: medical_e_r
-  spriteToggleLightState: medical_l
+  inventoryTemplateId: borgDutchHL # HardLight: borgDutch<borgDutchHL
+  spritePath: Mobs/Silicon/Chassis/medical/default.rsi
+  spriteBodyMovementState: borg_moving
 
   # Pet
   petSuccessString: petting-success-medical-cyborg
@@ -205,25 +215,25 @@
     tags:
     - BorgModuleGeneric
     - BorgModuleService
-
-  defaultModules:
-  - BorgModuleMusique
-  # - BorgModuleService # Frontier: deprecated, use NF variant
-  - BorgModuleClowning
-  - BorgModuleBureaucracy # Frontier
-  - BorgModuleNFService # Frontier
-  - BorgModuleJetpack # Frontier
+    - BorgModuleSyndicate # HardLight
+    - BorgModuleSyndicateAssault # HardLight
+    - XenoborgModuleGeneric # HardLight
+    #- BorgModuleTool # Starlight
+   # - BorgModuleMusique
+    - BorgModuleService
+    #- BorgModuleClowning
+    #- BorgModuleGardening
+    #- BorgModuleHarvesting
+    #- BorgModuleBureaucracy # Frontier
+    #- BorgModuleJetpack # Frontier
 
   radioChannels:
   - Science
   - Service
 
   # Visual
-  inventoryTemplateId: borgTall
-  spriteBodyState: service
-  spriteHasMindState: service_e
-  spriteNoMindState: service_e_r
-  spriteToggleLightState: service_l
+  inventoryTemplateId: borgTallHL # HardLight: borgTall<borgTallHL
+  spritePath: Mobs/Silicon/Chassis/service/default.rsi
 
   # Pet
   petSuccessString: petting-success-service-cyborg

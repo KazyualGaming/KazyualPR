@@ -15,14 +15,6 @@
     whitelist:
       tags:
         - BorgWearable
-  - name: id
-    slotTexture: id
-    slotFlags: IDCARD
-    slotGroup: SecondHotbar
-    stripTime: 6
-    uiWindowPos: 2,1
-    strippingWindowPos: 2,4
-    displayName: ID
   - name: armor
     slotTexture: suit_storage
     slotFlags: HEAD
@@ -34,17 +26,30 @@
       tags:
         - BorgWearable
 
+
+
 - type: inventoryTemplate
-  id: borgnorm
+  id: borgHL
   slots:
-  - name: id
-    slotTexture: id
-    slotFlags: IDCARD
-    slotGroup: SecondHotbar
-    stripTime: 6
-    uiWindowPos: 2,1
-    strippingWindowPos: 2,4
-    displayName: ID
+  - name: armor
+    slotTexture: suit_storage
+    slotFlags: HEAD
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,0
+    displayName: head
+  - name: head
+    slotTexture: head
+    slotFlags: HEAD
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,0
+    displayName: Head
+    offset: 0.015625, -0.09375
+
+
+
+- type: inventoryTemplate
+  id: borgShortHL
+  slots:
   - name: armor
     slotTexture: suit_storage
     slotFlags: HEAD
@@ -55,3 +60,55 @@
     whitelist:
       tags:
         - BorgWearable
+  - name: head
+    slotTexture: head
+    slotFlags: HEAD
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,0
+    displayName: Head
+    offset: 0.015625, -0.1875
+
+
+
+- type: inventoryTemplate
+  id: borgTallHL
+  slots:
+  - name: armor
+    slotTexture: suit_storage
+    slotFlags: HEAD
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,0
+    displayName: head
+    offset: 0, 0
+    whitelist:
+      tags:
+        - BorgWearable
+  - name: head
+    slotTexture: head
+    slotFlags: HEAD
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,0
+    displayName: Head
+    offset: 0.015625, 0
+
+
+- type: inventoryTemplate
+  id: borgDutchHL
+  slots:
+  - name: armor
+    slotTexture: suit_storage
+    slotFlags: HEAD
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,0
+    displayName: head
+    offset: 0, 0
+    whitelist:
+      tags:
+        - BorgWearable
+  - name: head
+    slotTexture: head
+    slotFlags: HEAD
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,0
+    displayName: Head
+    offset: 0, 0.09375

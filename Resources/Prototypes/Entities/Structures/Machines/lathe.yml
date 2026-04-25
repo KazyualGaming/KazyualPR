@@ -410,6 +410,7 @@
     - Instruments
     - Equipment
     - FauxTiles
+    - Hydroponics
     - NFMedical # Frontier
     - NFEngineering # Frontier
     - NFHardsuits # Frontier
@@ -429,6 +430,7 @@
     - SecurityEquipment
     - SecurityWeapons # Frontier
     - SyringeGuns # Delta-V
+    - HLIndustrialImplants # HL
     emagStaticPacks:
     - CivilianAmmoRecipePack
   - type: DeviceLinkSink
@@ -569,10 +571,10 @@
     - GygaxMechParts
     - MechWeapons
     - RipleyUpgrade
-    # Crescent - Cyberware
-    - CombatCybernetics
     # Starlight - Implants
     - SLCybernetics
+    # HardLight - Implants
+    - HLIndustrialImplants
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - WeaponMechCombatArsenal
@@ -686,13 +688,14 @@
   - type: Lathe
     idleState: icon
     runningState: icon
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
     staticPacks:
     - SecurityAmmoStatic
     - SecurityEquipmentStatic
     - SecurityPracticeStatic
     - CivilianAmmoRecipePack
     - SecurityWeaponsStatic
-    - SecBorgLimbsStatic # HardLight addition
     dynamicPacks:
     - SalvageSecurityBoards
     - SalvageSecurityWeapons
@@ -701,6 +704,7 @@
     - SecurityExplosives
     - AdvancedAmmoRecipePack
     - SecurityWeapons
+    - SecurityAmmo           # Sandwich edit
     - SecurityDisablers
     - SMCybernetics
     # Mono - Mechs
@@ -760,6 +764,8 @@
   - type: Lathe
     idleState: icon
     runningState: icon
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
     staticPacks:
     - CivilianAmmoRecipePack
     dynamicPacks:
@@ -801,6 +807,8 @@
   - type: Lathe
     idleState: icon
     runningState: icon
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
     staticPacks:
     - TopicalsStatic
     - ChemistryStatic
@@ -818,6 +826,9 @@
     # Shitmed Change
     - SMSurgery
     - SMCybernetics
+  - type: EmagLatheRecipes
+    emagDynamicPacks:
+    - CombatCybernetics
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget

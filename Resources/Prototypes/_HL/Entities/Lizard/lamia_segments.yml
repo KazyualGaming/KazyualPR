@@ -17,6 +17,7 @@
         - MobLayer
   - type: Transform
     anchored: false
+    gridTraversal: false
   - type: RequireProjectileTarget
     active: True
 

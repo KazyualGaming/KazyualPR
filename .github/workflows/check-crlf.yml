@@ -1,4 +1,4 @@
-﻿name: CRLF Check
+name: CRLF Check
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: CRLF Check
-    if: github.event.pull_request.draft == false
+    if: '!contains(github.actor, ''[bot]'') && github.event.pull_request.draft == false'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4.2.2

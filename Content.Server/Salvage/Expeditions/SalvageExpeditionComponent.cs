@@ -43,6 +43,11 @@ public sealed partial class SalvageExpeditionComponent : SharedSalvageExpedition
 
     [ViewVariables] public bool Completed = false;
 
+    /// <summary>
+    /// Sandwich: Set when the expedition cleanup/deletion process has started, prevents re-entry.
+    /// </summary>
+    [ViewVariables] public bool DeletionScheduled = false;
+
     // Frontier: moved to Client
     /// <summary>
     /// Countdown audio stream.

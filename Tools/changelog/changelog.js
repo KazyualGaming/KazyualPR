@@ -7,7 +7,7 @@ const axios = require("axios");
 if (process.env.GITHUB_TOKEN) axios.defaults.headers.common["Authorization"] = `Bearer ${process.env.GITHUB_TOKEN}`;
 
 // Regexes
-const HeaderRegex = /^\s*(?::cl:|🆑) *([a-z0-9_\- ]+)?\s+/im; // :cl: or 🆑 [0] followed by optional author name [1]
+const HeaderRegex = /^\s*(?::cl:|🆑) *([a-z0-9_\- ,]+)?\s+/im; // :cl: or 🆑 [0] followed by optional author name [1]
 const EntryRegex = /^ *[*-]? *(add|remove|tweak|fix): *([^\n\r]+)\r?$/img; // * or - followed by change type [0] and change message [1]
 const CommentRegex = /<!--.*?-->/gs; // HTML comments
 
@@ -61,6 +61,11 @@ async function main() {
 
     // Write changelogs
     writeChangelog(entry);
+
+    // Output entry ID so downstream workflow steps can reference it
+    if (process.env.GITHUB_OUTPUT) {
+        fs.appendFileSync(process.env.GITHUB_OUTPUT, `new_changelog_id=${entry.id}\n`);
+    }
 
     console.log(`Changelog updated with changes from PR #${process.env.PR_NUMBER}`);
 }
@@ -116,35 +121,33 @@ function getChanges(body) {
     return entries;
 }
 
-// Get the highest changelog number from the changelogs file
+// Get the highest changelog number from Sandwich.yml
 function getHighestCLNumber() {
-    // Read changelogs file
-    const file = fs.readFileSync(`../../${process.env.CHANGELOG_DIR}`, "utf8");
+    const changelogFile = "../../Resources/Changelog/Sandwich.yml";
+    if (!fs.existsSync(changelogFile)) return 0;
 
-    // Get list of CL numbers
+    const file = fs.readFileSync(changelogFile, "utf8");
     const data = yaml.load(file);
     const entries = data && data.Entries ? Array.from(data.Entries) : [];
     const clNumbers = entries.map((entry) => entry.id);
 
-    // Return highest changelog number
     return Math.max(...clNumbers, 0);
 }
 
 function writeChangelog(entry) {
+    const changelogFile = "../../Resources/Changelog/Sandwich.yml";
     let data = { Entries: [] };
 
-    // Create a new changelogs file if it does not exist
-    if (fs.existsSync(`../../${process.env.CHANGELOG_DIR}`)) {
-        const file = fs.readFileSync(`../../${process.env.CHANGELOG_DIR}`, "utf8");
+    if (fs.existsSync(changelogFile)) {
+        const file = fs.readFileSync(changelogFile, "utf8");
         data = yaml.load(file);
     }
 
     data.Entries.push(entry);
 
-    // Write updated changelogs file
     fs.writeFileSync(
-        `../../${process.env.CHANGELOG_DIR}`,
-        "Entries:\n" +
+        changelogFile,
+        "Name: SandwichChangelog\nOrder: -2\nEntries:\n" +
             yaml.dump(data.Entries, { indent: 2 }).replace(/^---/, "")
     );
 }

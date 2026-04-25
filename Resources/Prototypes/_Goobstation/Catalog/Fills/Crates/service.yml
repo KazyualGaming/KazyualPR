@@ -2,14 +2,14 @@
   id: CrateRadioStationAds
   parent: CrateGenericSteel
   name: ads crate
-  description: A whole crate which sole purpose is to store 6 exclusive ads, aint capitalism great?
+  description: A whole crate which sole purpose is to store 5 exclusive ads, aint capitalism great?
   components:
   - type: EntityTableContainerFill
     containers:
-      entity_storage: !type:AllSelector
-        children:
-        - !type:NestedSelector
-          tableId: RandomCDDisk
+      entity_storage: !type:NestedSelector
+        tableId: RandomCDDisk
+        rolls: !type:ConstantNumberSelector
+          value: 5
 
 - type: entity
   id: CrateRadioStationVinyls
@@ -19,25 +19,21 @@
   components:
   - type: EntityTableContainerFill
     containers:
-      entity_storage: !type:AllSelector
-        children:
-        - !type:NestedSelector
-          tableId: RandomVinylSleeve
+      entity_storage: !type:NestedSelector
+        tableId: RandomVinylSleeve
 
 - type: entity
   id: CrateRadioStationVinyls5
   parent: CrateGenericSteel
-  name:  5 vinyls crate
+  name: 5 vinyls crate
   description: A crate with 5 random vinyls to play with the vinyl player. Collect them all!
   components:
   - type: EntityTableContainerFill
     containers:
-      entity_storage: !type:AllSelector
-        children:
-        - !type:NestedSelector
-          tableId: RandomVinylSleeve
-          rolls: !type:ConstantNumberSelector
-            value: 5
+      entity_storage: !type:NestedSelector
+        tableId: RandomVinylSleeve
+        rolls: !type:ConstantNumberSelector
+          value: 5
 
 
 - type: entityTable

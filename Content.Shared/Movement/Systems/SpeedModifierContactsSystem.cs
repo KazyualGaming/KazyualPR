@@ -160,11 +160,6 @@ public sealed class SpeedModifierContactsSystem : EntitySystem
 
     private void OnEntityEnter(EntityUid uid, SpeedModifierContactsComponent component, ref StartCollideEvent args)
     {
-        // imp edit - added StepTrigger check
-        if (HasComp<StepTriggerComponent>(uid))
-            return;
-        // Imp End
-
         AddModifiedEntity(args.OtherEntity);
     }
 

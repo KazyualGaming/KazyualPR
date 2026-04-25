@@ -8,7 +8,6 @@
   - Quartermaster
   - SalvageSpecialist
   - MailCarrier
-  - SalvageQuadBorg
 
 - type: department
   id: Civilian
@@ -37,7 +36,6 @@
    - Mercenary # Frontier
    - Pilot # Frontier
    - Janitor
-   - ServiceQuadBorg # Floof
 - type: department
   id: CentralCommand
   name: department-CentralCommand
@@ -85,8 +83,6 @@
   - ChiefEngineer
   - StationEngineer
   - TechnicalAssistant
-  - EngineeringQuadBorg
-
 
 - type: department
   id: Medical
@@ -100,7 +96,6 @@
   - MedicalIntern
   - Psychologist
   - Paramedic
-  - MedicalQuadBorg # Floof
   - Geneticist # Funkystation - Genetics
 
 - type: department
@@ -117,7 +112,6 @@
   - Warden
   - PrisonGuard
   - Prisoner
-  - SecurityQuadBorg
 
 - type: department
   id: Science
@@ -137,6 +131,7 @@
   color: "#D381C9"
   roles:
   - Borg
+  - QuadBorg
   - StationAi
 
 - type: department

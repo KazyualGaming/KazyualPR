@@ -16,6 +16,10 @@ namespace Content.Client.Shuttles.Save
         [Dependency] private readonly IResourceManager _resourceManager = default!;
         private ISawmill _sawmill = default!;
 
+        private const string RoomGridDirectory = "/Exports/room_grids/";
+        private const string RoomGridPrefix = "/Exports/room_";
+
+        // Static data shared across all instances to handle multiple system instances
         private static readonly Dictionary<string, string> CachedShipData = new();
         private static readonly Dictionary<string, (string shipName, DateTime timestamp)> ShipMetadataCache = new();
         private static readonly List<string> AvailableShips = new();
@@ -275,6 +279,7 @@ namespace Content.Client.Shuttles.Save
                     // Accept any .yml file in Exports (not just ship_index), but exclude backups
                     if (filePath.Contains("Exports")
                         && !filePath.Contains("Exports/backup")
+                        && !IsRoomGridFile(filePath)
                         && filePath.EndsWith(".yml")
                         && !filePath.Contains("ship_index"))
                     {
@@ -346,8 +351,23 @@ namespace Content.Client.Shuttles.Save
             }
             catch (Exception ex)
             {
-                _sawmill.Error($"Failed to update ship index: {ex.Message}");
+                Logger.Error($"Error updating ship index: {ex.Message}");
             }
+        }
+
+        // Return list of ships available from server and cached locally
+        public List<string> GetAvailableShips()
+        {
+            // Return list of ships available from server and cached locally
+            return AvailableShips.Where(path => !IsRoomGridFile(path)).ToList();
+        }
+
+        private static bool IsRoomGridFile(string filePath)
+        {
+            // Room grid files are managed by RoomGridFileManagementSystem and should not be treated as ships
+            // This logic must match the path logic in RoomGridFileManagementSystem
+            return filePath.StartsWith("/Exports/room_grids/room_", StringComparison.OrdinalIgnoreCase)
+                || filePath.StartsWith("/Exports/room_", StringComparison.OrdinalIgnoreCase);
         }
 
         public List<string> GetSavedShipFiles() => new List<string>(AvailableShips);

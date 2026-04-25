@@ -28,6 +28,9 @@ public sealed class AutoOrientSystem : EntitySystem
 
     private void OnEntParentChanged(Entity<AutoOrientComponent> ent, ref EntParentChangedMessage args)
     {
+        if (_delay < TimeSpan.Zero)
+            return;
+
         ent.Comp.NextChange = _timing.CurTime + _delay;
         Dirty(ent);
     }

@@ -22,7 +22,7 @@ public sealed class RadiationCollectorSystem : VisualizerSystem<RadiationCollect
                 new AnimationTrackSpriteFlick() {
                     LayerKey = RadiationCollectorVisualLayers.Main,
                     KeyFrames = {new AnimationTrackSpriteFlick.KeyFrame(comp.ActivatingState, 0f)}
-                }, // TODO: Make this play a sound when activating a radiation collector.
+                },
             }
         };
 
@@ -33,7 +33,7 @@ public sealed class RadiationCollectorSystem : VisualizerSystem<RadiationCollect
                 new AnimationTrackSpriteFlick() {
                     LayerKey = RadiationCollectorVisualLayers.Main,
                     KeyFrames = {new AnimationTrackSpriteFlick.KeyFrame(comp.DeactivatingState, 0f)}
-                }, // TODO: Make this play a sound when deactivating a radiation collector.
+                },
             }
         };
     }
@@ -42,25 +42,31 @@ public sealed class RadiationCollectorSystem : VisualizerSystem<RadiationCollect
     {
         if (state == comp.CurrentState)
             return;
-        if (!Resolve(uid, ref animPlayer))
-            return;
-        if (AnimationSystem.HasRunningAnimation(uid, animPlayer, RadiationCollectorComponent.AnimationKey))
+
+        TryComp(uid, out animPlayer);
+        if (animPlayer != null && AnimationSystem.HasRunningAnimation(uid, animPlayer, RadiationCollectorComponent.AnimationKey))
             return;
 
         var targetState = state & RadiationCollectorVisualState.Active;
         var destinationState = comp.CurrentState & RadiationCollectorVisualState.Active;
-        if (targetState != destinationState) // If where we're going is not where we want to be then we must go there next.
-            targetState |= RadiationCollectorVisualState.Deactivating; // Convert to transition state.
+        if (targetState != destinationState)
+            targetState |= RadiationCollectorVisualState.Deactivating;
 
         comp.CurrentState = state;
 
         switch (targetState)
         {
             case RadiationCollectorVisualState.Activating:
-                AnimationSystem.Play((uid, animPlayer), comp.ActivateAnimation, RadiationCollectorComponent.AnimationKey);
+                if (animPlayer != null)
+                    AnimationSystem.Play((uid, animPlayer), comp.ActivateAnimation, RadiationCollectorComponent.AnimationKey);
+                else
+                    SpriteSystem.LayerSetRsiState((uid, sprite), RadiationCollectorVisualLayers.Main, comp.ActiveState);
                 break;
             case RadiationCollectorVisualState.Deactivating:
-                AnimationSystem.Play((uid, animPlayer), comp.DeactiveAnimation, RadiationCollectorComponent.AnimationKey);
+                if (animPlayer != null)
+                    AnimationSystem.Play((uid, animPlayer), comp.DeactiveAnimation, RadiationCollectorComponent.AnimationKey);
+                else
+                    SpriteSystem.LayerSetRsiState((uid, sprite), RadiationCollectorVisualLayers.Main, comp.InactiveState);
                 break;
 
             case RadiationCollectorVisualState.Active:
@@ -79,12 +85,11 @@ public sealed class RadiationCollectorSystem : VisualizerSystem<RadiationCollect
         if (!TryComp<SpriteComponent>(uid, out var sprite))
             return;
         if (!TryComp<AnimationPlayerComponent>(uid, out var animPlayer))
-            return; // Why doesn't AnimationCompletedEvent propagate the AnimationPlayerComponent? No idea, but it's in engine so I'm not touching it.
+            return;
 
         if (!AppearanceSystem.TryGetData<RadiationCollectorVisualState>(uid, RadiationCollectorVisuals.VisualState, out var state))
             state = comp.CurrentState;
 
-        // Convert to terminal state.
         var targetState = state & RadiationCollectorVisualState.Active;
 
         UpdateVisuals(uid, targetState, comp, sprite, animPlayer);
@@ -94,12 +99,11 @@ public sealed class RadiationCollectorSystem : VisualizerSystem<RadiationCollect
     {
         if (args.Sprite == null)
             return;
-        if (!TryComp<AnimationPlayerComponent>(uid, out var animPlayer))
-            return;
 
         if (!AppearanceSystem.TryGetData<RadiationCollectorVisualState>(uid, RadiationCollectorVisuals.VisualState, out var state, args.Component))
             state = RadiationCollectorVisualState.Deactive;
 
+        TryComp<AnimationPlayerComponent>(uid, out var animPlayer);
         UpdateVisuals(uid, state, comp, args.Sprite, animPlayer);
     }
 }

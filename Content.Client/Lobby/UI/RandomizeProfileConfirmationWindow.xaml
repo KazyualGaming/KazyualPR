@@ -1,0 +1,13 @@
+<DefaultWindow xmlns="https://spacestation14.io"
+            Title="{Loc 'humanoid-profile-editor-randomize-warning-title'}"
+            Resizable="False">
+
+    <BoxContainer Orientation="Vertical" SeparationOverride="8" MinSize="340 90" Margin="8 8 8 8">
+        <Label Text="{Loc 'humanoid-profile-editor-randomize-warning-body'}" />
+        <BoxContainer Orientation="Horizontal" SeparationOverride="6" HorizontalAlignment="Right">
+            <Control HorizontalExpand="True" />
+            <Button Name="CancelButton" Text="{Loc 'humanoid-profile-editor-randomize-warning-cancel'}" />
+            <Button Name="ConfirmButton" Text="{Loc 'humanoid-profile-editor-randomize-warning-confirm'}" />
+        </BoxContainer>
+    </BoxContainer>
+</DefaultWindow>

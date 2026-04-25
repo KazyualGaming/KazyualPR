@@ -492,12 +492,24 @@
       collection: VulpkaninBarks
     Honk:
       collection: BikeHorn
-    Gasp:
-      collection: MaleGasp
+    # Gasp:
+    #   collection: MaleGasp
     DefaultDeathgasp:
       collection: MothDeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    #region Starlight
+    Crying:
+      path: /Audio/_Starlight/Voice/Moth/moth_cry.ogg
+    Cough:
+      path: /Audio/_Starlight/Voice/Moth/moth_cough.ogg
+    Yawn:
+      path: /Audio/_Starlight/Voice/Moth/moth_yawn.ogg
+    Sigh:
+      path: /Audio/_Starlight/Voice/Moth/moth_sigh.ogg
+    Gasp:
+      path: /Audio/_Starlight/Voice/Moth/moth_gasp.ogg
+    #endregion Starlight
 
 - type: emoteSounds
   id: UnisexSilicon
@@ -601,6 +613,8 @@
       collection: MaleYawn
     Snore:
       collection: Snores
+    Purr: # Hardlight
+      collection: FelinidPurrs
     Weh:
       collection: Weh
     Hew:
@@ -619,7 +633,7 @@
     Gekker: # Floof
       collection: VulpkaninGekkers
     Pout: # HardLight
-        collection: Whine # Starlight
+      collection: Whine # Starlight
 
 - type: emoteSounds
   id: FemaleVulpkanin
@@ -638,6 +652,8 @@
       collection: FemaleSigh
     Scream:
       collection: VulpkaninScreams
+    Purr: # Hardlight
+      collection: FelinidPurrs
     Growl:
       collection: Growl # Starlight
     Snarl:
@@ -673,7 +689,7 @@
     Gekker: # Floof
       collection: VulpkaninGekkers
     Pout: # HardLight
-        collection: Whine # Starlight
+      collection: Whine # Starlight
 
 # body emotes
 - type: emoteSounds
@@ -691,24 +707,6 @@
       collection: Salutes
     Crack: # Imp
       collection: Cracks # Imp
-
-- type: emoteSounds
-  id: LewdSounds
-  sounds:
-    Stroke:
-      collection: Stroke
-    WetPlorp:
-      collection: WetPlorp
-    Plap:
-      collection: Plap
-    WetPlap:
-      collection: WetPlap
-    CumIn:
-      collection: CumIn
-    CumOut:
-      collection: CumOut
-    PullOut:
-      collection: PullOut
 
 - type: emoteSounds
   id: DionaBodyEmotes

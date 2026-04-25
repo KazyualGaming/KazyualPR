@@ -22,6 +22,14 @@
     canInteract: true
   - type: GhostHearing
   - type: Hands
+    hands:
+      hand_right:
+        location: Right
+      hand_left:
+        location: Left
+    sortedHands:
+    - hand_right
+    - hand_left
   - type: ComplexInteraction
   - type: Puller
     needsHands: false
@@ -29,8 +37,6 @@
   - type: Physics
     ignorePaused: true
     bodyType: Kinematic
-  - type: Body
-    prototype: Aghost
   - type: Access
     groups:
     - AllAccess
@@ -109,15 +115,15 @@
   - type: BypassInteractionChecks
   - type: BankAccount # Frontier
   - type: SupermatterImmune
-  - type: ShowHealthBars  # SandwhichStation
-  - type: ShowHealthIcons # SandwhichStation
-  - type: ShowHungerIcons # SandwhichStation
-  - type: ShowThirstIcons # SandwhichStation
-  - type: ShowJobIcons    # SandwhichStation
+  - type: ShowHealthBars  # SandwichStation
+  - type: ShowHealthIcons # SandwichStation
+  - type: ShowHungerIcons # SandwichStation
+  - type: ShowThirstIcons # SandwichStation
+  - type: ShowJobIcons    # SandwichStation
   - type: ShowMindShieldIcons # SandwhichStation
-  - type: SurgeryTarget # SandwhichStation - lets admin ghosts do surgery, until mocho refactors and we don't need this anymore.
-  - type: Targeting     # SandwhichStation - lets admin ghosts target limbs, useful for a variety of reasons.
-  - type: Sanitized     # SandwhichStation - so aghosts don't murder people with poison.
+  - type: SurgeryTarget # SandwichStation - lets admin ghosts do surgery, until mocho refactors and we don't need this anymore.
+  - type: Targeting     # SandwichStation - lets admin ghosts target limbs, useful for a variety of reasons.
+  - type: Sanitized     # SandwichStation - so aghosts don't murder people with poison.
 
 - type: entity
   id: ActionAGhostShowSolar

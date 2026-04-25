@@ -518,7 +518,3 @@
   - type: Tag
     tags:
     - Book
-  - type: GuideHelp
-    openOnActivation: true
-    guides:
-    - Psionics

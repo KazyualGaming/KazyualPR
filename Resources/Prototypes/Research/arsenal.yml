@@ -23,6 +23,7 @@
   # This is not roundstart since its a direct upgrade
   - WeaponCrusherGlaive
   - MechEquipmentKineticAccelerator # Goobstation
+  position: 1,0 # Goobstation R&D Console rework
 
 #Frontier: restricted arsenal research ;Monolith: readded :)
 
@@ -36,33 +37,38 @@
   tier: 2
   cost: 10000
   recipeUnlocks:
-  - Magazine45_ACPPistolIncendiary
-  - Magazine45_ACPSubMachineGunIncendiary
-  - AmmoBox45_ACPIncendiary
-  - Magazine9x19mmPistolIncendiary
-  - Magazine9x19mmSubMachineGunIncendiary
-  - SpeedLoader9x19mmIncendiary
-  - AmmoBox9x19mmIncendiary
-  - Magazine57x28mmPistolIncendiary
-  - Magazine57x28mmSubMachineGunIncendiary
-  - AmmoBox57x28mmIncendiary
-  - Magazine46x30mmPistolIncendiary
-  - Magazine46x30mmSubMachineGunIncendiary
-  - AmmoBox46x30mmIncendiary
-  - Magazine45_magnumPistolIncendiary
-  - SpeedLoader45_magnumIncendiary
-  - AmmoBox45_magnumIncendiary
-  - Magazine762x39mmIncendiary
-  - AmmoBox762x39mmIncendiary
-  - Magazine556x45mmIncendiary
-  - SpeedLoader556x45mmIncendiary
-  - AmmoBox556x45mmIncendiary
-  - Magazine762x54mmRIncendiary
-  - AmmoBox762x54mmRIncendiary
-  - Magazine762x51mmIncendiary
-  - AmmoBox762x51mmIncendiary
   - Magazine12_gaugeIncendiary
   - AmmoBox12_gaugeIncendiary
+  - AmmoBox45_ACPIncendiary
+  - AmmoBox46x30mmIncendiary
+  - AmmoBox57x28mmIncendiary
+  - AmmoBox9x19mmIncendiary
+  - AmmoBox556x45mmIncendiary
+  - AmmoBox762x39mmIncendiary
+  - AmmoBox762x54mmRIncendiary
+  - AmmoBox762x51mmIncendiary
+  - AmmoBox45_magnumIncendiary
+  - Magazine45_ACPSubMachineGunIncendiary
+  - Magazine46x30mmSubMachineGunIncendiary
+  - Magazine57x28mmSubMachineGunIncendiary
+  - Magazine9x19mmSubMachineGunIncendiary
+  - Magazine45_ACPPistolIncendiary
+  - Magazine45_magnumPistolIncendiary
+  - Magazine46x30mmPistolIncendiary
+  - Magazine57x28mmPistolIncendiary
+  - Magazine9x19mmPistolIncendiary
+  - Magazine556x45mmIncendiary
+  - SpeedLoader45_magnumIncendiary
+  - SpeedLoader556x45mmIncendiary
+  - SpeedLoader9x19mmIncendiary
+  - Magazine762x39mmIncendiary
+  - Magazine762x54mmRIncendiary
+  - Magazine762x51mmIncendiary
+  # Goobstation R&D Console rework start
+  position: 2,2
+  technologyPrerequisites:
+  - SalvageWeapons
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: WeaponizedLaserManipulation
@@ -76,8 +82,58 @@
   recipeUnlocks: # Frontier
   - WeaponLaserCarbine # Frontier
   - WeaponMechCombatFiredartLaser # Goobstation
+  # Goobstation R&D Console rework start
+  position: 4,0
+  technologyPrerequisites:
+  - KineticModifications
+  # Goobstation R&D Console rework end
 
 #Frontier: restricted arsenal research ;Monolith: readded :)
+
+- type: technology
+  id: NonlethalAmmunition
+  name: research-technology-nonlethal-ammunition
+  icon:
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
+    state: beanbag
+  discipline: Arsenal
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - WeaponDisabler
+  - Magazine12_gaugeBeanbag
+  - AmmoBox12_gaugeBeanbag
+  - AmmoBox12_gaugeTranquilizer
+  - AmmoBox45_ACPRubber
+  - AmmoBox46x30mmRubber
+  - AmmoBox57x28mmRubber
+  - AmmoBox9x19mmRubber
+  - AmmoBox556x45mmRubber
+  - AmmoBox762x39mmRubber
+  - AmmoBox762x54mmRRubber
+  - AmmoBox762x51mmRubber
+  - AmmoBox45_magnumRubber
+  - Magazine45_ACPSubMachineGunRubber
+  - Magazine46x30mmSubMachineGunRubber
+  - Magazine57x28mmSubMachineGunRubber
+  - Magazine9x19mmSubMachineGunRubber
+  - Magazine45_ACPPistolRubber
+  - Magazine45_magnumPistolRubber
+  - Magazine46x30mmPistolRubber
+  - Magazine57x28mmPistolRubber
+  - Magazine9x19mmPistolRubber
+  - Magazine556x45mmRubber
+  - SpeedLoader45_magnumRubber
+  - SpeedLoader556x45mmRubber
+  - SpeedLoader9x19mmRubber
+  - Magazine762x39mmRubber
+  - Magazine762x54mmRRubber
+  - Magazine762x51mmRubber
+  # Goobstation R&D Console rework start
+  position: 2,3
+  technologyPrerequisites:
+  - SalvageWeapons
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: UraniumMunitions
@@ -89,34 +145,39 @@
   tier: 2
   cost: 7500
   recipeUnlocks:
-  - Magazine45_ACPPistolUranium
-  - Magazine45_ACPSubMachineGunUranium
-  - AmmoBox45_ACPUranium
-  - Magazine9x19mmPistolUranium
-  - Magazine9x19mmSubMachineGunUranium
-  - SpeedLoader9x19mmUranium
-  - AmmoBox9x19mmUranium
-  - Magazine57x28mmPistolUranium
-  - Magazine57x28mmSubMachineGunUranium
-  - AmmoBox57x28mmUranium
-  - Magazine46x30mmPistolUranium
-  - Magazine46x30mmSubMachineGunUranium
-  - AmmoBox46x30mmUranium
-  - Magazine45_magnumPistolUranium
-  - SpeedLoader45_magnumUranium
-  - AmmoBox45_magnumUranium
-  - Magazine762x39mmUranium
-  - AmmoBox762x39mmUranium
-  - Magazine556x45mmUranium
-  - SpeedLoader556x45mmUranium
-  - AmmoBox556x45mmUranium
-  - Magazine762x54mmRUranium
-  - AmmoBox762x54mmRUranium
-  - Magazine762x51mmUranium
-  - AmmoBox762x51mmUranium
+  - WeaponMechCombatDisabler # Goobstation
   - Magazine12_gaugeUranium
   - AmmoBox12_gaugeUranium
-  - WeaponMechCombatDisabler # Goobstation
+  - AmmoBox45_ACPUranium
+  - AmmoBox46x30mmUranium
+  - AmmoBox57x28mmUranium
+  - AmmoBox9x19mmUranium
+  - AmmoBox556x45mmUranium
+  - AmmoBox762x39mmUranium
+  - AmmoBox762x54mmRUranium
+  - AmmoBox762x51mmUranium
+  - AmmoBox45_magnumUranium
+  - Magazine45_ACPSubMachineGunUranium
+  - Magazine46x30mmSubMachineGunUranium
+  - Magazine57x28mmSubMachineGunUranium
+  - Magazine9x19mmSubMachineGunUranium
+  - Magazine45_ACPPistolUranium
+  - Magazine45_magnumPistolUranium
+  - Magazine46x30mmPistolUranium
+  - Magazine57x28mmPistolUranium
+  - Magazine9x19mmPistolUranium
+  - Magazine556x45mmUranium
+  - SpeedLoader45_magnumUranium
+  - SpeedLoader556x45mmUranium
+  - SpeedLoader9x19mmUranium
+  - Magazine762x39mmUranium
+  - Magazine762x54mmRUranium
+  - Magazine762x51mmUranium
+  # Goobstation R&D Console rework start
+  position: 3,2
+  technologyPrerequisites:
+  - DraconicMunitions
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: AdvancedRiotControl
@@ -132,6 +193,11 @@
   - TelescopicShield # Frontier
   - HoloprojectorSecurity # Frontier
   - WeaponDisablerSMG # Frontier
+  # Goobstation R&D Console rework start
+  position: 3,3
+  technologyPrerequisites:
+  - NonlethalAmmunition
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: ExplosiveTechnology
@@ -150,6 +216,9 @@
   - FlashPayload
   - ExplosivePayload
   - ChemicalPayload
+  technologyPrerequisites:
+  - SalvageWeapons # Goobstation R&D Console rework
+  position: 2,-1  # Goobstation R&D Console rework
 
 - type: technology
   id: SpecialMeans
@@ -162,6 +231,11 @@
   cost: 5000
   recipeUnlocks:
   - ClothingBackpackElectropack
+  # Goobstation R&D Console rework start
+  position: 4,3
+  technologyPrerequisites:
+  - AdvancedRiotControl
+  # Goobstation R&D Console rework end
 
 # Tier 2
 
@@ -176,6 +250,11 @@
   cost: 10000
   recipeUnlocks: # Frontier
   - WeaponLaserCannon # Frontier
+  # Goobstation R&D Console rework start
+  position: 5,0
+  technologyPrerequisites:
+  - WeaponizedLaserManipulation
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: KineticModifications
@@ -191,6 +270,11 @@
   - PKAUpgradeRange
   - PKAUpgradeFireRate
   - WeaponMechCombatSolarisLaser # Goobstation
+  # Goobstation R&D Console rework start
+  position: 3,0
+  technologyPrerequisites:
+  - SalvageWeapons
+  # Goobstation R&D Console rework end
 
 
 
@@ -205,6 +289,12 @@
   cost: 10000
   recipeUnlocks: # Frontier
   - WeaponXrayCannon # Frontier
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - WeaponizedLaserManipulation
+  - UraniumMunitions
+  position: 5,1
+  # Goobstation R&D Console rework end
 
 # End Frontier: restricted arsenal research
 
@@ -231,7 +321,9 @@
   #  - ShuttleGunPerforatorCircuitboard # Frontier
   #  - ShuttleGunFriendshipCircuitboard # Frontier
   technologyPrerequisites:
-  - SalvageWeapons
+  - ExplosiveTechnology # Goobstation R&D Console rework
+  - Shuttlecraft  # Goobstation R&D Console rework
+  position: 3,-3  # Goobstation R&D Console rework
 
 # Tier 3
 
@@ -243,11 +335,16 @@
     state: icon
   discipline: Arsenal
   tier: 3
-  cost: 15000
+  cost: 20000 # Goobstation 15000 -> 20000
   recipeUnlocks:
   - WeaponAdvancedLaser # Frontier
   - PortableRecharger
   - WeaponMechCombatImmolationGun # Goobstation
+  # Goobstation R&D Console rework start
+  position: 6,0
+  technologyPrerequisites:
+  - ConcentratedLaserWeaponry
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: ThermalWeaponry
@@ -257,9 +354,14 @@
     state: icon
   discipline: Arsenal
   tier: 3
-  cost: 15000
+  cost: 20000 # Goobstation 15000 -> 20000
   recipeUnlocks: # Frontier
-  - WeaponTemperatureGun # Frontier
+  - WeaponTemperatureGun # Frontier 
+  # Goobstation R&D Console rework start
+  position: 6,1
+  technologyPrerequisites:
+  - WaveParticleHarnessing
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: AdvancedShuttleWeapon
@@ -273,19 +375,29 @@
   recipeUnlocks:
   - NFWeaponEnergyPistolLaserSvalinn
 #  - NFBlueprintWeaponLaserSvalinn # Frontier
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - BasicShuttleArmament
+  position: 4,-3  
+  # Goobstation R&D Console rework end
 
-# - type: technology #Frontier
-#  id: AdvancedShuttleWeapon
-#  name: research-technology-advanced-shuttle-weapon
-#  icon:
-#    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/Grenade/40mm_grenade_cartridge.rsi
-#    state: icon
-#  discipline: Arsenal
-#  tier: 3
-#  cost: 15000
-#  recipeUnlocks:
-#  - 40mmGrenadeEMP
-#  - PowerCageHigh
-#  - ShuttleGunDusterCircuitboard # Frontier
-#  technologyPrerequisites:
-#  - BasicShuttleArmament
+# - type: technology #Frontier disabled this
+#   id: AdvancedShuttleWeapon
+#   name: research-technology-advanced-shuttle-weapon
+#   icon:
+#     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/Grenade/40mm_grenade_cartridge.rsi
+#     state: icon
+#   discipline: Arsenal
+#   tier: 3
+#   cost: 15000
+#   recipeUnlocks:
+#     - 40mmGrenadeEMP
+#     - PowerCageHigh
+#     - ShuttleGunDusterCircuitboard # Frontier
+#   technologyPrerequisites:
+#   - BasicShuttleArmament
+#   # Goobstation R&D Console rework start
+#   #technologyPrerequisites:
+#   # -
+#   position: 4,-2  
+#   # Goobstation R&D Console rework end

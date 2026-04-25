@@ -11,7 +11,7 @@
   form: Protagonist
   name: Station Command
   color: "#00709C"
-  disabled: true  #Applies to Station Command staff, such as Captainl, Head of Personnel Harbor Master, Chief Medical Officer, etc.
+  disabled: true  #Applies to Station Command staff, such as Captain, Head of Personnel, Harbor Master, Chief Medical Officer, etc.
 
 - type: company
   id: Rogue
@@ -26,7 +26,9 @@
   name: Central Command
   color: "#2E9935"
   disabled: true
-  # logins: - admins only here !!! or your PR will be CLOSED!!!! also serves as a example for ur whitelisted factions
+  #admins only here !!! or your PR will be CLOSED!!!! also serves as a example for ur whitelisted factions
+  logins:
+  - FuelRat
 
 
 - type: company
@@ -35,6 +37,16 @@
   name: Central Security
   color: "#00FFFB"
   disabled: true #Applies to Security. HoS has this instead of Station Command.
+
+- type: company
+  id: Sandwich
+  form: Protagonist
+  name: Gorlex Marauders
+  color: "#FBDB65" #Cheesy yellow
+  disabled: true
+  logins: #Sandwich
+  - FuelRat
+
 # DO NOT TOUCH
 
 # ==== Canon Companies =====
@@ -44,12 +56,12 @@
   name: NanoTrasen
   color: "#334E6D" # navy blue
   disabled: true # locked, private
-  logins:
-  - Generic_Eagle
-  - Warcrazed
-  - Raccoon_Chan
-  - DizzyEevee
-  - Snakeman9
+  #logins: #Sandwich: No special things for people we dont know!
+  #- Generic_Eagle
+  #- Warcrazed
+  #- Raccoon_Chan
+  #- DizzyEevee
+  #- Snakeman9
   
 - type: company
   id: InterdynePharmaceuticals
@@ -108,16 +120,16 @@
   name: Black Crown Heavy Industries
   color: "#40826D" # teal
   disabled: true
-  logins:
-  - Goldenglow
-  - Tzula
-  - Shada
-  - synergyjohn
-  - Maribo
-  - Asky
-  - RoxyRirumi
-  - Hadoje
-  - Virryi
+  #logins: #Sandwich: No special things for people we dont know!
+  #- Goldenglow
+  #- Tzula
+  #- Shada
+  #- synergyjohn
+  #- Maribo
+  #- Asky
+  #- RoxyRirumi
+  #- Hadoje
+  #- Virryi
 
 - type: company
   id: Sequoia
@@ -125,10 +137,10 @@
   name: Sequoia Pharmaceuticals
   color: "#D2B48C" # tan
   disabled: true
-  logins:
-  - Suraru
-  - BagOBricks
-  - commanderniiue
+  #logins: #Sandwich: No special things for people we dont know!
+  #- Suraru
+  #- BagOBricks
+  #- commanderniiue
 
 - type: company
   id: HSC
@@ -160,9 +172,9 @@
   name: The Wayfarer
   color: "#0066ff" # blue
   disabled: true
-  logins:
-  - DeoxNirviS
-  - tastefulmedi
+  #logins: #Sandwich: No special things for people we dont know!
+  #- DeoxNirviS
+  #- tastefulmedi
 
 - type: company
   id: COSS
@@ -194,21 +206,21 @@
   form: Antagonist
   name: The Viper PMC
   color: "#A32984" # purple
-  disabled: false # if we have a list of logins, shouldn't this be locked?
-  logins:
-  - Schizm1253
-  - Archylle
-  - bubz_bs
-  - capslfern
-  - DrOktober
-  - Ghost581
-  - hellcat76
-  - HungryCuban
-  - Kiterny
-  - plazmasniper_2005
-  - Redrover1760
-  - SwadianSupremacy
-  - Traildog
+  disabled: true
+  #logins: #Sandwich: No special things for people we dont know!
+  #- Schizm1253
+  #- Archylle
+  #- bubz_bs
+  #- capslfern
+  #- DrOktober
+  #- Ghost581
+  #- hellcat76
+  #- HungryCuban
+  #- Kiterny
+  #- plazmasniper_2005
+  #- Redrover1760
+  #- SwadianSupremacy
+  #- Traildog
 
 - type: company
   id: SIN

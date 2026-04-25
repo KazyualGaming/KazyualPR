@@ -102,6 +102,9 @@
   - delete
   - pausemap
   - unpausemap
+
+- Flags: SHUTDOWNREBOOT
+  Commands:
   - restart
   - shutdown
 
@@ -132,6 +135,7 @@
   - fuck
   - replay_recording_start
   - replay_recording_stop
+  - transfer_test
 
 - Flags: QUERY
   Commands:

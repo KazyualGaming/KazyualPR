@@ -1,0 +1,427 @@
+Name: SandwichChangelog
+Order: -2
+Entries:
+- author: SandwichStation
+  changes:
+    - message: SandwichStation changelog added.
+      type: Add
+  id: 1
+  time: '2026-04-08T18:00:00.000000'
+- author: B3CKDOOR
+  changes:
+    - type: Add
+      message: SandwichStation changelog added.
+  id: 2
+  time: '2026-03-03T10:36:42.0000000+00:00'
+- author: QEU-B-458
+  changes:
+    - type: Add
+      message: >-
+        Station AI can now remotely control borgs with a B.O.R.I.S. module
+        installed.
+    - type: Fix
+      message: Cryogenic sleep units no longer crash on map load when rotated.
+    - type: Fix
+      message: Borg chassis no longer show surgery UI when interacted with.
+    - type: Fix
+      message: Fixed missing pirate logo texture.
+  id: 3
+  time: '2026-03-16T11:23:10.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Add
+      message: Security system against cheating shuttle players!
+    - type: Tweak
+      message: >-
+        Bluespace Stashes are now more restrictive (no longer nukedisks for the
+        next shift in your ship)
+    - type: Fix
+      message: Fixed bluespace WALL locker bug
+  id: 4
+  time: '2026-03-17T18:04:48.0000000+00:00'
+- author: BodenPflanze
+  changes:
+    - type: Add
+      message: Lizard legs are back!
+    - type: Tweak
+      message: The item size of collars has been reduced.
+    - type: Remove
+      message: Security no longer works for BluCorp.
+    - type: Remove
+      message: Security thongs.
+    - type: Fix
+      message: >-
+        Hotfix for most sprite gaps between limbs, there might still be some
+        issues for other species.
+  id: 5
+  time: '2026-03-19T20:34:29.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Tweak
+      message: >-
+        Shipyards no longer charge more then 50.000 bucks for loading a stored
+        ship
+  id: 6
+  time: '2026-03-19T18:39:42.0000000+00:00'
+- author: BodenPflanze
+  changes:
+    - type: Add
+      message: Added old Sandwich Station Tiles
+    - type: Remove
+      message: Removed HL Tiles
+  id: 7
+  time: '2026-03-17T18:10:32.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Fix
+      message: Fixed power on roundstart!
+  id: 8
+  time: '2026-03-22T11:28:16.0000000+00:00'
+- author: lever1209
+  changes:
+    - type: Fix
+      message: Fixed instruments allowing them to be used outside of hand slots.
+  id: 9
+  time: '2026-03-22T16:59:25.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Add
+      message: Added ship rulebook
+  id: 10
+  time: '2026-03-22T21:55:39.0000000+00:00'
+- author: QEU-B-458
+  changes:
+    - type: Add
+      message: >-
+        New utility dock airlock (AirlockShuttleUtility) that bridges HV power,
+        atmos piping, and disposal tubes between docked grids.
+  id: 11
+  time: '2026-03-24T13:25:25.0000000+00:00'
+- author: BodenPflanze
+  changes:
+    - type: Add
+      message: Added CE Handheld Power Console!
+    - type: Remove
+      message: Removed thongs and Libidozenithizine.
+    - type: Fix
+      message: Amber Map security decal color and LV wirering beneath bridge.
+  id: 12
+  time: '2026-03-24T13:13:39.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Add
+      message: Added volume slider to "Options Menu" and Jukebox for jukebox music
+  id: 13
+  time: '2026-03-27T16:59:51.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Tweak
+      message: Jukebox songs are now sorted again (and better)!
+    - type: Fix
+      message: Fixed Jukebox songs!
+  id: 14
+  time: '2026-03-25T15:20:31.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Tweak
+      message: Moved CCVar's
+    - type: Tweak
+      message: Made asteroids limit no longer hardcoded
+  id: 15
+  time: '2026-03-23T11:51:12.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Add
+      message: New station, Taco
+  id: 16
+  time: '2026-03-27T20:33:48.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Fix
+      message: Shuttles no longer get deleted on timer-run-out expeditions
+    - type: Add
+      message: Re-add of songs by Kazyu
+    - type: Add
+      message: Character randomizer now has a confirmation window
+    - type: Add
+      message: >-
+        New feature to disable auto rotation (server side, client will come
+        later)
+    - type: Tweak
+      message: Resized the "Portable Charger" (admin fix)
+    - type: Tweak
+      message: Captains+ can now reboot server without Yuuchan's intervention
+  id: 17
+  time: '2026-04-07T15:42:42.0000000+00:00'
+- author: BodenPflanze
+  changes:
+    - type: Add
+      message: Omega Station
+    - type: Remove
+      message: bondage gear
+    - type: Remove
+      message: leashes
+    - type: Remove
+      message: Overproportional genitals
+    - type: Tweak
+      message: various aghost improvements
+    - type: Tweak
+      message: Comms Console now uses Command access
+    - type: Tweak
+      message: Alert levels are now for the Station, not the entire Sector
+    - type: Tweak
+      message: Colonial Command is now Central Command
+    - type: Fix
+      message: rusted wall textures
+    - type: Fix
+      message: Neuralyzer
+  id: 18
+  time: '2026-04-02T14:39:46.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Fix
+      message: Fixed round endings (sometimes got stuck)
+    - type: Fix
+      message: Fixed ATAG's getting deleted
+    - type: Fix
+      message: Fixed spawning without gear or with wrong gear
+  id: 19
+  time: '2026-04-07T18:17:29.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Fix
+      message: Fixed water walking rubberbanding
+    - type: Fix
+      message: Fixed Station jobs not applying
+    - type: Fix
+      message: Vinyl and Advertisement crates now contain 5 records (as advertised)
+    - type: Fix
+      message: 'All maps (that we use) now start with freelancer slots   '
+  id: 20
+  time: '2026-04-07T21:17:36.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Fix
+      message: Fixed various broken prototypes, guidebook pages, and loadout entries
+    - type: Fix
+      message: >-
+        Fixed several missing content references across admin/event content,
+        shipyard entries, books, and markings
+    - type: Fix
+      message: >-
+        Fixed missing and incorrect text/localization in several traits,
+        recipes, and station descriptions
+    - type: Fix
+      message: >-
+        Fixed broken poster construction and removed invalid improvised magazine
+        recipes
+    - type: Fix
+      message: Fixed rain lizards causing spawn-related errors (and half-lizzos)
+    - type: Fix
+      message: Fixed the Exile chemistry recipe
+    - type: Fix
+      message: Fixed the default "Empty" map
+    - type: Fix
+      message: Restored normal headset behavior (passengers have common again)
+    - type: Fix
+      message: >-
+        Fixed round restart cleanup issues (ships got deleted 30 seconds after
+        round end...?!)
+    - type: Fix
+      message: Fixed several malformed YAML entries that were breaking tests
+    - type: Remove
+      message: Removed the Ironman trait
+    - type: Remove
+      message: Firebreath and Icebreath mutagens (broken)
+    - type: Tweak
+      message: Prybar Prosthetics no longer works on powered doors
+    - type: Tweak
+      message: Rebalanced several defensive traits to be less overpowered
+    - type: Tweak
+      message: Renamed Inoculated to The Chosen One
+  id: 21
+  time: '2026-04-10T17:05:25.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Fix
+      message: Fixed a memory issue with the automated tests
+    - type: Tweak
+      message: >-
+        Recalling shuttle now restricted on updates (I dont have all day to wait
+        for an update...)
+  id: 22
+  time: '2026-04-10T21:51:16.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Tweak
+      message: Changed companies
+  id: 23
+  time: '2026-04-10T22:06:25.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Add
+      message: Cyborg Selection System
+    - type: Add
+      message: Goob Research Tree
+    - type: Remove
+      message: Random Research System
+    - type: Remove
+      message: Researchable Hardsuits and misc from Head of Staffs
+    - type: Remove
+      message: Security Quadborg
+    - type: Remove
+      message: Security Cyborg Modules
+    - type: Remove
+      message: Quadborg hands and PDA slot
+    - type: Remove
+      message: Storage Cyborg Module
+    - type: Tweak
+      message: Bell Collar Sprite
+    - type: Tweak
+      message: Quadborgs move faster
+    - type: Tweak
+      message: Rubber munition now needs to be reasearched > "Nonlethals" research
+    - type: Tweak
+      message: CE hardsuit returned to 100% radiation protection
+    - type: Tweak
+      message: CE toolbelt has its whitelist returned + its old slot size
+  id: 24
+  time: '2026-04-11T17:09:23.0000000+00:00'
+- author: KazyualGaming
+  changes:
+    - type: Tweak
+      message: Changed Pirate team antagonist ghost role text
+  id: 25
+  time: '2026-04-12T13:57:27.0000000+00:00'
+- author: BodenPflanze
+  changes:
+    - type: Fix
+      message: CE suit sprites and light color
+  id: 26
+  time: '2026-04-12T23:33:51.0000000+00:00'
+- author: BodenPflanze
+  changes:
+    - type: Add
+      message: Cyborg Skins selection
+    - type: Fix
+      message: Cyborgs now can target limbs
+    - type: Tweak
+      message: Medborg standart modules
+    - type: Tweak
+      message: Unselected cyborg entity name
+  id: 27
+  time: '2026-04-16T09:48:34.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Tweak
+      message: Ship loading/saving system
+    - type: Fix
+      message: incompatable ships (due to updates) can now load!
+  id: 28
+  time: '2026-04-16T09:53:20.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Add
+      message: >-
+        Updated to latest of HL branch (300 updates!) Here is a small list of
+        the major changes, please check github for more!
+    - type: Add
+      message: >-
+        Mega-Update to the MercVend. Giving it a large majority of new utility,
+        armors, weapons, etc.
+    - type: Tweak
+      message: MagiVend never spawn on Expeds anymore
+    - type: Add
+      message: Plant analyzers (advanced ones too!)
+    - type: Tweak
+      message: >-
+        Station roles are no longer able to purchase or load ships from shipyard
+        consoles.
+    - type: Fix
+      message: Fixed station captain spawn on multiple maps
+    - type: Add
+      message: New dock!
+    - type: Fix
+      message: >-
+        Certain prototypes that would normally cause ship load fails should no
+        longer cause said fails.
+    - type: Tweak
+      message: >-
+        Job payout calculation now persists between rounds (no more punishment
+        for round ending, no payday)
+    - type: Add
+      message: Many, MANY fashion items from Coyote Sector.
+    - type: Fix
+      message: Fixed a bug where succumbing to your fate deleted your character
+    - type: Fix
+      message: Fixed a bug that failed to populate the character fields in lobby
+    - type: Add
+      message: Microwaves can now be used as bludgeoning weapons?!
+    - type: Add
+      message: >-
+        Freezer Pouch so now you can live out your space warlord organ trading
+        simulator fantasy.
+    - type: Tweak
+      message: Gunnery servers now require increasingly expensive amounts of materials.
+    - type: Add
+      message: Added new craftable bone items and some interesting drops from dinosaurs
+    - type: Tweak
+      message: Wagging has been improved!
+    - type: Add
+      message: Pettable trait!
+    - type: Add
+      message: New accessibility options!
+    - type: Add
+      message: >-
+        Janitors now have access to wirebrushes, allowing for the derusting of
+        metal walls.
+    - type: Tweak
+      message: >-
+        Cameras will now react to the AI-eye and change states to show they are
+        being used.
+    - type: Fix
+      message: >-
+        Attempting to open the crew manifest when not on an appropriate grid now
+        returns a fail message, instead of loading indefinitely.
+    - type: Fix
+      message: >-
+        crew manifest is now actually actual (no more seeing a full list when
+        no-one is around)
+    - type: Add
+      message: Alot more crafting recipes!
+    - type: Add
+      message: Tabletop computers are now craftable
+    - type: Remove
+      message: >-
+        Removed duplicated files meaning the content should be quicker to
+        download.
+    - type: Tweak
+      message: The AME now generates 180kW per core, instead of 8MW (Nerfed)
+    - type: Tweak
+      message: >-
+        There are now ALWAYS 3 jobs for freelancer at roundstart (more appear
+        based on station crew amount)
+    - type: Add
+      message: Many other new things!
+    - type: Remove
+      message: Not much, mostly depricated/duplicate and broken stuff
+    - type: Tweak
+      message: Alot has changed!
+    - type: Fix
+      message: MANY MANY BUGS!
+  id: 29
+  time: '2026-04-17T11:55:25.0000000+00:00'
+- author: B3CKDOOR
+  changes:
+    - type: Remove
+      message: 'Removed Protogen subspecies (temporary) #86 '
+    - type: Fix
+      message: Fixed HardCore map
+    - type: Fix
+      message: Fixed changelog tab title
+    - type: Fix
+      message: emotes menu
+    - type: Fix
+      message: aghosts (hopefully)
+  id: 30
+  time: '2026-04-17T21:45:47.0000000+00:00'

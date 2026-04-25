@@ -1,16 +1,13 @@
 name: Build & Test Debug
 
 on:
-  push:
-    branches: [ master, staging, stable ]
   merge_group:
   pull_request:
     types: [ opened, reopened, synchronize, ready_for_review ]
-    branches: [ master, staging, stable ]
 
 jobs:
   build:
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false && github.actor != 'FrontierATC' # Frontier
+    if: '!contains(github.actor, ''[bot]'') && github.event.pull_request.draft == false'
     strategy:
       matrix:
         os: [ubuntu-latest]
@@ -45,13 +42,30 @@ jobs:
       run: dotnet build --configuration DebugOpt --no-restore /p:WarningsAsErrors=nullable /m
 
     - name: Run Content.Tests
-      run: dotnet test --no-build --configuration DebugOpt Content.Tests/Content.Tests.csproj -- NUnit.ConsoleOut=0
+      shell: bash
+      env:
+        DOTNET_GCHeapHardLimit: 15032385536
+      run: |
+        (while true; do echo "Alive Check, OK! $(date -u +'%Y-%m-%dT%H:%M:%SZ')"; sleep 60; done) &
+        keepalive_pid=$!
+        dotnet test --no-build --configuration DebugOpt Content.Tests/Content.Tests.csproj -- NUnit.ConsoleOut=0
+        exit_code=$?
+        kill "$keepalive_pid" || true
+        wait "$keepalive_pid" 2>/dev/null || true
+        exit "$exit_code"
 
     - name: Run Content.IntegrationTests
-      shell: pwsh
+      shell: bash
+      env:
+        DOTNET_GCHeapHardLimit: 15032385536
       run: |
-        $env:DOTNET_gcServer=1
-        dotnet test --no-build --configuration DebugOpt Content.IntegrationTests/Content.IntegrationTests.csproj --filter "FullyQualifiedName!~ShipyardTest" -- NUnit.ConsoleOut=0 NUnit.MapWarningTo=Failed
+        (while true; do echo "Alive Check, OK! $(date -u +'%Y-%m-%dT%H:%M:%SZ')"; sleep 60; done) &
+        keepalive_pid=$!
+        DOTNET_gcServer=1 dotnet test --no-build --configuration DebugOpt Content.IntegrationTests/Content.IntegrationTests.csproj --filter "FullyQualifiedName!~ShipyardTest" -- NUnit.ConsoleOut=0 NUnit.MapWarningTo=Failed
+        exit_code=$?
+        kill "$keepalive_pid" || true
+        wait "$keepalive_pid" 2>/dev/null || true
+        exit "$exit_code"
   ci-success:
     name: Build & Test Debug
     needs:

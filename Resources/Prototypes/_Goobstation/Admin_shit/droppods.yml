@@ -36,8 +36,9 @@
     damageCoefficient: 0
   - type: Damageable
     damageContainer: Inorganic
-  - type: OnUseTimerTrigger
+  - type: TimerTrigger
     delay: 0.9
+  - type: TriggerOnActivate
   - type: Destructible
     thresholds:
     - trigger:
@@ -66,4 +67,3 @@
         interval: 0.5
         ignoreResistances: true
       - type: AnchorOnTrigger
-

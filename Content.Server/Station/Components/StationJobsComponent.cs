@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Server.Station.Systems;
 using Content.Shared.Roles;
 using JetBrains.Annotations;
@@ -88,4 +88,10 @@ public sealed partial class StationJobsComponent : Component
     [DataField]
     public List<ProtoId<AccessLevelPrototype>> Tags = new();
     // End Frontier
+
+    /// <summary>
+    /// Jobs that have been manually overridden via the Station Records Interface.
+    /// Automated systems (like DynamicJobAllocationRule) should not overwrite these.
+    /// </summary>
+    public HashSet<ProtoId<JobPrototype>> ManualJobOverrides = new();
 }

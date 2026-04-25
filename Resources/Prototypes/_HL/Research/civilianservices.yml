@@ -12,6 +12,13 @@
   recipeUnlocks:
   - PlumbingAssemblyRecipe
   - PlumbingPumpCircuitboard
+  # Goobstation R&D Console rework start
+  position: 4,5
+  technologyPrerequisites:
+  - ChemicalDispensary
+  # Goobstation R&D Console rework
+
+# Tier 2
 
 - type: technology
   id: BulkLiquidStorage
@@ -25,3 +32,9 @@
   recipeUnlocks:
   - BluespaceBarrel
   - BluespaceBucket
+  # Goobstation R&D Console rework start
+  position: 4,7
+  technologyPrerequisites:
+  - BiochemicalStasis
+  - Plumbing
+  # Goobstation R&D Console rework end

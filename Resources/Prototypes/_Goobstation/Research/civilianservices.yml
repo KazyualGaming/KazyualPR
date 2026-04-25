@@ -14,6 +14,11 @@
   recipeUnlocks:
   - StationRadioCircuitboard
   - VinylPlayerCircuitboard
+  # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - FoodService
+  position: -4,5
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: HONKWeapons
@@ -27,5 +32,10 @@
   recipeUnlocks:
   - MechEquipmentHonkerBananaMortar
   - MechEquipmentHonkerMousetrapMortar
+    # Goobstation R&D Console rework start
+  technologyPrerequisites:
+  - HONKMech
+  position: 0,6
+  # Goobstation R&D Console rework end
 
 # Tier 3

@@ -1,14 +1,5 @@
 # HEAD
 - type: marking
-  id: LizardHeadGuilmon
-  bodyPart: Eyes
-  markingCategory: Head
-  speciesRestriction: [Reptilian]
-  sprites:
-  - sprite: _White/Mobs/Customization/snouts.rsi
-    state: guilmon
-
-- type: marking
   id: LizardHeadCobraHood
   bodyPart: HeadSide
   markingCategory: HeadSide
@@ -24,7 +15,7 @@
   id: LizardSnoutEasternDragon
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Reptilian]
+  speciesRestriction: [Reptilian, ProtoReptile]
   sprites:
   - sprite: _White/Mobs/Customization/snouts.rsi
     state: eastern_dragon
@@ -35,7 +26,7 @@
   id: LizardShoutEasternDragonUsiki
   bodyPart: Snout
   markingCategory: Snout
-  speciesRestriction: [Reptilian]
+  speciesRestriction: [Reptilian, ProtoReptile]
   sprites:
   - sprite: _White/Mobs/Customization/snouts.rsi
     state: eastern_dragon

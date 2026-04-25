@@ -5,8 +5,7 @@
   - MailCarrierClothingUniformJumpsuitMailCarrier
   - MailCarrierClothingUniformJumpskirtMailCarrier
   - MailCarrierClothingUniformJumpsuitMilitaryMailCarrier
-  subgroups:
-  - CargoJumpsuit # HL - Add departmental NF-style loadouts
+  subgroups: []
   fallbacks:
   - MailCarrierClothingUniformJumpsuitMailCarrier
   - MailCarrierClothingUniformJumpskirtMailCarrier
@@ -39,3 +38,4 @@
   - MailCarrierClothingWalletLeatherMail
   fallbacks:
   - MailCarrierClothingWalletLeatherMail
+

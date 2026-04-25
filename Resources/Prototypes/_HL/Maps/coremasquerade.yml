@@ -14,7 +14,7 @@
 #            !type:NanotrasenNameGenerator
 #            prefixCreator: '14'
         - type: ExtraStationInformation
-          iconPath: /Textures/_HL/Logo/icon/icon-256x256.png # used the biggest one, looks better when downscaling than upscaling
+          iconPath: /Textures/Logo/icon/icon-256x256.png # used the biggest one, looks better when downscaling than upscaling
           stationSubtext: 'hardlight-lobby-hardlight-subtext'
           stationDescription: 'hardlight-lobby-hardlight-description'
           lobbySortOrder: 1
@@ -64,13 +64,13 @@
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
-            # silicon (3)
+            # silicon (3 )
             StationAi: [ 1, 1 ]
             Borg: [ -1, -1 ]
             # frontier
             Contractor: [ 3, 3 ]
             Pilot: [ 3, 3 ]
-            Mercenary: [ 3, 3 ]
+            Mercenary: [ 5, 5 ]
             StationTrafficController: [ 1, 1 ]
             Valet: [ 1, 1 ]
             MailCarrier: [ 1, 1 ]

@@ -8,6 +8,7 @@ on:
 jobs:
   diff:
     name: Diff
+    if: "!contains(github.actor, '[bot]')"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

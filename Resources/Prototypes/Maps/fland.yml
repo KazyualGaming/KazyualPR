@@ -20,7 +20,7 @@
           availableJobs: # 81 jobs total w/o latejoins & interns, 101 jobs total w/ latejoins & interns
             #command (7)
             StationTrafficController: [ 1, 1 ]
-            Captain: [ 1, 1 ]
+            StationCaptain: [ 1, 1 ]
             HeadOfPersonnel: [ 1, 1 ]
             HeadOfSecurity: [ 1, 1 ]
             ChiefMedicalOfficer: [ 1, 1 ]
@@ -68,12 +68,8 @@
             Borg: [ 5, 5 ]
             #Contractor: [ -1, -1 ]
             #Pilot: [ 5, 5 ]
-            Mercenary: [ 0, 40 ]
-            MedicalQuadBorg: [ 3, 3 ]
-            ServiceQuadBorg: [ 3, 3 ]
-            SalvageQuadBorg: [ 3, 3 ]
-            SecurityQuadBorg: [ 3, 3 ]
-            EngineeringQuadBorg: [ 3, 3 ]
+            QuadBorg: [-1, -1]
+            Mercenary: [ 5, 40 ]
             Valet: [ 1, 1 ]
             MailCarrier: [ 1, 1 ]
             Prisoner: [ 3, 3 ]

@@ -21,8 +21,12 @@
   - GygaxPeripheralsElectronics
   - GygaxTargetingElectronics
   - WeaponMechCombatUltraRifle
+  # Goobstation R&D Console rework start
   technologyPrerequisites:
-  - Ripley2
+  - ExplosiveTechnology
+  position: 3,-1
+  # Goobstation R&D Console rework end
+
 
 # Tier 2
 
@@ -37,8 +41,11 @@
   cost: 12000
   recipeUnlocks:
   - WeaponMechCombatMissileRack8
+  # Goobstation R&D Console rework start
   technologyPrerequisites:
-  - ExplosiveTechnology
+  - Gygax
+  position: 4,-2
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: Durand
@@ -62,5 +69,8 @@
   - DurandTargetingElectronics
   - WeaponMechCombatShotgun
   - WeaponMechCombatShotgunIncendiary
+  # Goobstation R&D Console rework start
   technologyPrerequisites:
   - Gygax
+  position: 4,-1
+  # Goobstation R&D Console rework end

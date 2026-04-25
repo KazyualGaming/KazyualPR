@@ -33,7 +33,6 @@ public sealed class CompanySystem : EntitySystem
         "HeadOfSecurity",
         "Warden",
         "SecurityOfficer",
-        "SecurityQuadBorg",
         "Detective",
         "Warden",
         "BrigMedic",

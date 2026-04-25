@@ -1,4 +1,8 @@
 humanoid-profile-editor-randomize-everything-button = Randomize everything
+humanoid-profile-editor-randomize-warning-title = Confirm randomize
+humanoid-profile-editor-randomize-warning-body = This will overwrite your current unsaved character changes.
+humanoid-profile-editor-randomize-warning-confirm = Randomize
+humanoid-profile-editor-randomize-warning-cancel = Cancel
 humanoid-profile-editor-name-label = Name:
 humanoid-profile-editor-name-random-button = Randomize
 humanoid-profile-editor-appearance-tab = Appearance

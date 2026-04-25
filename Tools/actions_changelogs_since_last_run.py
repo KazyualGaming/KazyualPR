@@ -22,7 +22,7 @@ GITHUB_API_URL = os.environ.get("GITHUB_API_URL", "https://api.github.com")
 DISCORD_SPLIT_LIMIT = 2000
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 
-CHANGELOG_FILE = "Resources/Changelog/Frontier.yml" # Frontier: Changelog.yml<Frontier.yml
+CHANGELOG_FILE = "Resources/Changelog/Sandwich.yml" # Frontier: Changelog.yml<Frontier.yml
 
 TYPES_TO_EMOJI = {"Fix": "🐛", "Add": "🆕", "Remove": "❌", "Tweak": "⚒️"}
 
@@ -42,6 +42,9 @@ def main():
         # when running this normally in a GitHub actions workflow,
         # it will get the old changelog from the GitHub API
         last_changelog_stream = get_last_changelog()
+
+    if last_changelog_stream is None:
+        return
 
     last_changelog = yaml.safe_load(last_changelog_stream)
     with open(CHANGELOG_FILE, "r") as f:
@@ -64,6 +67,8 @@ def get_most_recent_workflow(
 
         return run
 
+    return None
+
 
 def get_current_run(
     sess: requests.Session, github_repository: str, github_run: str
@@ -85,7 +90,7 @@ def get_past_runs(sess: requests.Session, current_run: Any) -> Any:
     return resp.json()
 
 
-def get_last_changelog() -> str:
+def get_last_changelog() -> str | None:
     github_repository = os.environ["GITHUB_REPOSITORY"]
     github_run = os.environ["GITHUB_RUN_ID"]
     github_token = os.environ["GITHUB_TOKEN"]
@@ -96,6 +101,10 @@ def get_last_changelog() -> str:
     session.headers["X-GitHub-Api-Version"] = "2022-11-28"
 
     most_recent = get_most_recent_workflow(session, github_repository, github_run)
+    if most_recent is None:
+        print("No previous successful workflow run found, skipping changelog diff")
+        return None
+
     last_sha = most_recent["head_commit"]["id"]
     print(f"Last successful publish job was {most_recent['id']}: {last_sha}")
     last_changelog_stream = get_last_changelog_by_sha(

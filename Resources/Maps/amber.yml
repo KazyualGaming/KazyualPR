@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 03/20/2026 19:00:54
-  entityCount: 23865
+  time: 04/09/2026 10:14:36
+  entityCount: 23862
 maps:
 - 1
 grids:
@@ -19915,8 +19915,6 @@ entities:
       pos: 15.5,-53.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 50
   - uid: 17163
@@ -102425,8 +102423,6 @@ entities:
       pos: 13.5,-54.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 50
     - type: AtmosPipeColor
@@ -105841,8 +105837,6 @@ entities:
       pos: 15.5,-57.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 50
     - type: AtmosPipeColor
@@ -119308,18 +119302,6 @@ entities:
     - type: Transform
       pos: -27.217897,6.6993713
       parent: 2
-- proto: NFMagazineSubMachineGunTopMounted35
-  entities:
-  - uid: 16633
-    components:
-    - type: Transform
-      pos: -20.910439,10.684546
-      parent: 2
-  - uid: 16634
-    components:
-    - type: Transform
-      pos: -20.798544,10.503175
-      parent: 2
 - proto: NFMagnetBoxOre
   entities:
   - uid: 16635
@@ -119359,13 +119341,6 @@ entities:
     components:
     - type: Transform
       pos: -22.494625,-3.1906652
-      parent: 2
-- proto: NFWeaponSubMachineGunWt550
-  entities:
-  - uid: 16639
-    components:
-    - type: Transform
-      pos: -21.319635,10.6595335
       parent: 2
 - proto: NitrogenCanister
   entities:
@@ -138686,13 +138661,6 @@ entities:
     - type: Transform
       pos: 36.5,3.5
       parent: 2
-- proto: SpawnPointEngineeringQuadborg
-  entities:
-  - uid: 19584
-    components:
-    - type: Transform
-      pos: 33.5,-24.5
-      parent: 2
 - proto: SpawnPointForensicMantis
   entities:
   - uid: 23816
@@ -138832,13 +138800,6 @@ entities:
     components:
     - type: Transform
       pos: -35.5,-23.5
-      parent: 2
-- proto: SpawnPointMedicalQuadborg
-  entities:
-  - uid: 19609
-    components:
-    - type: Transform
-      pos: 34.5,-25.5
       parent: 2
 - proto: SpawnPointMercenary
   entities:
@@ -139128,13 +139089,6 @@ entities:
     - type: Transform
       pos: 28.5,-34.5
       parent: 2
-- proto: SpawnPointSalvageQuadborg
-  entities:
-  - uid: 19661
-    components:
-    - type: Transform
-      pos: 35.5,-24.5
-      parent: 2
 - proto: SpawnPointSalvageSpecialist
   entities:
   - uid: 19662
@@ -139227,20 +139181,6 @@ entities:
     components:
     - type: Transform
       pos: -25.5,16.5
-      parent: 2
-- proto: SpawnPointSecurityQuadborg
-  entities:
-  - uid: 19679
-    components:
-    - type: Transform
-      pos: 34.5,-24.5
-      parent: 2
-- proto: SpawnPointServiceQuadborg
-  entities:
-  - uid: 19680
-    components:
-    - type: Transform
-      pos: 34.5,-26.5
       parent: 2
 - proto: SpawnPointServiceWorker
   entities:

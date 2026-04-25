@@ -51,7 +51,8 @@ public sealed partial class ShuttleSystem
     public float DefaultStartupTime;
     public float DefaultTravelTime;
     public float DefaultArrivalTime;
-    private float _ftlCooldown;
+    private TimeSpan FTLCooldown;
+    private TimeSpan ArrivalsFTLCooldown;
     public float FTLMassLimit;
     private TimeSpan _hyperspaceKnockdownTime = TimeSpan.FromSeconds(5);
 
@@ -88,6 +89,7 @@ public sealed partial class ShuttleSystem
 
     private EntityQuery<BodyComponent> _bodyQuery;
     private EntityQuery<BuckleComponent> _buckleQuery;
+    private EntityQuery<FTLKnockdownImmuneComponent> _knockdownImmuneQuery;
     private EntityQuery<FTLSmashImmuneComponent> _immuneQuery;
     private EntityQuery<PhysicsComponent> _physicsQuery;
     private EntityQuery<StatusEffectsComponent> _statusQuery;
@@ -100,6 +102,7 @@ public sealed partial class ShuttleSystem
 
         _bodyQuery = GetEntityQuery<BodyComponent>();
         _buckleQuery = GetEntityQuery<BuckleComponent>();
+        _knockdownImmuneQuery = GetEntityQuery<FTLKnockdownImmuneComponent>();
         _immuneQuery = GetEntityQuery<FTLSmashImmuneComponent>();
         _physicsQuery = GetEntityQuery<PhysicsComponent>();
         _statusQuery = GetEntityQuery<StatusEffectsComponent>();
@@ -108,7 +111,8 @@ public sealed partial class ShuttleSystem
         _cfg.OnValueChanged(CCVars.FTLStartupTime, time => DefaultStartupTime = time, true);
         _cfg.OnValueChanged(CCVars.FTLTravelTime, time => DefaultTravelTime = time, true);
         _cfg.OnValueChanged(CCVars.FTLArrivalTime, time => DefaultArrivalTime = time, true);
-        _cfg.OnValueChanged(CCVars.FTLCooldown, time => _ftlCooldown = time, true);
+        _cfg.OnValueChanged(CCVars.FTLCooldown, time => FTLCooldown = TimeSpan.FromSeconds(time), true);
+        _cfg.OnValueChanged(CCVars.ArrivalsFTLCooldown, time => ArrivalsFTLCooldown = TimeSpan.FromSeconds(time), true);
         _cfg.OnValueChanged(CCVars.FTLMassLimit, time => FTLMassLimit = time, true);
         _cfg.OnValueChanged(CCVars.HyperspaceKnockdownTime, time => _hyperspaceKnockdownTime = TimeSpan.FromSeconds(time), true);
     }
@@ -572,7 +576,10 @@ public sealed partial class ShuttleSystem
         }
 
         comp.State = FTLState.Cooldown;
-        comp.StateTime = StartEndTime.FromCurTime(_gameTiming, _ftlCooldown);
+        var cooldown = entity.Comp2.FTLCooldownOverride ?? (HasComp<ArrivalsShuttleComponent>(uid)
+                ? ArrivalsFTLCooldown
+                : FTLCooldown);
+        comp.StateTime = StartEndTime.FromCurTime(_gameTiming, cooldown);
         _console.RefreshShuttleConsoles(uid);
         _mapManager.SetMapPaused(mapId, false);
         Smimsh(uid, xform: xform);
@@ -658,23 +665,26 @@ public sealed partial class ShuttleSystem
         // Get enumeration exceptions from people dropping things if we just paralyze as we go
         var toKnock = new ValueList<EntityUid>();
         KnockOverKids(xform, ref toKnock);
-        TryComp<MapGridComponent>(xform.GridUid, out var grid);
+        if (xform.GridUid is not { } gridUid) // HardLight
+            return;
 
-        if (TryComp<PhysicsComponent>(xform.GridUid, out var shuttleBody))
+        TryComp<MapGridComponent>(gridUid, out var grid);
+        var hasShuttleBody = TryComp<PhysicsComponent>(gridUid, out var shuttleBody); // HardLight
+
+        // HardLight start
+        foreach (var child in toKnock)
         {
-            foreach (var child in toKnock)
-            {
-                if (!_statusQuery.TryGetComponent(child, out var status))
-                    continue;
+            // Preserve Frontier's FTL knockdown immunity while keeping upstream's direct paralyze update flow.
+            if (_knockdownImmuneQuery.HasComponent(child))
+                continue;
 
-                if (!HasComp<FTLKnockdownImmuneComponent>(child)) // Frontier: FTL knockdown immunity
-                    _stuns.TryParalyze(child, _hyperspaceKnockdownTime, true, status);
+            _stuns.TryUpdateParalyzeDuration(child, _hyperspaceKnockdownTime);
 
-                // If the guy we knocked down is on a spaced tile, throw them too
-                if (grid != null)
-                    TossIfSpaced((xform.GridUid.Value, grid, shuttleBody), child);
-            }
+            // If the guy we knocked down is on a spaced tile, throw them too
+            if (grid is { } shuttleGrid && hasShuttleBody && shuttleBody is { } body)
+                TossIfSpaced((gridUid, shuttleGrid, body), child);
         }
+        // HardLight end
     }
 
     private void LeaveNoFTLBehind(Entity<TransformComponent> grid, Matrix3x2 oldGridMatrix, EntityUid? oldMapUid)

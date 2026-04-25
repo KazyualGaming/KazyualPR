@@ -73,7 +73,36 @@
 - type: latheRecipePack
   id: SecurityAmmo
   recipes:
-  - Wirecutter
+    # Sandwich edit for _Mono ammo start
+  - Magazine12_gaugeBeanbag
+  - AmmoBox12_gaugeBeanbag 
+  - AmmoBox12_gaugeTranquilizer
+  - AmmoBox45_ACPRubber
+  - Magazine45_ACPPistolRubber
+  - Magazine45_ACPSubMachineGunRubber
+  - AmmoBox45_magnumRubber
+  - Magazine45_magnumPistolRubber
+  - SpeedLoader45_magnumRubber
+  - Magazine46x30mmPistolRubber
+  - Magazine46x30mmSubMachineGunRubber
+  - AmmoBox46x30mmRubber
+  - AmmoBox556x45mmRubber
+  - Magazine556x45mmRubber
+  - SpeedLoader556x45mmRubber
+  - AmmoBox57x28mmRubber
+  - Magazine57x28mmPistolRubber
+  - Magazine57x28mmSubMachineGunRubber
+  - Magazine762x39mmRubber
+  - AmmoBox762x39mmRubber
+  - Magazine762x54mmRRubber
+  - AmmoBox762x54mmRRubber
+  - Magazine762x51mmRubber
+  - AmmoBox762x51mmRubber
+  - Magazine9x19mmPistolRubber
+  - Magazine9x19mmSubMachineGunRubber
+  - SpeedLoader9x19mmRubber
+  - AmmoBox9x19mmRubber
+    # Sandwich edit for _Mono ammo end
 
 - type: latheRecipePack # Frontier
   id: SecurityWeapons # Frontier

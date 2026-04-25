@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by Fenndragon discord: 190763499276861440, edits by LucasTheDrgn discord: 97135517740593152 and dakodragon discord: 56038550335922176, SEC edits made by GRESH!! GL1TZ and Danse (RUIN) discord: 1207115437163151460",
+  "states": [
+    {
+      "name": "dogborg",
+      "directions": 4
+    },
+    {
+      "name": "dogborg_moving",
+      "directions": 4
+    },
+    {
+      "name": "engieservborg",
+      "directions": 4
+    },
+    {
+      "name": "engieservborgballz",
+      "directions": 4
+    },
+    {
+      "name": "engieservborg_moving",
+      "directions": 4
+    },
+    {
+      "name": "engieservborg_movingballz",
+      "directions": 4
+    },
+    {
+      "name": "OrchidBase"
+    },
+    {
+      "name": "OrchidBelly"
+    },
+    {
+      "name": "OrchidFlashlight"
+    },
+    {
+      "name": "orchidl",
+      "directions": 4
+    },
+    {
+      "name": "orchid_moving",
+      "directions": 4
+    },
+    {
+      "name": "orchid_movingballz",
+      "directions": 4
+    }
+  ]
+}

@@ -14,7 +14,6 @@ using Content.Server.RoundEnd;
 using Content.Server.Screens.Components;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
-using Content.Server.Station.Components;
 using Content.Server.Station.Events;
 using Content.Server.Station.Systems;
 using Content.Shared.Access.Systems;
@@ -69,6 +68,7 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly TransformSystem _transformSystem = default!;
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
+    [Dependency] private readonly Content.Server._HL.ColComm.ColcommJobSystem _colcommJobs = default!; // HardLight
 
     private const float ShuttleSpawnBuffer = 1f;
 
@@ -109,6 +109,9 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
     {
         _roundEndCancelToken?.Cancel();
         _roundEndCancelToken = null;
+        _singletonCentcomMap = null;
+        _singletonCentcomGrid = null;
+        _singletonCentcomShuttle = null;
     }
 
     private void OnCentcomShutdown(EntityUid uid, StationCentcomComponent component, ComponentShutdown args)
@@ -186,7 +189,7 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
             return;
         }
 
-        var targetGrid = _station.GetLargestGrid(Comp<StationDataComponent>(station.Value));
+        var targetGrid = _station.GetLargestGrid(station.Value);
         if (targetGrid == null)
             return;
 
@@ -275,7 +278,7 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
             return null;
         }
 
-        var targetGrid = _station.GetLargestGrid(Comp<StationDataComponent>(stationUid));
+        var targetGrid = _station.GetLargestGrid(stationUid);
 
         // UHH GOOD LUCK
         if (targetGrid == null)
@@ -454,6 +457,12 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
                 dockResults.Add(dockResult);
         }
 
+        if (dockResults.Count == 0)
+        {
+            _commsConsole.UpdateCommsConsoleInterface();
+            return;
+        }
+
         // Make the shuttle wait longer if it couldn't dock in the normal spot.
         // We have to handle the possibility of there being multiple stations, so since the shuttle timer is global,
         // use the WORST value we have.
@@ -547,7 +556,15 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
         _singletonCentcomGrid = grid;
         _metaData.SetEntityName(map, Loc.GetString("map-name-Centcom"));
         _shuttle.TryAddFTLDestination(mapId, true, out _);
-        Log.Info($"Created Centcom grid {ToPrettyString(grid)} on map {ToPrettyString(map)} for station {ToPrettyString(station)}");
+        Log.Info($"Created Colcomm grid {ToPrettyString(grid)} on map {ToPrettyString(map)} for station {ToPrettyString(station)}");
+
+        // HardLight: Seed the persistent job registry on the ColComm grid entity.
+        // SetupColcommRegistry handles the [Access] boundary for ConfiguredJobs.
+        if (component.JobRegistryConfig.Count > 0)
+        {
+            var colcommRegistry = EnsureComp<Content.Server._HL.ColComm.ColcommJobRegistryComponent>(grid.Value);
+            _colcommJobs.SetupColcommRegistry((grid.Value, colcommRegistry), component.JobRegistryConfig);
+        }
     }
 
     public HashSet<EntityUid> GetCentcomMaps()

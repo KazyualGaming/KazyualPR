@@ -5,7 +5,7 @@
   description: High-tech recharger adapted for portability.
   components:
   - type: Item
-    size: Ginormous # Frontier Huge<Ginormous
+    size: Huge
   - type: Sprite
     sprite: Objects/Power/portable_recharger.rsi
     state: charging

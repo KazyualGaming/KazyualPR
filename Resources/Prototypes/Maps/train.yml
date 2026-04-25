@@ -5,7 +5,7 @@
   maxRandomOffset: 0
   randomRotation: false
   minPlayers: 0
-  maxPlayers: 70
+  maxPlayers: 200
   stations:
     Train:
       stationProto: StandardNanotrasenStation
@@ -68,11 +68,6 @@
             Contractor: [ -1, -1 ]
             Pilot: [ 5, 5 ]
             Mercenary: [ 5, 5 ]
-            MedicalQuadBorg: [ 3, 3 ]
-            ServiceQuadBorg: [ 3, 3 ]
-            SalvageQuadBorg: [ 3, 3 ]
-            SecurityQuadBorg: [ 3, 3 ]
-            EngineeringQuadBorg: [ 3, 3 ]
             Valet: [ 1, 1 ]
             MailCarrier: [ 1, 1 ]
             Prisoner: [ 3, 3 ]

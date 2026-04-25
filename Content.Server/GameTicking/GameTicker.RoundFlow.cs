@@ -4,15 +4,16 @@ using Content.Server._NF.PublicTransit.Components;
 using Content.Server._NF.RoundNotifications.Events; // Frontier
 using Content.Server.Announcements;
 using Content.Server.Discord;
-using Content.Shared._NF.Shipyard.Components;
-using Content.Server.Shuttles.Components;
-using Content.Server.Shuttles.Events;
-using Content.Shared.Shuttles.Components;
-using Content.Server.Shuttles.Systems;
 using Content.Server.GameTicking.Events;
 using Content.Server.Ghost;
 using Content.Server.Maps;
 using Content.Server.Roles;
+using Content.Server.Shuttles.Components;
+using Content.Server.Shuttles.Events;
+using Content.Server.Shuttles.Systems;
+using Content.Server.Station.Components;
+using Content.Server.Station.Systems; // Add this if missing
+using Content.Shared._NF.Shipyard.Components;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
 using Content.Shared.GameTicking;
@@ -20,6 +21,7 @@ using Content.Shared.Mind;
 using Content.Shared.Players;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
+using Content.Shared.Shuttles.Components;
 using JetBrains.Annotations;
 using Prometheus;
 using Robust.Shared.Asynchronous;
@@ -33,8 +35,6 @@ using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
-using Content.Server.Station.Systems; // Add this if missing
-using Content.Server.Station.Components;
 
 namespace Content.Server.GameTicking
 {
@@ -107,7 +107,7 @@ namespace Content.Server.GameTicking
         private void LoadMaps()
         {
             // Prevent loading maps if the default map already exists.
-            if (_mapManager.MapExists(DefaultMap))
+            if (DefaultMap != MapId.Nullspace && _mapManager.MapExists(DefaultMap))
                 return;
 
             AddGamePresetRules();
@@ -424,8 +424,9 @@ namespace Content.Server.GameTicking
                 return;
             }
 
-            // MapInitialize *before* spawning players, our codebase is too shit to do it afterwards...
-            _map.InitializeMap(DefaultMap);
+            // MapInitialize *before* spawning players
+            if (!_map.IsInitialized(DefaultMap))
+                _map.InitializeMap(DefaultMap);
 
             SpawnPlayers(readyPlayers, readyPlayerProfiles, force);
 
@@ -445,11 +446,8 @@ namespace Content.Server.GameTicking
             }
             catch (Exception e)
             {
-                if (DefaultMap != null)
-                {
-                    var defaultMapEntityUid = _mapManager.GetMapEntityId(DefaultMap);
-                    QueueDel(defaultMapEntityUid);
-                }
+                if (DefaultMap != MapId.Nullspace && _mapManager.MapExists(DefaultMap))
+                    _map.DeleteMap(DefaultMap);
                 _roundStartFailCount++;
 
                 if (RoundStartFailShutdownCount > 0 && _roundStartFailCount >= RoundStartFailShutdownCount)
@@ -499,7 +497,7 @@ namespace Content.Server.GameTicking
             }
 
             _endingRound = true;
-            _sawmill.Info("Ending round!");
+            _sawmill.Info("Ending round !");
 
             RunLevel = GameRunLevel.PostRound;
 
@@ -540,6 +538,11 @@ namespace Content.Server.GameTicking
                         var targetCoordinates = new EntityCoordinates(dockGridUid, dockPosition);
                         var targetAngle = dockXform.LocalRotation;
 
+                        // HardLight: End-round cleanup should always evacuate owned/transit shuttles,
+                        // even if they are currently in FTL cooldown.
+                        if (HasComp<FTLComponent>(shuttleUid))
+                            RemComp<FTLComponent>(shuttleUid);
+
                         _shuttleSystem.FTLToCoordinates(shuttleUid, shuttle, targetCoordinates, targetAngle);
                     }
                 }
@@ -562,31 +565,16 @@ namespace Content.Server.GameTicking
                         var targetCoordinates = new EntityCoordinates(dockGridUid, dockPosition);
                         var targetAngle = dockXform.LocalRotation;
 
+                        // HardLight: End-round cleanup should always evacuate owned/transit shuttles,
+                        // even if they are currently in FTL cooldown.
+                        if (HasComp<FTLComponent>(shuttleUid))
+                            RemComp<FTLComponent>(shuttleUid);
+
                         _shuttleSystem.FTLToCoordinates(shuttleUid, shuttle, targetCoordinates, targetAngle);
                     }
                 }
             }
             // --- End Corrected Centcom logic ---
-
-            // Aggressively delete the default map after a 30 second delay
-            var defaultMapEntityUid = _mapManager.GetMapEntityId(DefaultMap);
-            if (DefaultMap != null)
-            {
-                Timer.Spawn(TimeSpan.FromSeconds(30), () =>
-                {
-                    // Send all players on the default map to the lobby before deleting the map
-                    foreach (var session in _playerManager.Sessions)
-                    {
-                        var attachedEntity = session.AttachedEntity;
-                        if (attachedEntity != null && Transform(attachedEntity.Value).MapID == DefaultMap)
-                        {
-                            PlayerJoinLobby(session);
-                        }
-                    }
-
-                    QueueDel(defaultMapEntityUid);
-                });
-            }
 
             try
             {
@@ -824,9 +812,24 @@ namespace Content.Server.GameTicking
             var ev = new RoundRestartCleanupEvent();
             RaiseLocalEvent(ev);
 
+            if (DefaultMap != MapId.Nullspace && _mapManager.MapExists(DefaultMap))
+            {
+                foreach (var session in _playerManager.Sessions)
+                {
+                    var attachedEntity = session.AttachedEntity;
+                    if (attachedEntity != null && Transform(attachedEntity.Value).MapID == DefaultMap)
+                    {
+                        PlayerJoinLobby(session);
+                    }
+                }
+
+                _map.DeleteMap(DefaultMap);
+                DefaultMap = MapId.Nullspace;
+            }
+
             // Delete all stations at round cleanup
             var stationSystem = EntitySystem.Get<Content.Server.Station.Systems.StationSystem>();
-            foreach (var station in EntityManager.EntityQuery<Content.Server.Station.Components.StationDataComponent>())
+            foreach (var station in EntityManager.EntityQuery<Content.Shared.Station.Components.StationDataComponent>()) // HardLight: .Server<.Shared
             {
                 stationSystem.DeleteStation(station.Owner, station);
             }

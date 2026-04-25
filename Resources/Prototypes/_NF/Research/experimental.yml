@@ -12,6 +12,11 @@
   recipeUnlocks:
   - RPED
   - NFBlueprintRped
+  # Goobstation R&D Console rework start
+  position: -4,3
+  technologyPrerequisites:
+  - AdvancedParts
+  # Goobstation R&D Console rework end
 
 # Tier 3
 
@@ -31,32 +36,9 @@
   - NFBlueprintSuperCapacitorStockPart
   - NFBlueprintPicoManipulatorStockPart
   - NFBlueprintSuperMatterBinStockPart
-
-- type: technology
-  id: MagnetsTechAdvanced
-  name: research-technology-magnets-tech-advanced
-  icon:
-    sprite: Clothing/Shoes/Boots/magboots-advanced.rsi
-    state: icon
-  discipline: Experimental
-  tier: 3
-  cost: 10000
-  recipeUnlocks:
-  - ClothingShoesBootsMagAdv
-  - NFBlueprintClothingShoesBootsMagAdv
+  # Goobstation R&D Console rework start
+  position: -5,3
   technologyPrerequisites:
-  - MagnetsTech
-
-- type: technology
-  id: HardsuitsExperimentalRD
-  name: research-technology-hardsuits-experimental-rd
-  icon:
-    sprite: Clothing/OuterClothing/Hardsuits/rd.rsi
-    state: icon
-  discipline: Experimental
-  tier: 3
-  cost: 15000
-  recipeUnlocks:
-    - ClothingOuterHardsuitRd
-  technologyPrerequisites:
-  - HardsuitsArmored
+  - RapidPartExchange
+  - BluespaceTimeManipulation
+  # Goobstation R&D Console rework end

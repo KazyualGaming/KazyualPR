@@ -58,7 +58,9 @@ ui-options-quality-label = Quality
 ui-options-misc-label = Misc
 ui-options-interface-label = Interface
 
-
+ui-options-auto-fill-highlights = Auto-fill the highlights with the character's information
+ui-options-highlights-color = Highlights color:
+ui-options-highlights-color-example = This is highlighted text.
 ui-options-show-held-item = Show held item next to cursor
 ui-options-show-combat-mode-indicators = Show combat mode indicators with cursor
 ui-options-show-offer-mode-indicators = Show offer mode indicators with cursor
@@ -144,6 +146,7 @@ ui-options-function-move-left = Move Left
 ui-options-function-move-down = Move Down
 ui-options-function-move-right = Move Right
 ui-options-function-walk = Walk
+ui-options-function-toggle-knockdown = Toggle Crawling
 
 ui-options-function-camera-rotate-left = Rotate left
 ui-options-function-camera-rotate-right = Rotate right
@@ -162,16 +165,16 @@ ui-options-function-activate-item-in-world = Activate item in world
 ui-options-function-alt-activate-item-in-world = Alternative activate item in world
 ui-options-function-drop = Drop item
 ui-options-function-examine-entity = Examine
-# Frontier: add (next)
-ui-options-function-swap-hands = Swap hands (next)
+ui-options-function-swap-hands = Swap hands
+ui-options-function-swap-hands-reverse = Swap hands (other direction)
 ui-options-function-move-stored-item = Move stored item
 ui-options-function-rotate-stored-item = Rotate stored item
-
 ui-options-function-save-item-location = Save item location
-ui-options-function-toggle-standing = Toggle standing
+
+# EE
 ui-options-function-toggle-crawling-under = Toggle crawling under furniture
 
-# _HL
+# HardLight
 ui-options-function-offer-item = Offer something
 ui-options-function-al-open-mob-interaction = Interact With Mob
 

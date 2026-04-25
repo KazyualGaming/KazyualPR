@@ -33,6 +33,10 @@
   id: ClothingHeadsetGrey
   name: passenger headset
   components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
   # HardLight start: Replaced starting encryption keys with intrinsic radio channels.
   - type: ActiveRadio
     intrinsicChannels:

@@ -7,8 +7,6 @@
     containers:
       borg_brain:
         - PositronicBrain
-      borg_module:
-        - BorgModuleTool
   - type: ItemSlots
     slots:
       cell_slot:
@@ -26,10 +24,6 @@
     containers:
       borg_brain:
         - PositronicBrain
-      borg_module:
-        - BorgModuleTool
-        - BorgModuleDiagnosis
-        - BorgModuleTreatment
   - type: SurgerySpeedModifier #shitmed
     speedModifier: 1.75
   - type: ItemSlots
@@ -49,8 +43,6 @@
     containers:
       borg_brain:
         - PositronicBrain
-      borg_module:
-        - BorgModuleTool
   - type: ItemSlots
     slots:
       cell_slot:
@@ -68,32 +60,6 @@
     containers:
       borg_brain:
         - PositronicBrain
-      borg_module:
-        - BorgModuleTool
-        - BorgModuleRCD
-        - BorgModuleCable
-  - type: ItemSlots
-    slots:
-      cell_slot:
-        name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellMedium
-  - type: RandomMetadata
-    nameSegments: [NFNamesBorg]
-
-- type: entity
-  id: PlayerBorgQuad
-  parent: BorgChassisQuadSec
-  suffix: Battery, Tools
-  components:
-  - type: ContainerFill
-    containers:
-      borg_brain:
-        - PositronicBrain
-      borg_module:
-        - BorgModuleTool
-        - BorgModuleStun
-        - BorgModuleKill
-        - BorgModuleInvestigation
   - type: ItemSlots
     slots:
       cell_slot:

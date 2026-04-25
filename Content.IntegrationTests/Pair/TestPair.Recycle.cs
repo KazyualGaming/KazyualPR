@@ -1,6 +1,7 @@
 #nullable enable
 using System.IO;
 using System.Linq;
+using System.Runtime;
 using Content.Server.GameTicking;
 using Content.Server.Preferences.Managers;
 using Content.Shared.CCVar;
@@ -21,12 +22,38 @@ public sealed partial class TestPair : IAsyncDisposable
 {
     public PairState State { get; private set; } = PairState.Ready;
 
+    private static string GetMemoryUsageSummary()
+    {
+        var info = GC.GetGCMemoryInfo();
+        var totalBytes = info.TotalAvailableMemoryBytes;
+        var usedBytes = GC.GetTotalMemory(false);
+        var usedGb = usedBytes / 1024d / 1024d / 1024d;
+
+        if (totalBytes <= 0)
+            return $"{usedGb:F2} GB used (total memory unavailable)";
+
+        var percentUsed = usedBytes * 100d / totalBytes;
+        var totalGb = totalBytes / 1024d / 1024d / 1024d;
+        return $"{percentUsed:F1}% used out of {totalGb:F1} GB ({usedGb:F2}/{totalGb:F2} GB)";
+    }
+
+    private static void ForceMemoryCleanup()
+    {
+        GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
+        GC.Collect(GC.MaxGeneration, GCCollectionMode.Forced, blocking: true, compacting: true);
+        GC.WaitForPendingFinalizers();
+        GC.Collect(GC.MaxGeneration, GCCollectionMode.Forced, blocking: true, compacting: true);
+    }
+
     private async Task OnDirtyDispose()
     {
         var usageTime = Watch.Elapsed;
         Watch.Restart();
         await _testOut.WriteLineAsync($"{nameof(DisposeAsync)}: Test gave back pair {Id} in {usageTime.TotalMilliseconds} ms");
+        await _testOut.WriteLineAsync($"{nameof(DisposeAsync)}: Pair {Id} memory before dispose: {GetMemoryUsageSummary()}");
         Kill();
+        ForceMemoryCleanup();
+        await _testOut.WriteLineAsync($"{nameof(DisposeAsync)}: Pair {Id} memory after dispose: {GetMemoryUsageSummary()}");
         var disposeTime = Watch.Elapsed;
         await _testOut.WriteLineAsync($"{nameof(DisposeAsync)}: Disposed pair {Id} in {disposeTime.TotalMilliseconds} ms");
         // Test pairs should only dirty dispose if they are failing. If they are not failing, this probably happened
@@ -69,7 +96,10 @@ public sealed partial class TestPair : IAsyncDisposable
 
         if (Settings.MustNotBeReused)
         {
+            await _testOut.WriteLineAsync($"{nameof(CleanReturnAsync)}: Pair {Id} memory before dispose: {GetMemoryUsageSummary()}");
             Kill();
+            ForceMemoryCleanup();
+            await _testOut.WriteLineAsync($"{nameof(CleanReturnAsync)}: Pair {Id} memory after dispose: {GetMemoryUsageSummary()}");
             await ReallyBeIdle();
             await _testOut.WriteLineAsync($"{nameof(CleanReturnAsync)}: Clean disposed in {Watch.Elapsed.TotalMilliseconds} ms");
             return;

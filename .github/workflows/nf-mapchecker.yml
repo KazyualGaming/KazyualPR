@@ -19,7 +19,7 @@ permissions:
 
 jobs:
   build:
-
+    if: '!contains(github.actor, ''[bot]'') && github.event.pull_request.draft == false'
     runs-on: ubuntu-latest
 
     steps:

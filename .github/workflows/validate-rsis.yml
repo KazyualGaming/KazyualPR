@@ -1,8 +1,6 @@
 name: RSI Validator
 
 on:
-  push:
-    branches: [ master, staging, stable ]
   merge_group:
   pull_request:
     paths:
@@ -11,6 +9,7 @@ on:
 jobs:
   validate_rsis:
     name: Validate RSIs
+    if: "!contains(github.actor, '[bot]')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.2

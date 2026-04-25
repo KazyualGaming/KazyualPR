@@ -1,0 +1,5 @@
+# Silicons
+- type: roleLoadout
+  id: JobQuadBorg
+  nameDataset: NFNamesBorg # Frontier: use NF variant
+  canCustomizeName: true

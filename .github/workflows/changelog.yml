@@ -3,23 +3,34 @@ concurrency: commit_action
 on:
   pull_request_target:
     types: [closed]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'Pull Request Number'
+        required: true
+        type: string
 
 env:
-  GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
-  CHANGELOG_DIR: ${{ vars.CHANGELOG_DIR }}
-  PR_NUMBER: ${{ github.event.number }}
+  PR_NUMBER: ${{ github.event.inputs.pr_number || github.event.number }}
 
 jobs:
   changelog:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
     permissions:
       contents: write
     steps:
+      - name: Generate Bot Token
+        id: bot-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
       - name: Checkout Master
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          token: ${{ steps.bot-token.outputs.token }}
           ref: master
 
       - name: Setup Git
@@ -40,16 +51,28 @@ jobs:
         shell: bash
 
       - name: Generate Changelog
+        id: generate
         run: |
           cd "Tools/changelog"
           node changelog.js
         shell: bash
 
       - name: Commit Changelog
+        env:
+          BOT_TOKEN: ${{ steps.bot-token.outputs.token }}
         run: |
+          git remote set-url origin https://x-access-token:${BOT_TOKEN}@github.com/${{ github.repository }}
           git pull origin master
           git add *.yml
-          git commit -m "${{ vars.CHANGELOG_MESSAGE }} (#${{ env.PR_NUMBER }})"
+          git commit -m "${{ vars.CHANGELOG_MESSAGE }} (Changelog for PR #${{ env.PR_NUMBER }})"
           git push
         shell: bash
+        continue-on-error: true
+
+      - name: Post to Discord
+        if: steps.generate.outputs.new_changelog_id != ''
+        run: python3 Tools/pr_discord_notify.py
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
+          CHANGELOG_ID: ${{ steps.generate.outputs.new_changelog_id }}
         continue-on-error: true

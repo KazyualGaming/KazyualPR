@@ -1,5 +1,6 @@
 using Content.Server.Administration.Logs;
 using Content.Server.Cargo.Systems;
+using Content.Server.Stack;
 using Content.Server.Storage.Components;
 using Content.Shared.Database;
 using Content.Shared.Hands.EntitySystems;
@@ -17,6 +18,7 @@ namespace Content.Server.Storage.EntitySystems
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly IAdminLogManager _adminLogger = default!;
         [Dependency] private readonly SharedHandsSystem _hands = default!;
+        [Dependency] private readonly StackSystem _stackSystem = default!;
         [Dependency] private readonly PricingSystem _pricing = default!;
         [Dependency] private readonly SharedAudioSystem _audio = default!;
         [Dependency] private readonly SharedTransformSystem _transform = default!;
@@ -36,7 +38,10 @@ namespace Content.Server.Storage.EntitySystems
 
             foreach (var entry in ungrouped)
             {
-                var protUid = Spawn(entry.PrototypeId, MapCoordinates.Nullspace);
+                if (entry.PrototypeId is not {} prototypeId || !_proto.HasIndex<EntityPrototype>(prototypeId))
+                    continue;
+
+                var protUid = Spawn(prototypeId, MapCoordinates.Nullspace);
 
                 // Calculate the average price of the possible spawned items
                 args.Price += _pricing.GetPrice(protUid) * entry.SpawnProbability * entry.GetAmount(getAverage: true);
@@ -48,7 +53,10 @@ namespace Content.Server.Storage.EntitySystems
             {
                 foreach (var entry in group.Entries)
                 {
-                    var protUid = Spawn(entry.PrototypeId, MapCoordinates.Nullspace);
+                    if (entry.PrototypeId is not {} prototypeId || !_proto.HasIndex<EntityPrototype>(prototypeId))
+                        continue;
+
+                    var protUid = Spawn(prototypeId, MapCoordinates.Nullspace);
 
                     // Calculate the average price of the possible spawned items
                     args.Price += _pricing.GetPrice(protUid) *
@@ -72,6 +80,7 @@ namespace Content.Server.Storage.EntitySystems
                 return;
 
             var coords = Transform(args.User).Coordinates;
+            var initialUses = component.Uses;
             var spawnEntities = GetSpawns(component.Items, _random);
             EntityUid? entityToPlaceInHands = null;
 
@@ -93,13 +102,23 @@ namespace Content.Server.Storage.EntitySystems
 
             component.Uses--;
 
-            // Delete entity only if component was successfully used
+            // Delete or decrement stack only if component was successfully used
             if (component.Uses <= 0)
             {
-                // Don't delete the entity in the event bus, so we queue it for deletion.
-                // We need the free hand for the new item, so we send it to nullspace.
-                _transform.DetachEntity(uid, Transform(uid));
-                QueueDel(uid);
+                // If this is a stacked entity, remove a single unit instead of deleting the whole stack.
+                if (TryComp<Shared.Stacks.StackComponent>(uid, out var stack) && stack.Count > 1)
+                {
+                    _stackSystem.SetCount(uid, stack.Count - 1, stack);
+                    // Restore per-item uses for the remaining stack so future uses don't fall-through.
+                    component.Uses = initialUses;
+                }
+                else
+                {
+                    // Don't delete the entity in the event bus, so we queue it for deletion.
+                    // We need the free hand for the new item, so we send it to nullspace.
+                    _transform.DetachEntity(uid, Transform(uid));
+                    QueueDel(uid);
+                }
             }
 
             if (entityToPlaceInHands != null)
