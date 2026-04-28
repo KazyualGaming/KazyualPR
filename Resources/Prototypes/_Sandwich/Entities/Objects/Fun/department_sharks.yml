@@ -5,7 +5,7 @@
   description: Captain Shark at the helm!
   components:
   - type: Sprite
-    sprite: _ShibaStation/Objects/Fun/departmentsharks.rsi
+    sprite: _Sandwich/Objects/Fun/departmentsharks.rsi
     state: command
   - type: EmitSoundOnUse
     sound:
@@ -28,7 +28,7 @@
   description: I guess this is a Nurse Shark?
   components:
   - type: Sprite
-    sprite: _ShibaStation/Objects/Fun/departmentsharks.rsi
+    sprite: _Sandwich/Objects/Fun/departmentsharks.rsi
     state: medical
   - type: EmitSoundOnUse
     sound:
@@ -51,7 +51,7 @@
   description: Super-Human Anomalous Research Kutie.
   components:
   - type: Sprite
-    sprite: _ShibaStation/Objects/Fun/departmentsharks.rsi
+    sprite: _Sandwich/Objects/Fun/departmentsharks.rsi
     state: science
   - type: EmitSoundOnUse
     sound:
@@ -74,7 +74,7 @@
   description: Would a Hammerhead be more fitting?
   components:
   - type: Sprite
-    sprite: _ShibaStation/Objects/Fun/departmentsharks.rsi
+    sprite: _Sandwich/Objects/Fun/departmentsharks.rsi
     state: engineering
   - type: EmitSoundOnUse
     sound:
@@ -97,7 +97,7 @@
   description: Prone to biting the clown.
   components:
   - type: Sprite
-    sprite: _ShibaStation/Objects/Fun/departmentsharks.rsi
+    sprite: _Sandwich/Objects/Fun/departmentsharks.rsi
     state: security
   - type: EmitSoundOnUse
     sound:
@@ -120,7 +120,7 @@
   description: Can we order a big fishtank for this one?
   components:
   - type: Sprite
-    sprite: _ShibaStation/Objects/Fun/departmentsharks.rsi
+    sprite: _Sandwich/Objects/Fun/departmentsharks.rsi
     state: cargo
   - type: EmitSoundOnUse
     sound:
